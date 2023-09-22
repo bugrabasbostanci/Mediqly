@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Majezik",
+    "purpose": "MAJEZİK çeşitli ağrıları ortadan kaldırmak ya da hafifletmek için kullanılır. ",
+    "instruction": " MAJEZİK'in tavsiye edilen dozu, günde iki, üç veya dört defaya bölünerek uygulanmak üzere günde 200 ila 300 mg'dır",
+    "imageURL": "https://cdn.hekimce.com/uploads/2022/basliksiz-2-1668878307.jpg"
+  },
+  {
+    "name": "Muscoflex Duo",
+    "purpose": "MUSCOFLEX esas olarak kas gevşetici etkinliğe sahiptir. Tiyokolşikosid, ağrılı kas spazmlarının semptomatik tedavisi amacıyla kullanılır. ",
+    "instruction": " Önerilen ve günlük maksimum doz, her 12 saatte bir alınmak koşuluyla (12 saat aralık verilerek) günde iki defa bir tablettir",
+    "imageURL": "https://www.basvur.co/sites/1358/uploads/2023/06/16/muscoflex-duo-nedir-ne-ise-yarar%20(1).png?"
+  },
+  {
+    "name": "Coversyl",
+    "purpose": "Yetişkinlerde esansiyel (nedeni bilinmeyen) hipertansiyonun (yüksek kan basıncı) tedavisinde kullanılmaktadır ",
+    "instruction": " Tavsiye edilen doz, başlangıç ve devam dozu günde tek doz olarak 5 mg’dır. Tabletinizi sabahları tercihen her gün aynı saatte yemekten önce almanız önerilir.",
+    "imageURL": "https://ilactarif.kolayasistan.com/wp-content/uploads/2022/10/coversyl.webp"
+  },
+  {
+    "name": "Lipitor",
+    "purpose": "Kolesterol ve trigliserid olarak bilinen yağ kökenli maddelerin düşürülmesinde kullanılır.",
+    "instruction": " LİPİTOR’un yetişkinler, 10 yaş ve üzeri çocuklar için günlük başlama dozu 10 mg’dır. Dozlar günün herhangi bir saatinde, yemekle birlikte veya ayrı olarak alınabilir.",
+    "imageURL": "https://cdn.hekimce.com/uploads/2022/basliksiz-1-1669485770.jpg"
+  },
+  {
+    "name": "Ventolin",
+    "purpose": "Etkin madde olarak salbutamol içerir ve akciğerlerdeki hava yollarını genişleterek daha kolay nefes alıp vermenizi sağlar.",
+    "instruction": "Genel etkili doz günde 3 veya 4 kez alınan 4 mg’dır. ",
+    "imageURL": "https://prospektus.co/media/images/drug/000011/ventolin-4-mg-100-tablet__cid3211__original.jpg"
+  },
+  {
+    "name": "Nurofen Cold and Flu",
+    "purpose": "NUROFEN COLD & FLU, grip, soğuk algınlığı veya sinüzit gibi hastalıkların seyrinde görülen burun tıkanıklığı, baş ağrısı, ateş, vücut ağrıları ve diğer ağrıların giderilmesinde kullanılır",
+    "instruction": "Yetişkinlerde ve 12 yaşın üzerindeki çocuklarda, başlangıç dozu olarak ağızdan 2 tablet ve eğer gerekli ise her 4 saatte bir 1-2 tablet şeklinde bir miktar su ile birlikte kullanılmalıdır",
+    "imageURL": "https://i.superhaber.com/2/1280/720/storage/files/images/2020/03/04/nurofen-cold-flu-24s-1-20595-lwZ6_cover.jpg"
+  },
+  {
+    "name": "Omeprol",
+    "purpose": "OMEPROL etkin madde olarak omeprazol içerir. ‘Proton pompası inhibitörü’ olarak bilinen ilaçlardan biridir. Midenizdeki asit oluşumunu azaltır.",
+    "instruction": "Eğer doktorunuz yemek borunuzda az miktarda hasar bulursa, 4-8 hafta için olağan doz günde bir kez 20 mg’dır. Yemek borunuzda iyileşme gerçekleşmezse doktorunuz ilave 8 hafta daha 40 mg doz almanızı söyleyebilir.",
+    "imageURL": "https://cdn.hekimce.com/uploads/2022/basliksiz-1-1668372031.jpg"
+  },
+  {
+    "name": "Pradaxa",
+    "purpose": "PRADAXA dabigatran eteksilat etkin maddesini içeririr ve antikoagülanlar olarak adlandırılan bir gruba ait bir ilaçtır. Kanda pıhtı oluşumunda rol oyanayan bir maddeyi engelleyerek etki gösterir.",
+    "instruction": "Önerilen doz günde iki kez 150 mg’lık birer kapsül şeklinde alınan 300 mg’dır.",
+    "imageURL": "https://5.imimg.com/data5/SELLER/Default/2022/9/NK/CN/CF/3468355/pradaxa-dabigatran-medicine-.jpg"
+  },
+  {
+    "name": "İsordil",
+    "purpose": "İSORDİL, damar genişletici organik nitratlar ismi verilen ve kalp hastalıklarında kullanılan bir ilaç grubuna dahil olan izosorbid dinitrat etkin maddesini içeren damar genişletici bir ilaçtır.",
+    "instruction": "İSORDİL dil altı tabletini kalbinize yeterli kan gitmediği için gelişen göğüs ağrınızın tedavisi için kullanıyorsanız 5-10 dakikada bir 2,5- 5 mg dozlarda, 15- 30 dakika içinde maksimum 3 kez alınacak şekilde kullanabilirsiniz.",
+    "imageURL": "https://cdn.hekimce.com/uploads/2022/basliksiz-1-1671764639.jpg"
+  },
+  {
+    "name": "Prozac",
+    "purpose": "Kişide var olan düşünce temelli bilişsel çarpıtmaların azalmasına yardımcı olur. Özellikle obsesif kompulsif bozukluk gibi kişinin hayatını derinden etkileyen durumlarda tercih edilir.",
+    "instruction": "Önerilen doz günde bir kapsüldür (20 mg). Tedavi başlatıldıktan sonra doktorunuz dozajınızı gözden geçirecek ve gerekiyorsa ayarlayacaktır",
+    "imageURL": "https://nolurbak.com/wp-content/uploads/2023/07/image_1688778453.jpg"
+  },
+  {
+    "name": "Zyvoxid",
+    "purpose": "ZYVOXİD oksazolidinonlar grubundan bir antibiyotik olarak belirli bakteri tiplerinin çoğalmasını durdurur. Zatürre ve deri üzerindeki veya deri altındaki bazı enfeksiyonların tedavisi için kullanılır.",
+    "instruction": "Günde iki defa (12 saatte bir) bir film kaplı tablet (600 mg linezolid) olarak almanız önerilmektedir. Tedavi süresi genellikle 10 ila 14 günde tamamlanır, ancak 28 güne kadar da sürebilir.",
+    "imageURL": "https://cdn.hekimce.com/uploads/2022/basliksiz-1-1662733232.jpg"
+  }
+]

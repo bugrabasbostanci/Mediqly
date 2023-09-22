@@ -26,19 +26,19 @@ Bu şekilde, kullanıcıların ilaçlar hakkında bilgi edinebilecekleri basit b
 
 1-ağrı kesiciler
 
-- dolorex, parol, majezik, apranax, arveles, novalgin, İbuprofen, Parasetamol, minoset,
+- Majezik, Dolorex, Parol, Apranax, Arveles, Novalgin, İbuprofen, Parasetamol, Minoset,
 
 2-kas gevşetici
 
-- muscoflex, voltaren, Dikloron, Parafon, PARAFLEX
+- Muscoflex, Voltaren, Dikloron, Parafon, Paraflex
 
 3-tansiyon
 
-- coversyl, kaptoril, rilace, delix, zestril, enapril, monopril, gopten, inhibace
+- Coversyl, Kaptoril, Rilace, Delix, Zestril, Enapril, Monopril, Gopten, İnhibace
 
 4-kolesterol
 
-- atorvastatin, fluvastatin, lovastatin, pravastatin, simvastatin, rosuvastatin, pitavastatin
+- Lipitor(Atorvastatin), Fluvastatin, Lovastatin, Pravastatin, Simvastatin, Rosuvastatin, Pitavastatin
 
 5-şeker
 
@@ -46,15 +46,15 @@ Bu şekilde, kullanıcıların ilaçlar hakkında bilgi edinebilecekleri basit b
 
 6-astım
 
-- ventolin, Atrovent, Bricanyl
+- Ventolin, Atrovent, Bricanyl
 
 7-soğuk algınlığı
 
-- nurofen cold, Theraflu forte, A-Ferin Forte, ColdAway Cold & Flu, Ibucold c, Tylolhot, Benical Cold,
+- Nurofen cold, Theraflu forte, A-Ferin Forte, ColdAway Cold & Flu, Ibucold c, Tylolhot, Benical Cold,
 
 8- mide
 
-- gaviscon, Rennie, Omeprazol, Omeprol, Lansor, Nexium,
+- Omeprol, Gaviscon, Rennie, Omeprazol, Lansor, Nexium,
 
 9- kan sulandırıcı
 
@@ -62,16 +62,16 @@ Bu şekilde, kullanıcıların ilaçlar hakkında bilgi edinebilecekleri basit b
 
 10- dilaltı
 
--isordil, kapril,
+-İsordil, Kapril,
 
 11- antidepresan
 
-- Prozac, lustral, Celexa, Lexapro, Paxil, Zoloft, Effexor, CİTOLES
+- Prozac, Lustral, Celexa, Lexapro, Paxil, Zoloft, Effexor, Citoles
 
-12-uyku
+12-uyku ? -antidepresan sanırım
 
-- XANAX, ATİVAN, RİVOTRİL
+- Xanax, Ativan, Rivotril
 
 13-antibiyotik
 
-- zyvox
+- Zyvoxid
