@@ -45,24 +45,24 @@ body {
   margin: 2rem;
 }
 
-.search-container > form {
+.search-container > input {
   background-color: var(--PRIMARY-COLOR);
   width: 300px;
   height: 45px;
   border-radius: 25px;
-  display: flex;
-  align-items: center;
-}
-
-.search-container > form > input {
-  all: unset;
+  border: none;
   font-size: 1.25rem;
   color: black;
-  height: 100%;
-  width: 100%;
   padding: 6px 12px;
 }
-.search-container > form > input::placeholder {
+
+.search-container > input:focus {
+  outline: none;
+  /* border: 1px solid var(--SECONDARY-COLOR); */
+  /* box-shadow: 0 0 10px var(--SECONDARY-COLOR); */
+}
+
+.search-container > input::placeholder {
   color: black;
 }
 /* Medicines */
@@ -120,7 +120,7 @@ body {
   .header > .title {
     font-size: 5rem;
   }
-  .search-container > form {
+  .search-container > input {
     width: 600px;
   }
   .card-container {
@@ -146,7 +146,7 @@ body {
   .header > .title {
     font-size: 6rem;
   }
-  .search-container > form {
+  .search-container > input {
     width: 700px;
   }
 }

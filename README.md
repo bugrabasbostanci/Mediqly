@@ -1,6 +1,6 @@
 # Online Reçete Uygulaması
 
--Projenin ismi "İlaç Dünyası" olsun, logosuda şu tarz bir şey olabilir >> font awesome "pills" ![örnek](https://simpleicon.com/wp-content/uploads/pills_1.png)
+-Projenin ismi "İlaç Dünyası","İlaç Kutusu","İlaç Kütüphanesi" olabilir, logosuda şu tarz bir şey olabilir >> font awesome "pills" ![örnek](https://simpleicon.com/wp-content/uploads/pills_1.png)
 
 -Projenin benzeri olarak şöyle bir sayfa var [hekimce-ilaç rehberi](https://www.hekimce.com/blog/ilac-rehberi)
 

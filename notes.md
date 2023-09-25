@@ -75,3 +75,44 @@ Bu şekilde, kullanıcıların ilaçlar hakkında bilgi edinebilecekleri basit b
 13-antibiyotik
 
 - Zyvoxid
+
+---
+
+backend (programlama dilleri)
+-python >> django, flask
+
+-java >> java spring,
+
+-js >> node.js, deno,
+
+-ruby >> ruby onrails
+
+-c# >> .net, asp, .net core
+
+---
+
+> > databases
+
+-mySQL\*\*
+
+-postgreSQL\*
+
+-microsoft SQL Server
+
+-SQLite\*
+
+-mariaDB
+
+> > not SQLs
+
+-mongoDB\*
+
+-dynamoDB
+
+-redise
+
+---
+
+1-CRUD
+
+2-CSS
