@@ -11,6 +11,9 @@
   </head>
   <body>
     <div class="container">
+      <!-- navbar test -->
+      <div data-include="navbar"></div>
+
       <!-- header -->
       <div class="header">
         <h1 class="title">Online Reçete</h1>
@@ -52,6 +55,39 @@
           </div>
         </div> -->
       </div>
+
+      <!-- footer test -->
+      <div data-include="footer"></div>
     </div>
+    <!-- JS CODES |  IMPORT COMPONENTS-->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var includes = document.querySelectorAll("[data-include]");
+
+        includes.forEach(function (element) {
+          var file =
+            "components/" +
+            element.getAttribute("data-include") +
+            "/" +
+            element.getAttribute("data-include") +
+            ".html";
+          fetch(file)
+            .then(function (response) {
+              if (!response.ok) {
+                throw new Error(
+                  "Dosya yüklenirken hata oluştu: " + response.status
+                );
+              }
+              return response.text();
+            })
+            .then(function (html) {
+              element.innerHTML = html;
+            })
+            .catch(function (error) {
+              console.error(error);
+            });
+        });
+      });
+    </script>
   </body>
 </html>

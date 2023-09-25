@@ -1,57 +1,8 @@
 const searchInput = document.getElementById("search");
 const cardContainer = document.querySelector(".card-container");
 
-// 1-FETCH
-// fetch("./data/medicines.json")
-//   .then((response) => response.json())
-//   .then((data) => showData(data));
-
-// 2-SEARCH const allData = data;
-// form.addEventListener("submit", (e) => {
-//   e.preventDefault();
-
-//   cardContainer.innerHTML = "";
-
-//   const searchItem = searchInput.value;
-
-//   if (searchItem) {
-//     showData(searchItem);
-//     searchInput.value = " ";
-//   }
-// });
-
-// 3-DATA USING AND CARD CREATE
-// function showData(data) {
-//   data.map((element) => {
-//     const divCard = document.createElement("div");
-//     divCard.innerHTML = `
-//             <!-- medicine image -->
-//             <img
-//               src=${element.imageURL}
-//               alt=""
-//               class="thumbnail"
-//             />
-//             <!-- medicine informations -->
-//             <div class="description">
-//               <h2 class="medicine-title">${element.name}</h2>
-//               <p class="medicine-purpose">
-//                 ${element.purpose}
-//               </p>
-//               <p class="medicine-instruction">
-//                 ${element.instruction}
-//               </p>
-//               <a href="" class="more-info">Daha fazla bilgi için tıklayınız</a>
-//             </div>
-//       `;
-//     divCard.setAttribute("class", "card");
-//     cardContainer.appendChild(divCard);
-//   });
-// }
-
-// TEST
-
 let medicineDatas;
-
+// FETCH
 fetch("./data/medicines.json")
   .then((response) => response.json())
   .then((data) => {
@@ -60,6 +11,7 @@ fetch("./data/medicines.json")
     showData(medicineDatas);
   });
 
+// SEARCH
 function searchData() {
   searchInput.addEventListener("keyup", (e) => {
     const searchData = e.target.value.toLowerCase();
@@ -70,6 +22,7 @@ function searchData() {
   });
 }
 
+// CREATING COMPONENT w/ DATA
 function showData(items) {
   cardContainer.innerHTML = items
     .map((item) => {

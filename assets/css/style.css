@@ -23,6 +23,10 @@ body {
   background-color: var(--MAIN-COLOR);
   font-family: var(--TITLE-FONT);
 }
+body,
+html {
+  overflow-x: hidden;
+}
 
 .container {
   display: flex;
