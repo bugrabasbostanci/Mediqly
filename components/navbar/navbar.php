@@ -21,8 +21,8 @@
       <div class="navbar-links">
         <ul class="navbar-menu">
           <li>Home</li>
-          <li>Features</li>
-          <li>About</li>
+          <li><a href="/online-recete/crud/index.php">Add Medicine</a></li>
+          <li><a href="/online-recete/crud/index.php">test</a></li>
           <li>Contact</li>
         </ul>
       </div>

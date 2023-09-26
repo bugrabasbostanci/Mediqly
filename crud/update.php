@@ -3,8 +3,8 @@
 require_once "config.php";
  
 // Define variables and initialize with empty values
-$name = $address = $salary = "";
-$name_err = $address_err = $salary_err = "";
+$name = $purpose = $instruction = $imageURL = "";
+$name_err = $purpose_err = $instruction_err =$imageURL_err = "";
  
 // Processing form data when form is submitted
 if(isset($_POST["id"]) && !empty($_POST["id"])){
@@ -21,52 +21,58 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
         $name = $input_name;
     }
     
-    // Validate address address
-    $input_address = trim($_POST["address"]);
-    if(empty($input_address)){
-        $address_err = "Please enter an address.";     
+    // Validate purpose
+    $input_purpose = trim($_POST["purpose"]);
+    if(empty($input_purpose)){
+        $purpose_err = "Please enter an purpose.";     
     } else{
-        $address = $input_address;
+        $purpose = $input_purpose;
     }
     
-    // Validate salary
-    $input_salary = trim($_POST["salary"]);
-    if(empty($input_salary)){
-        $salary_err = "Please enter the salary amount.";     
-    } elseif(!ctype_digit($input_salary)){
-        $salary_err = "Please enter a positive integer value.";
+    // Validate instruction
+    $input_instruction = trim($_POST["instruction"]);
+    if(empty($input_instruction)){
+        $instruction_err = "Please enter the instruction amount.";     
     } else{
-        $salary = $input_salary;
+        $instruction = $input_instruction;
+    }
+
+    // Validate imageURL
+    $input_imageURL = trim($_POST["imageURL"]);
+    if(empty($input_imageURL)){
+        $imageURL_err = "Please enter the imageURL amount.";     
+    } else{
+        $imageURL = $input_imageURL;
     }
     
-    // Check input errors before inserting in database
-    if(empty($name_err) && empty($address_err) && empty($salary_err)){
-        // Prepare an update statement
-        $sql = "UPDATE employees SET name=?, address=?, salary=? WHERE id=?";
-         
-        if($stmt = mysqli_prepare($link, $sql)){
-            // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "sssi", $param_name, $param_address, $param_salary, $param_id);
-            
-            // Set parameters
-            $param_name = $name;
-            $param_address = $address;
-            $param_salary = $salary;
-            $param_id = $id;
-            
-            // Attempt to execute the prepared statement
-            if(mysqli_stmt_execute($stmt)){
-                // Records updated successfully. Redirect to landing page
-                header("location: index.php");
-                exit();
-            } else{
-                echo "Oops! Something went wrong. Please try again later.";
-            }
+   // Check input errors before inserting in database
+   if(empty($name_err) && empty($purpose_err) && empty($instruction_err) && empty($imageURL_err)){
+    // Prepare an insert statement
+    $sql = "INSERT INTO medicines (name, purpose, instruction, imageURL) VALUES (?, ?, ?, ?)";
+     
+    if($stmt = mysqli_prepare($link, $sql)){
+        // Bind variables to the prepared statement as parameters
+        mysqli_stmt_bind_param($stmt, "ssss", $param_name, $param_purpose, $param_instruction, $param_imageURL);
+        
+        // Set parameters
+        $param_name = $name;
+        $param_purpose = $purpose;
+        $param_instruction = $instruction;
+        $param_imageURL=$imageURL;
+        
+        // Attempt to execute the prepared statement
+        if(mysqli_stmt_execute($stmt)){
+            // Records created successfully. Redirect to landing page
+            header("location: index.php");
+            exit();
+        } else{
+            echo "Oops! Something went wrong. Please try again later.";
         }
-         
-        // Close statement
-        mysqli_stmt_close($stmt);
     }
+     
+    // Close statement
+    mysqli_stmt_close($stmt);
+}
     
     // Close connection
     mysqli_close($link);
@@ -77,7 +83,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
         $id =  trim($_GET["id"]);
         
         // Prepare a select statement
-        $sql = "SELECT * FROM employees WHERE id = ?";
+        $sql = "SELECT * FROM medicines WHERE id = ?";
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "i", $param_id);
@@ -96,8 +102,9 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
                     
                     // Retrieve individual field value
                     $name = $row["name"];
-                    $address = $row["address"];
-                    $salary = $row["salary"];
+                    $purpose = $row["purpose"];
+                    $instruction = $row["instruction"];
+                    $imageURL = $row["imageURL"];
                 } else{
                     // URL doesn't contain valid id. Redirect to error page
                     header("location: error.php");
@@ -135,30 +142,34 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
         }
     </style>
 </head>
-    <body>
+<body>
         <div class="wrapper">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 class="mt-5">Update Record</h2>
-                        <p>Please edit the input values and submit to update the employee record.</p>
-                        <form action="<?php echo htmlspecialchars(basename($_SERVER['REQUEST_URI'])); ?>" method="post">
+                        <h2 class="mt-5">Create Record</h2>
+                        <p>Please fill this form and submit to add medicine record to the database.</p>
+                        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                             <div class="form-group">
                                 <label>Name</label>
                                 <input type="text" name="name" class="form-control <?php echo (!empty($name_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $name; ?>">
                                 <span class="invalid-feedback"><?php echo $name_err;?></span>
                             </div>
                             <div class="form-group">
-                                <label>Address</label>
-                                <textarea name="address" class="form-control <?php echo (!empty($address_err)) ? 'is-invalid' : ''; ?>"><?php echo $address; ?></textarea>
-                                <span class="invalid-feedback"><?php echo $address_err;?></span>
+                                <label>purpose</label>
+                                <textarea name="purpose" class="form-control <?php echo (!empty($purpose_err)) ? 'is-invalid' : ''; ?>"><?php echo $purpose; ?></textarea>
+                                <span class="invalid-feedback"><?php echo $purpose_err;?></span>
                             </div>
                             <div class="form-group">
-                                <label>Salary</label>
-                                <input type="text" name="salary" class="form-control <?php echo (!empty($salary_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $salary; ?>">
-                                <span class="invalid-feedback"><?php echo $salary_err;?></span>
+                                <label>instruction</label>
+                                <input type="text" name="instruction" class="form-control <?php echo (!empty($instruction_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $instruction; ?>">
+                                <span class="invalid-feedback"><?php echo $instruction_err;?></span>
                             </div>
-                            <input type="hidden" name="id" value="<?php echo $id; ?>"/>
+                            <div class="form-group">
+                                <label>imageURL</label>
+                                <input type="text" name="imageURL" class="form-control <?php echo (!empty($imageURL_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $imageURL; ?>">
+                                <span class="invalid-feedback"><?php echo $imageURL_err;?></span>
+                            </div>
                             <input type="submit" class="btn btn-primary" value="Submit">
                             <a href="index.php" class="btn btn-secondary ml-2">Cancel</a>
                         </form>

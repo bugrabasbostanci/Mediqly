@@ -40,6 +40,8 @@ Bu şekilde, kullanıcıların ilaçlar hakkında bilgi edinebilecekleri basit b
 
 - Lipitor(Atorvastatin), Fluvastatin, Lovastatin, Pravastatin, Simvastatin, Rosuvastatin, Pitavastatin
 
+-lescol, lovakor, pravachol, zocor, crestor, alipza
+
 5-şeker
 
 - Diameprid, Glutril, Gliben, Diamicron, Amaryl, Betanorm
@@ -77,3 +79,19 @@ Bu şekilde, kullanıcıların ilaçlar hakkında bilgi edinebilecekleri basit b
 - Zyvoxid
 
 ---
+
+## İlaçlar ve Alanları
+
+| Kategori                  | İlaç                                                            |
+| ------------------------- | --------------------------------------------------------------- |
+| Ağrı kesici               | MAJEZİK, DİCLOFENAC, İBUPROFEN, PARASETAMOL, NUROFEN COLD & FLU |
+| Kas gevşetici             | MUSCOFLEX DUO, TIOKOLSİKOSİD                                    |
+| Tansiyon düşürücü         | COVERSYL                                                        |
+| Kolesterol düşürücü       | LİPİTOR                                                         |
+| Astım ilacı               | VENTOLIN                                                        |
+| Solunum yolu dekonjestanı | Psödoefedrin                                                    |
+| Mide ilacı                | OMEPROL                                                         |
+| Pıhtı önleyici            | PRADAXA                                                         |
+| Kalp yetmezliği ilacı     | İSORDİL                                                         |
+| Antidepresan              | PROZAC                                                          |
+| Antibiyotik               | ZYVOXİD                                                         |

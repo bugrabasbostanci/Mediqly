@@ -12,7 +12,9 @@
   <body>
     <div class="container">
       <!-- navbar test -->
-      <div data-include="navbar"></div>
+      <?php
+      include './components/navbar/navbar.php';
+      ?>
 
       <!-- header -->
       <div class="header">
@@ -29,38 +31,13 @@
       </div>
 
       <!-- medicine cards -->
-      <div class="card-container">
-        <!-- example card -->
-
-        <!-- <div class="card">
-          
-          <img
-            src="https://www.medexpress.com.ph/Content/Images/Medicines/15357.png"
-            alt=""
-            class="thumbnail"
-          />
-      
-          <div class="description">
-            <h2 class="medicine-title">Medicine Title</h2>
-            <p class="medicine-purpose">
-              <b>Lorem ipsum</b> dolor sit amet consectetur adipisicing elit.
-              At, quaerat.
-            </p>
-            <p class="medicine-instruction">
-              <b>Lorem ipsum,</b> dolor sit amet consectetur adipisicing elit.
-              Soluta sit ut dolorem dolores similique harum minima, debitis
-              facere magni. Saepe.
-            </p>
-            <a href="" class="more-info">Daha fazla bilgi için tıklayınız</a>
-          </div>
-        </div> -->
-      </div>
+      <div class="card-container"></div>
 
       <!-- footer test -->
       <div data-include="footer"></div>
     </div>
     <!-- JS CODES |  IMPORT COMPONENTS-->
-    <script>
+    <!-- <script>
       document.addEventListener("DOMContentLoaded", function () {
         var includes = document.querySelectorAll("[data-include]");
 
@@ -88,6 +65,6 @@
             });
         });
       });
-    </script>
+    </script> -->
   </body>
 </html>

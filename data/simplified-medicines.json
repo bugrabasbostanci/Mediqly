@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Majezik",
+    "purpose": "Ağrı kesici ve iltihap giderici bir ilaçtır. Eklem ağrıları, kas ağrıları, adet ağrısı ve gut ağrısı gibi ağrıları gidermek için kullanılır.",
+    "instruction": "Ağız yoluyla su ile alınmalıdır. Yetişkinler için günde 1-3 defa 1 tablet veya 1-2 defa 2 tablet alınabilir. Yemekten önce veya sonra alınabilir.",
+    "imageURL": "https://cdn.hekimce.com/uploads/2022/basliksiz-2-1668878307.jpg"
+  },
+  {
+    "name": "Muscoflex Duo",
+    "purpose": "Kas ağrılarını ve kas spazmlarını gidermek için kullanılan bir kas gevşeticidir. ",
+    "instruction": "Ağız yoluyla su ile alınmalıdır. Yetişkinler için günde 2 defa 1 tablet alınabilir. Yemeklerden sonra alınmalıdır.",
+    "imageURL": "https://www.basvur.co/sites/1358/uploads/2023/06/16/muscoflex-duo-nedir-ne-ise-yarar%20(1).png?"
+  },
+  {
+    "name": "Coversyl",
+    "purpose": "Yüksek tansiyonu düşürerek kalp sağlığını korumaya yardımcı olan bir ilaçtır.",
+    "instruction": "Ağız yoluyla su ile alınmalıdır. Yetişkinler için günde 1 defa 1 tablet alınabilir. Yemekten önce alınmalıdır.",
+    "imageURL": "https://ilactarif.kolayasistan.com/wp-content/uploads/2022/10/coversyl.webp"
+  },
+  {
+    "name": "Lipitor",
+    "purpose": "Kolesterol ve trigliserit seviyelerini düşürerek kalp hastalığı riskini azaltmaya yardımcı olan bir ilaçtır.",
+    "instruction": "Ağız yoluyla su ile alınmalıdır. Yetişkinler için günde 1 defa 10 mg, 20 mg veya 40 mg alınabilir. Yemeklerle birlikte veya yemeklerden bağımsız olarak alınabilir.",
+    "imageURL": "https://cdn.hekimce.com/uploads/2022/basliksiz-1-1669485770.jpg"
+  },
+  {
+    "name": "Ventolin",
+    "purpose": "Astım ve KOAH gibi solunum yolları hastalıklarının semptomlarını hafifletmek için kullanılan bir ilaçtır.",
+    "instruction": "İnhaler yoluyla nefes yoluyla çekilmelidir. Yetişkinler ve 12 yaş ve üzeri çocuklar için 1-2 puf gerektiğinde 1 saatte bir alınabilir. Yemeklerden bağımsız olarak alınmalıdır.",
+    "imageURL": "https://nolurbak.com/wp-content/uploads/2023/07/image_1689530702-1.jpg"
+  },
+  {
+    "name": "Nurofen Cold and Flu",
+    "purpose": "Grip, soğuk algınlığı ve sinüzit gibi üst solunum yolu hastalıklarının semptomlarını hafifletmek için kullanılan bir ilaçtır.",
+    "instruction": "Ağız yoluyla su ile alınmalıdır. Yetişkinler için günde 3 defa 1 tablet veya 1 defa 2 tablet alınabilir. Yemeklerden sonra alınmalıdır.",
+    "imageURL": "https://i.superhaber.com/2/1280/720/storage/files/images/2020/03/04/nurofen-cold-flu-24s-1-20595-lwZ6_cover.jpg"
+  },
+  {
+    "name": "Omeprol",
+    "purpose": "Mide yanması, reflü ve ülser gibi mide problemlerini tedavi etmek için kullanılan bir ilaçtır.",
+    "instruction": "Yemeklerle birlikte veya yemeklerden bağımsız olarak alınabilir. Yetişkinler için günde 1 defa 20 mg alınabilir. Yemeklerle birlikte veya yemeklerden bağımsız olarak alınabilir.",
+    "imageURL": "https://cdn.hekimce.com/uploads/2022/basliksiz-1-1668372031.jpg"
+  },
+  {
+    "name": "Pradaxa",
+    "purpose": "Beyin kanaması ve bacak damarlarında pıhtı oluşumunu önlemeye yardımcı olan bir ilaçtır.",
+    "instruction": "Ağız yoluyla su ile alınmalıdır. Yetişkinler için günde 1 defa 100 mg alınabilir. Yemeklerden bağımsız olarak alınmalıdır.",
+    "imageURL": "https://5.imimg.com/data5/SELLER/Default/2022/9/NK/CN/CF/3468355/pradaxa-dabigatran-medicine-.jpg"
+  },
+  {
+    "name": "İsordil",
+    "purpose": "Kalp ağrısını ve kalp yetmezliğini tedavi etmek için kullanılan bir ilaçtır.",
+    "instruction": "Ağız yoluyla su ile alınmalıdır. Yetişkinler için günde 1 defa 5 mg alınabilir. Yemeklerden bağımsız olarak alınmalıdır.",
+    "imageURL": "https://cdn.hekimce.com/uploads/2022/basliksiz-1-1671764639.jpg"
+  },
+  {
+    "name": "Prozac",
+    "purpose": "Depresyon, takıntı hastalığı, bulimia nervoza ve adet öncesi gerginlik gibi ruhsal hastalıkları tedavi etmek için kullanılan bir ilaçtır.",
+    "instruction": "Ağız yoluyla su ile alınmalıdır. Yetişkinler için günde 1 defa 20 mg alınabilir. Yemeklerden bağımsız olarak alınmalıdır.",
+    "imageURL": "https://nolurbak.com/wp-content/uploads/2023/07/image_1688778453.jpg"
+  },
+  {
+    "name": "Zyvoxid",
+    "purpose": "Zatürre ve deri enfeksiyonlarını tedavi etmek için kullanılan bir antibiyotiktir.",
+    "instruction": "Ağız yoluyla su ile alınmalıdır. Yetişkinler için günde 2 defa 500 mg alınabilir. Yemeklerden sonra alınmalıdır.",
+    "imageURL": "https://cdn.hekimce.com/uploads/2022/basliksiz-1-1662733232.jpg"
+  }
+]
