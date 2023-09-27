@@ -21,7 +21,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate purpose
     $input_purpose = trim($_POST["purpose"]);
     if(empty($input_purpose)){
-        $purpose_err = "Please enter an purpose.";     
+        $purpose_err = "Please enter a purpose.";     
     } else{
         $purpose = $input_purpose;
     }
@@ -29,7 +29,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate instruction
     $input_instruction = trim($_POST["instruction"]);
     if(empty($input_instruction)){
-        $instruction_err = "Please enter the instruction amount.";     
+        $instruction_err = "Please enter the instruction.";     
     } else{
         $instruction = $input_instruction;
     }
@@ -37,7 +37,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate imageURL
     $input_imageURL = trim($_POST["imageURL"]);
     if(empty($input_imageURL)){
-        $imageURL_err = "Please enter the imageURL amount.";     
+        $imageURL_err = "Please enter the imageURL.";     
     } else{
         $imageURL = $input_imageURL;
     }
