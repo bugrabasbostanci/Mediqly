@@ -27,6 +27,7 @@
         <div class="wrapper">
             <div class="container-fluid">
                 <div class="row">
+                    <a href="/medicine-page.php" class="btn btn-danger">Back to Main</a>
                     <div class="col-md-12">
                         <div class="mt-5 mb-3 clearfix">
                             <h2 class="pull-left">Medicines Details</h2>

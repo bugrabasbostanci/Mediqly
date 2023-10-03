@@ -1,0 +1,165 @@
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/Inter-Medium.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins-Medium.ttf");
+}
+:root {
+  --MAIN-COLOR: #313338; /* >> MAIN BG COLOR*/
+  --GREEN-1: #248046; /* >> buton*/
+  --GREEN-ALL: #23a55a; /* >> other things except buttons */
+  --YELLOW: #f0b232;
+  --RED: #f23f43;
+  --REDISH: #fa777c; /* >> alert-danger*/
+  --BLUE: #5865f2;
+  --BLUE-LINK: #00a8fc; /* >> MAIN BG, LINK COLOR*/
+  --ORANGE: #bf861c;
+  --WHITE: #f2f3f5;
+  --WHITE-50: #dbdee1; /* >> Search bar TEXT COLOR*/
+  --GRAY-50: #b5bac1; /* >> MAIN BG üzerindeki SUBTITLE COLOR */
+  --GRAY-100: #949ba4; /* >> BG COLOR 1 | MAIN BG üzerindeki TEXT COLOR*/
+  --GRAY-150: #80848e; /* >> invisible status | MAIN BG üzerindeki badge bg rengi*/
+  --GRAY-200: #42444a; /* >> MAIN BG üzerindeki BTN BG*/
+  --GRAY-250: #2b2d31; /* >> BG COLOR 1 |MAIN BG üzerindeki iconların bg rengi*/
+  --GRAY-400: #1e1f22; /* >> BG COLOR 2 | MAIN BG üzerindeki search bar bg*/
+  --TITLE-FONT: "Inter";
+  --TEXT-FONT: "Poppins";
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--TITLE-FONT);
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  box-shadow: 0 0 0 3px var(--GRAY-400), 9px 9px 0 0 var(--GRAY-400);
+  border-radius: 5px;
+}
+
+.contact-title {
+  font-size: 3rem;
+  padding-bottom: 1rem;
+  color: var(--WHITE);
+}
+
+.contact-form {
+}
+
+.name-email-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding-bottom: 2rem;
+}
+
+.contact-label-name {
+  font-size: 1.3rem;
+  color: var(--WHITE-50);
+}
+
+.contact-input-name {
+  width: 300px;
+  height: 40px;
+  padding: 8px 12px;
+  font-size: 1.2rem;
+  border: 3px solid black;
+  border-radius: 5px;
+  outline: none;
+  background-color: var(--WHITE);
+}
+
+.name-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.contact-label-email {
+  font-size: 1.3rem;
+  color: var(--WHITE-50);
+}
+
+.contact-input-email {
+  width: 300px;
+  height: 40px;
+  padding: 8px 12px;
+  font-size: 1.2rem;
+  border: 3px solid black;
+  border-radius: 5px;
+  outline: none;
+  background-color: var(--WHITE);
+}
+
+.email-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.contact-label-message {
+  font-size: 1.3rem;
+  color: var(--WHITE-50);
+}
+
+.contact-input-message {
+  width: 300px;
+  height: 200px;
+  padding: 8px 12px;
+  font-size: 1.2rem;
+  border: 3px solid black;
+  border-radius: 5px;
+  outline: none;
+  background-color: var(--WHITE);
+}
+
+.message-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  align-self: flex-start;
+  width: 100%;
+  padding-bottom: 2rem;
+}
+
+.contact-link {
+  align-self: flex-start;
+}
+
+.contact-btn {
+  font-size: 1.2rem;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--BLUE);
+  color: white;
+}
+
+/**************** MEDIA QUERIES -RESPONSIVE *********************/
+@media screen and (max-width: 600px) {
+}
+
+@media screen and (min-width: 600px) {
+}
+
+@media screen and (min-width: 1200px) {
+  .name-email-wrapper {
+    flex-direction: row;
+  }
+
+  .contact-input-message {
+    width: 100%;
+    height: 200px;
+  }
+}

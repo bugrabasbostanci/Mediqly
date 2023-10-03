@@ -23,6 +23,7 @@
   --GRAY-150: #80848e; /* >> invisible status | MAIN BG üzerindeki badge bg rengi*/
   --GRAY-200: #42444a; /* >> MAIN BG üzerindeki BTN BG*/
   --GRAY-250: #2b2d31; /* >> BG COLOR 1 |MAIN BG üzerindeki iconların bg rengi*/
+  --GRAY-300: #232428; /* >> CARD BG COLOR */
   --GRAY-400: #1e1f22; /* >> BG COLOR 2 | MAIN BG üzerindeki search bar bg*/
   --TITLE-FONT: "Inter";
   --TEXT-FONT: "Poppins";
@@ -32,78 +33,20 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  background-color: var(--MAIN-COLOR);
   font-family: var(--TITLE-FONT);
 }
 
-.faqs-container {
+body,
+html {
+  overflow-x: hidden;
+}
+
+.container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 2rem;
-  padding: 5rem 0;
-}
-
-.faq-title {
-  font-size: 2rem;
-  color: var(--WHITE-50);
-}
-
-.faq-cards {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5rem;
-  padding: 1rem;
-}
-
-.faq-card {
-  width: 100%;
-  background-color: var(--GRAY-400);
-  border-radius: 5px;
-  padding: 1.5rem;
-  /* box-shadow: var(--WHITE-50) 0px 20px 30px -10px; */
-  box-shadow: var(--WHITE) 0px 6px 12px -2px, var(--WHITE-50) 0px 3px 7px -3px;
-}
-
-.faq-question {
-  color: var(--WHITE);
-  padding-bottom: 1rem;
-  font-size: 1.2rem;
-}
-
-.faq-answer {
-  color: var(--GRAY-50);
-  font-size: 1rem;
-}
-
-/**************** MEDIA QUERIES -RESPONSIVE *********************/
-@media screen and (max-width: 600px) {
-}
-
-@media screen and (min-width: 600px) {
-}
-
-@media screen and (min-width: 1200px) {
-  .faq-title {
-    font-size: 3rem;
-  }
-
-  .faq-cards {
-    flex-direction: row;
-    gap: 5rem;
-  }
-
-  .faq-card {
-    width: 45%;
-  }
-
-  .faq-question {
-    font-size: 1.5rem;
-  }
-
-  .faq-answer {
-    font-size: 1.1rem;
-  }
 }

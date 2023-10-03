@@ -11,60 +11,17 @@
   </head>
   <body>
     <div class="container">
-      <!-- navbar test -->
       <?php
-      include './components/navbar/navbar.php';
+      include "./components/navbar/navbar.php";
+      include "./components/hero/hero.html";
+      include "./components/feature-cards/feature-card.html";
+      include "./components/info-card/info-card.html";
+      include "./components/comments/comments.html";
+      include "./components/blog-card/blog-cards.html";
+      include "./components/faq/faq.html";
+      include "./components/subscribe/subscribe.html";
+      include "./components/contact/contact.html";
+      include "./components/footer/footer.html";
       ?>
-
-      <!-- header -->
-      <div class="header">
-        <h1 class="title">Online Reçete</h1>
-      </div>
-      <!-- search bar -->
-      <div class="search-container">
-        <input
-          type="search"
-          name="search"
-          id="search"
-          placeholder="Search..."
-        />
-      </div>
-
-      <!-- medicine cards -->
-      <div class="card-container"></div>
-
-      <!-- footer test -->
-      <div data-include="footer"></div>
-    </div>
-    <!-- JS CODES |  IMPORT COMPONENTS-->
-    <!-- <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var includes = document.querySelectorAll("[data-include]");
-
-        includes.forEach(function (element) {
-          var file =
-            "components/" +
-            element.getAttribute("data-include") +
-            "/" +
-            element.getAttribute("data-include") +
-            ".html";
-          fetch(file)
-            .then(function (response) {
-              if (!response.ok) {
-                throw new Error(
-                  "Dosya yüklenirken hata oluştu: " + response.status
-                );
-              }
-              return response.text();
-            })
-            .then(function (html) {
-              element.innerHTML = html;
-            })
-            .catch(function (error) {
-              console.error(error);
-            });
-        });
-      });
-    </script> -->
   </body>
 </html>

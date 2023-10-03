@@ -5,26 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Footer Component</title>
     <link rel="stylesheet" href="/components/footer/footer.css" />
+    <script
+      src="https://kit.fontawesome.com/d50705f12e.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <footer class="footer">
+    <footer class="footer-container">
       <!-- footer logo -->
       <div class="footer-logo">
         <a href="#">
           <img
-            src="https://simpleicon.com/wp-content/uploads/pills_1.png"
+            class="footer-image"
+            src="/assets/images/ilac-dunyasi-logo.png"
             alt="logo"
           />
         </a>
+        <!-- name -->
+        <a href="#" class="footer-name">
+          <h1>İlaç Dünyası</h1>
+        </a>
       </div>
-      <!-- footer links -->
-      <div class="footer-links">
-        <ul class="footer-menu">
-          <li>Home</li>
-          <li>Features</li>
-          <li>About</li>
-          <li>Contact</li>
-        </ul>
+      <!-- rights -->
+      <p class="footer-text">© 2023 İlaç Dünyası. Tüm hakları saklıdır.</p>
+
+      <!-- icons -->
+      <div class="footer-icons">
+        <i class="fa-brands fa-x-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-threads"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-facebook"></i>
       </div>
     </footer>
   </body>

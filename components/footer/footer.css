@@ -1,43 +1,123 @@
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/Inter-Medium.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins-Medium.ttf");
+}
+:root {
+  --MAIN-COLOR: #313338; /* >> MAIN BG COLOR*/
+  --GREEN-1: #248046; /* >> buton*/
+  --GREEN-ALL: #23a55a; /* >> other things except buttons */
+  --YELLOW: #f0b232;
+  --RED: #f23f43;
+  --REDISH: #fa777c; /* >> alert-danger*/
+  --BLUE: #5865f2;
+  --BLUE-LINK: #00a8fc; /* >> MAIN BG, LINK COLOR*/
+  --ORANGE: #bf861c;
+  --WHITE: #f2f3f5;
+  --WHITE-50: #dbdee1; /* >> Search bar TEXT COLOR*/
+  --GRAY-50: #b5bac1; /* >> MAIN BG üzerindeki SUBTITLE COLOR */
+  --GRAY-100: #949ba4; /* >> BG COLOR 1 | MAIN BG üzerindeki TEXT COLOR*/
+  --GRAY-150: #80848e; /* >> invisible status | MAIN BG üzerindeki badge bg rengi*/
+  --GRAY-200: #42444a; /* >> MAIN BG üzerindeki BTN BG*/
+  --GRAY-250: #2b2d31; /* >> BG COLOR 1 |MAIN BG üzerindeki iconların bg rengi*/
+  --GRAY-400: #1e1f22; /* >> BG COLOR 2 | MAIN BG üzerindeki search bar bg*/
+  --TITLE-FONT: "Inter";
+  --TEXT-FONT: "Poppins";
+}
+
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  font-family: var(--TITLE-FONT);
 }
 
-body {
-  height: 100vh;
-}
-
-.footer {
-  background-color: aquamarine;
+.footer-container {
+  background-color: var(--MAIN-COLOR);
   width: 100vw;
   height: 100px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  border-top: 2px solid rgba(78, 80, 88, 0.48);
+  margin-top: 5rem;
 }
 
 /* LOGO */
 .footer-logo {
-  /* border: 1px solid black; */
-}
-
-.footer-logo > a > img {
-  width: 50px;
-  height: 50px;
-}
-
-/* LINKS */
-.footer-links {
-  /* border: 1px solid black; */
-}
-
-.footer-links > .footer-menu {
-  list-style-type: none;
   display: flex;
-  gap: 2rem;
+  align-items: center;
+  gap: 2px;
 }
-.footer-links > .footer-menu > li {
-  color: black;
+
+.footer-logo > a > .footer-image {
+  width: 45px;
+  height: 45px;
+}
+
+.footer-logo > .footer-name {
+  text-decoration: none;
+  color: var(--WHITE);
+  font-family: var(--TITLE-FONT);
+  font-size: 0.65rem;
+  width: 50px;
+  white-space: wrap;
+  text-align: center;
+}
+
+.footer-text {
+  color: var(--WHITE-50);
+  white-space: wrap;
+  text-align: center;
+  width: 180px;
+  padding-left: 10px;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.footer-icons > i {
+  color: var(--WHITE);
   font-size: 1.5rem;
+}
+
+/**************** MEDIA QUERIES -RESPONSIVE *********************/
+@media screen and (max-width: 600px) {
+}
+
+@media screen and (min-width: 600px) {
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-logo {
+    gap: 5px;
+  }
+
+  .footer-logo > a > .footer-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .footer-logo > .footer-name {
+    white-space: nowrap;
+  }
+
+  .footer-text {
+    white-space: nowrap;
+  }
+
+  .footer-icons {
+    gap: 1rem;
+  }
+
+  .footer-icons > i {
+    font-size: 2rem;
+  }
 }

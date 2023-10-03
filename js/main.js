@@ -1,9 +1,9 @@
 const searchInput = document.getElementById("search");
-const cardContainer = document.querySelector(".card-container");
+const cardContainer = document.querySelector(".cards-container");
 
 let medicineDatas;
 // FETCH
-fetch("./data/simplified-medicines.json")
+fetch("./data/medicines.json")
   .then((response) => response.json())
   .then((data) => {
     medicineDatas = data;
@@ -26,25 +26,61 @@ function searchData() {
 function showData(items) {
   cardContainer.innerHTML = items
     .map((item) => {
+      const stars = item.power > 0 ? item.power : 1;
+
+      // Create stars
+      const starIcons = Array.from(
+        { length: stars },
+        () => '<i class="fa-solid fa-star"></i>'
+      ).join("");
+
       return `
-  <div class="card">
-    <!-- medicine image -->
-            <img
-              src=${item.imageURL}
-              alt=""
-              class="thumbnail"
-            />
-            <!-- medicine informations -->
-            <div class="description">
-              <h2 class="medicine-title">${item.name}</h2>
-              <p class="medicine-purpose">
-                ${item.purpose}
-              </p>
-              <p class="medicine-instruction">
-                ${item.instruction}
-              </p>
-              <a href="" class="more-info">Daha fazla bilgi için tıklayınız</a>
-            </div>
+      <div class="card">
+      <!-- image -->
+      <div class="image-container">
+        <a href="null">
+          <img
+            class="medicine-image"
+            src="${item.imageURL}"
+            alt="${item.name}"
+          />
+        </a>
+      </div>
+      <!-- labels, icons and rates -->
+      <div class="status-container">
+        <!-- labels -->
+        <div class="label-container">
+          <span class="medicine-tag">${item.category}</span>
+        </div>
+        <!-- icons -->
+        <div class="icon-container">
+          <i class="fa-solid fa-${item.method}" title="${item.methodTitle}"></i>
+          <i class="fa-solid fa-${item.ageA}" title="Yetişkinler içindir"></i>
+          <i class="fa-solid fa-${item.ageC}" title="Çocuklar içindir"></i> 
+        </div>
+        <!-- rates -->
+        <div class="rate-container" title="${item.powerTitle}">
+          ${starIcons}
+        </div>
+      </div>
+      <!-- informations -->
+      <div class="information-container">
+        <h1 class="medicine-name">${item.name}</h1>
+        <p class="medicine-purpose">
+          <b>Ne için kullanılır:</b> ${item.purpose}
+        </p>
+        <p class="medicine-instruction">
+          <b>Nasıl kullanılır:</b> ${item.instruction}
+        </p>
+        <p class="medicine-warning">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          Kullanmadan önce prospektüse bakın
+          <i class="fa-solid fa-triangle-exclamation"></i>
+        </p>
+        <a href="${item.prescription}" class="medicine-prescription" target="_blank">
+          <button>Prospektüsü İncele</button>
+        </a>
+      </div>
     </div>
     `;
     })

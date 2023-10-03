@@ -1,0 +1,111 @@
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/Inter-Medium.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins-Medium.ttf");
+}
+:root {
+  --MAIN-COLOR: #313338; /* >> MAIN BG COLOR*/
+  --GREEN-1: #248046; /* >> buton*/
+  --GREEN-ALL: #23a55a; /* >> other things except buttons */
+  --YELLOW: #f0b232;
+  --RED: #f23f43;
+  --REDISH: #fa777c; /* >> alert-danger*/
+  --BLUE: #5865f2;
+  --BLUE-LINK: #00a8fc; /* >> MAIN BG, LINK COLOR*/
+  --ORANGE: #bf861c;
+  --WHITE: #f2f3f5;
+  --WHITE-50: #dbdee1; /* >> Search bar TEXT COLOR*/
+  --GRAY-50: #b5bac1; /* >> MAIN BG üzerindeki SUBTITLE COLOR */
+  --GRAY-100: #949ba4; /* >> BG COLOR 1 | MAIN BG üzerindeki TEXT COLOR*/
+  --GRAY-150: #80848e; /* >> invisible status | MAIN BG üzerindeki badge bg rengi*/
+  --GRAY-200: #42444a; /* >> MAIN BG üzerindeki BTN BG*/
+  --GRAY-250: #2b2d31; /* >> BG COLOR 1 |MAIN BG üzerindeki iconların bg rengi*/
+  --GRAY-400: #1e1f22; /* >> BG COLOR 2 | MAIN BG üzerindeki search bar bg*/
+  --TITLE-FONT: "Inter";
+  --TEXT-FONT: "Poppins";
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--TITLE-FONT);
+}
+
+.hero-container {
+  background-image: url("https://images.unsplash.com/photo-1628771065518-0d82f1938462?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
+  background-position: 75% 60%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hero-title {
+  font-size: 53px;
+  line-height: 48px;
+  letter-spacing: -0.01em;
+  color: white;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.65), 2px -2px 0px rgba(0, 0, 0, 0.65),
+    -2px 2px 0px rgba(0, 0, 0, 0.65), -2px -2px 0px rgba(0, 0, 0, 0.65),
+    2px 0px 0px rgba(0, 0, 0, 0.65), 0px 2px 0px rgba(0, 0, 0, 0.65),
+    -2px 0px 0px rgba(0, 0, 0, 0.65), 0px -2px 0px rgba(0, 0, 0, 0.65);
+}
+
+.hero-text {
+  font-size: 20px;
+  line-height: 20px;
+  width: 70%;
+  text-align: center;
+  color: var(--GRAY-400);
+}
+.hero-btn {
+  background-color: var(--GRAY-250);
+  border: none;
+  font-size: 18px;
+  color: var(--WHITE-50);
+  border-radius: 50px;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+.hero-btn:hover {
+  background-color: var(--GRAY-400);
+}
+
+/**************** MEDIA QUERIES -RESPONSIVE *********************/
+@media screen and (max-width: 600px) {
+}
+
+@media screen and (min-width: 600px) {
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-container {
+    height: 500px;
+    align-items: start;
+    gap: 3rem;
+    padding-left: 6%;
+  }
+  .hero-title {
+    font-size: 106px;
+    line-height: 95px;
+    letter-spacing: -0.02em;
+  }
+  .hero-text {
+    font-size: 24px;
+    line-height: 24px;
+    width: 30%;
+    text-align: start;
+  }
+  .hero-btn {
+    font-size: 20px;
+  }
+}

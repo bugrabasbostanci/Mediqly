@@ -1,0 +1,153 @@
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/Inter-Medium.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins-Medium.ttf");
+}
+:root {
+  --MAIN-COLOR: #313338; /* >> MAIN BG COLOR*/
+  --GREEN-1: #248046; /* >> buton*/
+  --GREEN-ALL: #23a55a; /* >> other things except buttons */
+  --YELLOW: #f0b232;
+  --RED: #f23f43;
+  --REDISH: #fa777c; /* >> alert-danger*/
+  --BLUE: #5865f2;
+  --BLUE-LINK: #00a8fc; /* >> MAIN BG, LINK COLOR*/
+  --ORANGE: #bf861c;
+  --WHITE: #f2f3f5;
+  --WHITE-50: #dbdee1; /* >> Search bar TEXT COLOR*/
+  --GRAY-50: #b5bac1; /* >> MAIN BG üzerindeki SUBTITLE COLOR */
+  --GRAY-100: #949ba4; /* >> BG COLOR 1 | MAIN BG üzerindeki TEXT COLOR*/
+  --GRAY-150: #80848e; /* >> invisible status | MAIN BG üzerindeki badge bg rengi*/
+  --GRAY-200: #42444a; /* >> MAIN BG üzerindeki BTN BG*/
+  --GRAY-250: #2b2d31; /* >> BG COLOR 1 |MAIN BG üzerindeki iconların bg rengi*/
+  --GRAY-300: #232428; /* >> CARD BG COLOR */
+  --GRAY-400: #1e1f22; /* >> BG COLOR 2 | MAIN BG üzerindeki search bar bg*/
+  --TITLE-FONT: "Inter";
+  --TEXT-FONT: "Poppins";
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem 0;
+  margin: 2rem 0;
+}
+
+.card {
+  border-radius: 15px;
+  background-color: var(--GRAY-300);
+  max-width: 400px;
+  min-height: 650px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* IMAGE */
+.card > .image-container > a > .medicine-image {
+  width: 100%;
+  height: 250px;
+  border-radius: 7px 7px 0 0;
+}
+
+/* STATUS */
+.status-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(78, 80, 88, 0.48);
+  padding-bottom: 1rem;
+}
+
+/* LABELS */
+.label-container {
+  align-self: flex-start;
+  background-color: var(--GRAY-200);
+  padding: 4px 8px;
+  border-radius: 50px;
+}
+
+.medicine-tag {
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-family: var(--TITLE-FONT);
+  color: var(--WHITE);
+  font-weight: normal;
+}
+
+/* ICONS */
+.icon-container {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.5rem;
+  color: var(--BLUE);
+}
+
+/* RATES */
+.rate-container {
+  font-size: 1.3rem;
+  color: var(--YELLOW);
+  display: flex;
+  gap: 0.2rem;
+}
+
+/* INFOS */
+.information-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1rem;
+}
+
+.information-container > .medicine-name {
+  font-family: var(--TITLE-FONT);
+  color: var(--GREEN-ALL);
+}
+
+.information-container > p {
+  color: var(--GRAY-100);
+}
+
+p > b {
+  font-family: var(--TITLE-FONT);
+  color: var(--WHITE);
+}
+
+.information-container > .medicine-warning {
+  text-align: center;
+  color: var(--REDISH);
+  font-family: var(--TITLE-FONT);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.medicine-prescription {
+  align-self: center;
+}
+
+.medicine-prescription > button {
+  padding: 10px 12px;
+  font-family: var(--TITLE-FONT);
+  cursor: pointer;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--GREEN-1);
+  color: white;
+}
+
+@media screen and (min-width: 1200px) {
+  .cards-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+}

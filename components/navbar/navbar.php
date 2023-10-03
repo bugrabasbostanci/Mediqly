@@ -5,25 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Navbar Component</title>
     <link rel="stylesheet" href="/components/navbar/navbar.css" />
+    <script
+      src="https://kit.fontawesome.com/d50705f12e.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <nav class="navbar">
+    <nav class="navbar-container">
       <!-- Navbar logo -->
       <div class="navbar-logo">
+        <!-- logo -->
         <a href="#">
-          <img
-            src="https://simpleicon.com/wp-content/uploads/pills_1.png"
-            alt="logo"
-          />
+          <img src="/assets/images/ilac-dunyasi-logo.png" alt="logo" />
+        </a>
+        <!-- name -->
+        <a href="#">
+          <h1>İlaç Dünyası</h1>
         </a>
       </div>
+
+      <!-- Search Bar -->
+      <div class="navbar-search">
+        <form>
+          <input type="text" placeholder="Search" />
+        </form>
+      </div>
+
       <!-- Nav links -->
       <div class="navbar-links">
+        <i class="fa-solid fa-bars toggle"></i>
         <ul class="navbar-menu">
-          <li>Home</li>
-          <li><a href="/online-recete/crud/index.php">Add Medicine</a></li>
-          <li><a href="/online-recete/crud/index.php">test</a></li>
-          <li>Contact</li>
+          <li>
+            <a href="/index.php">Home</a>
+          </li>
+          <li>
+            <a href="/medicine-page.php">Medicines</a>
+          </li>
+          <li>
+            <a href="">Blogs</a>
+          </li>
+          <li>
+            <a href="">Contact</a>
+          </li>
         </ul>
       </div>
     </nav>
