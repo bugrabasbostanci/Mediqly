@@ -83,8 +83,8 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
                             <p><b><?php echo $row["instruction"]; ?></b></p>
                         </div>
                         <div class="form-group">
-                            <label>ImageURL</label>
-                            <p><b><?php echo $row["imageURL"]; ?></b></p>
+                            <label>ImageURL</label> <br>
+                            <img src=" <?php echo $row["imageURL"]?>" style='width: 100px;height: 100px;'>;
                         </div>
                         <p><a href="index.php" class="btn btn-primary">Back</a></p>
                     </div>

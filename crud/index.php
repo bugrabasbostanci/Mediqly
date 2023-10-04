@@ -56,7 +56,7 @@
                                             echo "<td>" . $row['name'] . "</td>";
                                             echo "<td>" . $row['purpose'] . "</td>";
                                             echo "<td>" . $row['instruction'] . "</td>";
-                                            echo "<td>" . $row['imageURL'] . "</td>";
+                                            echo "<td><img src=" . $row['imageURL'] . " style='width: 100px;height: 100px;'  > </td>";
                                             echo "<td>";
                                                 echo '<a href="read.php?id='. $row['id'] .'" class="mr-3" title="View Record" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
                                                 echo '<a href="update.php?id='. $row['id'] .'" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
@@ -80,5 +80,6 @@
                 </div>        
             </div>
         </div>
+        
     </body>
 </html>

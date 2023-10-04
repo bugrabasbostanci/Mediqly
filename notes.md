@@ -95,3 +95,19 @@ Bu şekilde, kullanıcıların ilaçlar hakkında bilgi edinebilecekleri basit b
 | Kalp yetmezliği ilacı     | İSORDİL                                                         |
 | Antidepresan              | PROZAC                                                          |
 | Antibiyotik               | ZYVOXİD                                                         |
+
+dbye import, zip ile
+
+session
+
+js to php
+
+---
+
+1 full stack app
+
+2 bilmediğin seyleri ögrenme
+
+3 cevre olusturma
+
+---
