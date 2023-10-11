@@ -102,6 +102,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <body>
     <div class="container">
         <div class="wrapper">
+            <a href="/medicine-page.php" class="btn btn-danger">Back</a>
             <h2>Login</h2>
             <p>Please fill in your credentials to login.</p>
 

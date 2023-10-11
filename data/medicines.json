@@ -351,6 +351,7 @@
   },
   {
     "name": "Parol",
+    "slug": "parol",
     "power": 1,
     "powerTitle": "Zayıf",
     "category": "Ağrı Kesici",

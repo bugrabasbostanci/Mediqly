@@ -96,6 +96,7 @@ Bu şekilde, kullanıcıların ilaçlar hakkında bilgi edinebilecekleri basit b
 | Antidepresan              | PROZAC                                                          |
 | Antibiyotik               | ZYVOXİD                                                         |
 
+---
 dbye import, zip ile
 
 session

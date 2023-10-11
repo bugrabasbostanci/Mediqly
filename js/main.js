@@ -86,3 +86,13 @@ function showData(items) {
     })
     .join("");
 }
+
+// data = fetch('http:/localhost:8000/data')
+// data.map(() => {
+//   return(
+//     {/* CARD */}
+//     <div>
+//         <a href={data.slug}>Prospektüsü incele</a>
+//     <div>
+//   )
+// })
