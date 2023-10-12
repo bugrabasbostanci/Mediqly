@@ -30,7 +30,7 @@
                     <a href="/medicine-page.php" class="btn btn-danger">Back to Main</a>
                     <div class="col-md-12">
                         <div class="mt-5 mb-3 clearfix">
-                            <h2 class="pull-left">Medicines Database</h2>
+                            <h2 class="pull-left">Medicines Details</h2>
                             <a href="create.php" class="btn btn-success pull-right"><i class="fa fa-plus"></i> Add New Medicine</a>
                         </div>
                         <?php
@@ -44,17 +44,9 @@
                                         echo "<tr>";
                                             echo "<th>#</th>";
                                             echo "<th>Name</th>";
-                                            echo "<th>power</th>";
-                                            echo "<th>powerText</th>";
-                                            echo "<th>category</th>";
-                                            echo "<th>method</th>";
-                                            echo "<th>methodText</th>";
-                                            echo "<th>ageA</th>";
-                                            echo "<th>ageC</th>";
                                             echo "<th>Purpose</th>";
                                             echo "<th>Instruction</th>";
                                             echo "<th>ImageURL</th>";
-                                            echo "<th>prescription</th>";
                                         echo "</tr>";
                                     echo "</thead>";
                                     echo "<tbody>";
@@ -62,18 +54,9 @@
                                         echo "<tr>";
                                             echo "<td>" . $row['id'] . "</td>";
                                             echo "<td>" . $row['name'] . "</td>";
-                                            echo "<td>" . $row['power'] . "</td>";
-                                            echo "<td>" . $row['powerText'] . "</td>";
-                                            echo "<td>" . $row['category'] . "</td>";
-                                            echo "<td>" . $row['method'] . "</td>";
-                                            echo "<td>" . $row['methodText'] . "</td>";
-                                            echo "<td>" . $row['ageA'] . "</td>";
-                                            echo "<td>" . $row['ageC'] . "</td>";
                                             echo "<td>" . $row['purpose'] . "</td>";
                                             echo "<td>" . $row['instruction'] . "</td>";
                                             echo "<td><img src=" . $row['imageURL'] . " style='width: 100px;height: 100px;'  > </td>";
-                                            echo "<td><a href=" . $row['prescription'] . " target='_blank'>Prospektüs</a> </td>";
-
                                             echo "<td>";
                                                 echo '<a href="read.php?id='. $row['id'] .'" class="mr-3" title="View Record" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
                                                 echo '<a href="update.php?id='. $row['id'] .'" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';

@@ -75,34 +75,6 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
                             <p><b><?php echo $row["name"]; ?></b></p>
                         </div>
                         <div class="form-group">
-                            <label>Power</label>
-                            <p><b><?php echo $row["power"]; ?></b></p>
-                        </div>
-                        <div class="form-group">
-                            <label>powerText</label>
-                            <p><b><?php echo $row["powerText"]; ?></b></p>
-                        </div>
-                        <div class="form-group">
-                            <label>category</label>
-                            <p><b><?php echo $row["category"]; ?></b></p>
-                        </div>
-                        <div class="form-group">
-                            <label>method</label>
-                            <p><b><?php echo $row["method"]; ?></b></p>
-                        </div>
-                        <div class="form-group">
-                            <label>methodText</label>
-                            <p><b><?php echo $row["methodText"]; ?></b></p>
-                        </div>
-                        <div class="form-group">
-                            <label>ageA</label>
-                            <p><b><?php echo $row["ageA"]; ?></b></p>
-                        </div>
-                        <div class="form-group">
-                            <label>ageC</label>
-                            <p><b><?php echo $row["ageC"]; ?></b></p>
-                        </div>
-                        <div class="form-group">
                             <label>Purpose</label>
                             <p><b><?php echo $row["purpose"]; ?></b></p>
                         </div>
@@ -113,10 +85,6 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
                         <div class="form-group">
                             <label>ImageURL</label> <br>
                             <img src=" <?php echo $row["imageURL"]?>" style='width: 100px;height: 100px;'>;
-                        </div>
-                        <div class="form-group">
-                            <label>prescription</label> <br>
-                            <img src=" <?php echo $row["prescription"]?>" style='width: 100px;height: 100px;'>;
                         </div>
                         <p><a href="index.php" class="btn btn-primary">Back</a></p>
                     </div>

@@ -14,3 +14,6 @@ if($link === false){
 }
 ?>
 
+<!-- net ninja, video 24 | creat datas at db -->
+<!-- net ninja, video 25 | admin profile creat at db -->
+<!-- net ninja, videos 26-33  -->
