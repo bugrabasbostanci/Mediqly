@@ -24,6 +24,9 @@ function searchData() {
 
 // CREATING COMPONENT w/ DATA
 function showData(items) {
+  // TODO BUNU DENE BİR DE FONKSİYON YERİNE
+  // const star = "<i class='fa-solid fa-star'></i>";
+  // ${star.repeat(item.power)}
   cardContainer.innerHTML = items
     .map((item) => {
       const stars = item.power > 0 ? item.power : 1;

@@ -7,7 +7,7 @@
     <!-- CSS Files -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <!-- JS Files -->
-    <script defer src="js/main.js"></script>
+    <!-- <script defer src="js/main.js"></script> -->
   </head>
   <body>
     <div class="container">
