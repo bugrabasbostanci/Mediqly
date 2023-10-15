@@ -1,3 +1,13 @@
+<?php
+session_start();
+// Include database connection file
+include_once('config.php');
+if (!isset($_SESSION['ID'])) {
+    header("Location:/login/login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,6 +38,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <a href="/medicine-page.php" class="btn btn-danger">Back to Main</a>
+                    <a href="/login/logout.php" class="btn btn-danger">Exit </a>
                     <div class="col-md-12">
                         <div class="mt-5 mb-3 clearfix">
                             <h2 class="pull-left">Medicines Database</h2>

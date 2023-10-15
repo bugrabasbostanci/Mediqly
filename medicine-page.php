@@ -35,8 +35,9 @@
 
         <!-- Search Bar -->
         <div class="navbar-search">
-          <form>
-            <input id="search" type="text" name="search" placeholder="Search" />
+          <form action="" method="post">
+            <input id="search" type="text" name="search" placeholder="Search"  />
+            <input type="submit" value="search">
           </form>
         </div>
 
@@ -51,7 +52,7 @@
               <a href="#">Medicines</a>
             </li>
             <li>
-              <a href="/crud/index.php">Add</a>
+              <a href="/crud-dashboard/index.php">Add</a>
             </li>
             <li>
               <a href="/login/welcome.php">Login</a>
@@ -62,113 +63,42 @@
       <!-- Navbar | End -->
 
       <!-- Card Section | Start -->
-      <div class="cards-container">
-        <?php
-        define('DB_SERVER', 'localhost');
-        define('DB_USERNAME', 'root');
-        define('DB_PASSWORD', '');
-        define('DB_NAME', 'medicinedb');
-    
-        
-        // Create connection
-        $conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
-        // Check connection
-        if (!$conn) {
-          die("Connection failed: " . mysqli_connect_error());
-        }
+        <div class="cards-container">
 
-// FETCH PROCESS
-        $sql = "SELECT id, name, power, powerText, category, method, methodText, ageA, ageC, purpose, instruction, imageURL, prescription FROM medicines";
-        $result = mysqli_query($conn, $sql);
-        
-        if (mysqli_num_rows($result) > 0) {
-          // output data of each row
-          while($row = mysqli_fetch_assoc($result)) {
+        <p>Lütfen ilaç arayınız</p>
+        <p>İlaçlar burada görüntülensin</p>
 
-// SEARCH PROCESS
+          <?php
+          
+          require "/xampp/htdocs/online-recete/db/connect.php";
+          
+            // Formun submit işlemini işleyen kod
+            if (isset($_POST['search'])) {
+              // Kullanıcının girdiği ilaç adını alın
+              $input = $_POST['search'];
 
-            
-            // FONKSİYON KULLANARAK YILDIZ OLUŞTURMA
-              //   $stars = 0;
+              // SEARCH
+              $sql = "SELECT id, name, power, powerText, category, method, methodText, ageA, ageC, purpose, instruction, imageURL, prescription FROM medicines WHERE name LIKE '%$input%'";
+              // FETCH
+              $result = mysqli_query($conn, $sql);
 
-              //   if($row['power'] > 1 ) {
-              //     $stars=$row['power'];
-              //   }
-              //   else{
-              //     $stars=1;
-              //  }
-
-              //  function createIcons($stars) {
-              //    $starIcons = array_fill
-              //     (0, $stars, '<i class="fa-solid fa-star"></i>');
-              //     return implode('', $starIcons);
-              //   }
-
-              // " . createIcons($stars) . " şeklinde çağır
-  
-
-// MAP PROCESS
-            echo "
-            <div class='card'>
-      <!-- image -->
-      <div class='image-container'>
-        <a href='null'>
-          <img
-            class='medicine-image'
-            src='". $row["imageURL"]."'
-            alt='". $row["name"]."'
-          />
-        </a>
-      </div>
-      <!-- labels, icons and rates -->
-      <div class='status-container'>
-        <!-- labels -->
-        <div class='label-container'>
-          <span class='medicine-tag'>". $row["category"]."</span>
-        </div>
-        <!-- icons -->
-        <div class='icon-container'>
-          <i class='fa-solid fa-". $row["method"]."' title='". $row["methodText"]."'></i>
-          <i class='fa-solid fa-". $row["ageA"]."' title='Yetişkinler içindir'></i>
-          <i class='fa-solid fa-". $row["ageC"]."' title='Çocuklar içindir'></i> 
-        </div>
-        <!-- rates -->
-        <div class='rate-container' title=". $row["powerText"].">
-    
-        " . str_repeat("<i class='fa-solid fa-star'></i>",$row["power"]) . "
-        
-        </div>
-      </div>
-      <!-- informations -->
-      <div class='information-container'>
-        <h1 class='medicine-name'>". $row["name"]."</h1>
-        <p class='medicine-purpose'>
-          <b>Ne için kullanılır:</b> ". $row["purpose"]."
-        </p>
-        <p class='medicine-instruction'>
-          <b>Nasıl kullanılır:</b> ". $row["instruction"]."
-        </p>
-        <p class='medicine-warning'>
-          <i class='fa-solid fa-triangle-exclamation'></i>
-          Kullanmadan önce prospektüse bakın
-          <i class='fa-solid fa-triangle-exclamation'></i>
-        </p>
-        <a href='". $row["prescription"]."' class='medicine-prescription' target='_blank'>
-          <button>Prospektüsü İncele</button>
-        </a>
-      </div>
-    </div>
-            ";
-            
-            
+          
+              // Arama sonucunu gösteren kod
+              if (mysqli_num_rows($result) > 0) {
+                
+                  while($row = mysqli_fetch_assoc($result)) {
+                    // MAP
+                    include "/xampp/htdocs/online-recete/db/map.php";
+                  }
+                  
+              } else {
+                  echo "0 results";
+              }
           }
-        } else {
-          echo "0 results";
-        }
-        
-        mysqli_close($conn);
-        ?>
-      </div>
+
+          mysqli_close($conn);
+          ?>
+        </div>
       <!-- Card Section | End -->
 
       <!-- Footer | Start -->
