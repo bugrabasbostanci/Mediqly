@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Online Reçete</title>
+    <title>MediCenter</title>
+    <link rel="shortcut icon" href="/assets/images/ilac-dunyasi-logo.png" type="image/x-icon">
     <!-- CSS Files -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <!-- JS Files -->
@@ -12,7 +13,7 @@
   <body>
     <div class="container">
       <?php
-      include "./components/navbar/navbar.php";
+      include "./components/navbar-main/navbar.php";
       include "./components/hero/hero.html";
       include "./components/feature-cards/feature-card.html";
       include "./components/info-card/info-card.html";

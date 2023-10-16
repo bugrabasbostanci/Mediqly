@@ -1,17 +1,5 @@
 # Online Reçete Uygulaması
 
--Projenin ismi "İlaç Dünyası","İlaç Kutusu","İlaç Kütüphanesi" olabilir, logosuda şu tarz bir şey olabilir >> font awesome "pills" ![örnek](https://simpleicon.com/wp-content/uploads/pills_1.png)
-
--Projenin benzeri olarak şöyle bir sayfa var [hekimce-ilaç rehberi](https://www.hekimce.com/blog/ilac-rehberi)
-
--Projenin tasarımını(navbar-hero-section-comments-blogs-faq-subscribe-contact-footer) düzenle yap.
-
--css mi framwork mü yoksa ikisi birlikte mi???
-
-## Benzer Proje Olan "Hekimce'nin" Eksikleri
-
--Bazı noktalarda daha fazla detay ve açıklama yer almasını isterdim. Örneğin, ilaçların olası yan etkilerinin tam olarak ne olduğu ve bu yan etkilerin nasıl önlenebileceği hakkında daha fazla bilgi verilmesi faydalı olabilirdi. Ayrıca, ilaçlarla ilgili dikkat edilmesi gereken noktalar konusunda da daha fazla uyarı ve tavsiye yer almasını isterdim
-
 ## Projede Olması Gereken Özellikler
 
 -İlaç Arama Özelliği: Kullanıcıların, aradıkları ilacı kolayca bulabilmeleri için bir ilaç arama özelliği ekleyebilirsiniz. Bu özellik, ilaca ait isim, etken madde veya kullanım alanı gibi bilgilere göre arama yapmayı mümkün kılabilir.

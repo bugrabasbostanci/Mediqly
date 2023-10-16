@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>İlaç Dünyası | İlaç Sayfası</title>
+    <title>Medicines</title>
+    <link rel="shortcut icon" href="/assets/images/ilac-dunyasi-logo.png" type="image/x-icon">
     <!-- CSS Files -->
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="/components/navbar/navbar.css" />
+    <link rel="stylesheet" href="/components/navbar-search/navbar.css" />
     <link rel="stylesheet" href="/components/medicine-card/medicine-card.css" />
     <link rel="stylesheet" href="/components/footer/footer.css" />
     <!-- Font Awesome -->
@@ -21,27 +22,27 @@
     <div class="container">
       <!-- Navbar | Start -->
       <nav class="navbar-container">
-        <!-- Navbar logo -->
-        <div class="navbar-logo">
-          <!-- logo -->
-          <a href="#">
-            <img src="/assets/images/ilac-dunyasi-logo.png" alt="logo" />
-          </a>
-          <!-- name -->
-          <a href="#">
-            <h1>İlaç Dünyası</h1>
-          </a>
-        </div>
+      <!-- Navbar logo -->
+      <div class="navbar-logo">
+        <!-- logo -->
+        <a href="#">
+          <img src="/assets/images/ilac-dunyasi-logo.png" alt="logo" />
+        </a>
+        <!-- name -->
+        <a href="#">
+          <h1>MediCenter</h1>
+        </a>
+      </div>
 
-        <!-- Search Bar -->
-        <div class="navbar-search">
+      <!-- Search Bar -->
+      <div class="navbar-search">
           <form action="" method="post">
             <input id="search" type="text" name="search" placeholder="Search"  />
             <input type="submit" value="search">
           </form>
         </div>
 
-        <!-- Nav links -->
+        <!-- Links -->
         <div class="navbar-links">
           <i class="fa-solid fa-bars toggle"></i>
           <ul class="navbar-menu">
@@ -55,22 +56,21 @@
               <a href="/crud-dashboard/index.php">Add</a>
             </li>
             <li>
-              <a href="/login/welcome.php">Login</a>
+              <a href="/login/index.php">Login</a>
             </li>
           </ul>
         </div>
-      </nav>
+    </nav>
       <!-- Navbar | End -->
 
       <!-- Card Section | Start -->
         <div class="cards-container">
 
-        <p>Lütfen ilaç arayınız</p>
-        <p>İlaçlar burada görüntülensin</p>
+        <p>İlaçlar burada görüntülensin</p> 
 
           <?php
           
-          require "/xampp/htdocs/online-recete/db/connect.php";
+          require "/xampp/htdocs/online-recete/config.php";
           
             // Formun submit işlemini işleyen kod
             if (isset($_POST['search'])) {
@@ -88,7 +88,7 @@
                 
                   while($row = mysqli_fetch_assoc($result)) {
                     // MAP
-                    include "/xampp/htdocs/online-recete/db/map.php";
+                    include "/xampp/htdocs/online-recete/map.php";
                   }
                   
               } else {

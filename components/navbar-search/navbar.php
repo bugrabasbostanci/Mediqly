@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Navbar Component</title>
-    <link rel="stylesheet" href="/components/navbar/navbar.css" />
+    <link rel="stylesheet" href="/components/navbar-search/navbar.css" />
     <script
       src="https://kit.fontawesome.com/d50705f12e.js"
       crossorigin="anonymous"
@@ -20,16 +20,17 @@
         </a>
         <!-- name -->
         <a href="#">
-          <h1>İlaç Dünyası</h1>
+          <h1>MediCenter</h1>
         </a>
       </div>
 
       <!-- Search Bar -->
       <div class="navbar-search">
-        <form>
-          <input type="text" placeholder="Search" />
-        </form>
-      </div>
+          <form action="" method="post">
+            <input id="search" type="text" name="search" placeholder="Search"  />
+            <input type="submit" value="search">
+          </form>
+        </div>
 
       <!-- Nav links -->
       <div class="navbar-links">
