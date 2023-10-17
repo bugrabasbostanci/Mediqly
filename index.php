@@ -13,7 +13,7 @@
   <body>
     <div class="container">
       <?php
-      include "./components/navbar-main/navbar.php";
+      include "./components/navbar-main/navbar.html";
       include "./components/hero/hero.html";
       include "./components/feature-cards/feature-card.html";
       include "./components/info-card/info-card.html";

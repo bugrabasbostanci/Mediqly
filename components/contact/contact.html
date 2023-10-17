@@ -7,47 +7,47 @@
     <link rel="stylesheet" href="/components/contact/contact.css" />
   </head>
   <body>
-    <div class="contact-container">
+    <section class="contact-container">
       <!-- title -->
-      <h1 class="contact-title">Contact Us</h1>
+      <h1 class="contact__title">Contact Us</h1>
 
       <!-- form -->
-      <div class="contact-form">
+      <form class="contact-form">
         <!-- name-email wrapper -->
-        <div class="name-email-wrapper">
+        <div class="top-wrapper">
           <!-- name -->
           <div class="name-wrapper">
-            <label for="Name" class="contact-label-name">Name</label>
+            <label for="Name" class="form__name-label">Name</label>
             <input
               type="text"
               placeholder="Enter your name"
-              class="contact-input-name"
+              class="form__name-input"
             />
           </div>
           <!-- email -->
           <div class="email-wrapper">
-            <label for="Name" class="contact-label-email">Email</label>
+            <label for="Name" class="form__email-label">Email</label>
             <input
               type="email"
               placeholder="Enter your email"
-              class="contact-input-email"
+              class="form__email-input"
             />
           </div>
         </div>
-      </div>
-      <!-- message -->
-      <div class="message-wrapper">
-        <label for="Name" class="contact-label-message">Message</label>
-        <textarea
-          name="email"
-          placeholder="Enter your message"
-          class="contact-input-message"
-        ></textarea>
-      </div>
-      <!-- button -->
-      <a class="contact-link" href=""
-        ><button class="contact-btn">Gönder</button></a
-      >
-    </div>
+        <!-- message -->
+        <div class="message-wrapper">
+          <label for="Name" class="form__message-label">Message</label>
+          <textarea
+            name="email"
+            placeholder="Enter your message"
+            class="form__message-input"
+          ></textarea>
+        </div>
+        <!-- button -->
+        <a class="form__submit-link" href=""
+          ><button class="form__submit-btn">Submit</button></a
+        >
+      </form>
+    </section>
   </body>
 </html>

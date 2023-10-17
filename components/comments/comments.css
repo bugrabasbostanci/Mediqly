@@ -42,6 +42,8 @@
   align-items: center;
   gap: 2rem;
   padding: 5rem 1rem;
+  background-color: var(--MAIN-COLOR);
+  height: 40vh;
 }
 
 .comment-card {
@@ -55,20 +57,20 @@
   border-radius: 5px;
 }
 
-.comment-text {
+.comment-card__text {
   color: var(--GRAY-100);
 }
 
-.comment-info {
+.comment-card__info {
   display: flex;
   flex-direction: column;
 }
 
-.comment-people {
+.info__people {
   color: var(--WHITE);
 }
 
-.comment-job {
+.info__job {
   color: var(--GRAY-150);
 }
 
@@ -88,7 +90,7 @@
 
   .comment-card {
     width: 33%;
-    height: 130px;
+    height: 150px;
     gap: 1.1rem;
   }
 }

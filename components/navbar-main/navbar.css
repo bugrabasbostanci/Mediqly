@@ -35,196 +35,158 @@
   margin: 0;
 }
 
-.navbar-container {
+.navbar {
   background-color: var(--MAIN-COLOR);
   width: 100vw;
   height: 60px;
   display: flex;
   justify-content: space-around;
-  /* gap: 2rem; */
   align-items: center;
   border-bottom: 2px solid rgba(78, 80, 88, 0.48);
 }
 
-.left {
+.navbar__left {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
 }
 
-.right {
+.navbar__right {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
 }
 /********************* LOGO *********************/
-.navbar-logo {
+.navbar__logo {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2px;
 }
 
-.navbar-logo > a {
+.navbar__logo-image-link {
   text-decoration: none;
 }
 
-.navbar-logo > a > img {
+.navbar__logo-image {
   width: 45px;
   height: 45px;
 }
 
-.navbar-logo > a:nth-child(2) {
+.navbar__logo-name-link {
+  text-decoration: none;
   color: var(--WHITE);
   font-family: var(--TITLE-FONT);
   font-size: 0.65rem;
-  /* width: 50px; */
   white-space: wrap;
   text-align: center;
 }
 
-/********************* FIND PHARMACY *********************/
-.find-pharmacy {
-  display: none;
-}
-
-.find-pharmacy-link {
-}
-
-.find-pharmacy-text {
-}
-
-/********************* LINKS *********************/
-.navbar-links > .toggle {
-  color: white;
+.navbar__logo-name {
   font-size: 1.5rem;
 }
 
-.navbar-links > .navbar-menu {
+/********************* FIND PHARMACY *********************/
+.navbar__find {
+  display: none;
+}
+
+/********************* LINKS *********************/
+.navbar__menu-toggler {
+  display: block;
+  color: var(--WHITE);
+  font-size: 1.5rem;
+}
+
+.menu__items {
   list-style-type: none;
   display: none;
   gap: 2rem;
 }
-.navbar-links > .navbar-menu > li {
+.menu__item {
   font-size: 1.5rem;
   font-family: var(--TITLE-FONT);
 }
 
-.navbar-links > .navbar-menu > li:first-child > a {
-  /* background-color: var(--GREEN-1); */
-  color: var(--WHITE);
-  padding: 2px 8px;
-  /* border-radius: 5px; */
-}
-
-.navbar-links > .navbar-menu > li:first-child > a:hover {
-  border-bottom: 3px solid var(--GREEN-1);
-}
-
-.navbar-links > .navbar-menu > li > a {
+.item__link {
   text-decoration: none;
   color: var(--WHITE);
   padding: 2px 8px;
-  /* border-radius: 5px; */
 }
 
-.navbar-links > .navbar-menu > li > a:hover {
+.item__link-home:hover {
+  border-bottom: 3px solid var(--BLUE-LINK);
+}
+.item__link-meds:hover {
+  border-bottom: 3px solid var(--GREEN-1);
+}
+
+.item__link-normal:hover {
   border-bottom: 3px solid var(--ORANGE);
 }
 
 /********************* SEARCH *********************/
-.navbar-search {
+.navbar__search {
   display: none;
-}
-
-.navbar-search-link {
-}
-
-.navbar-search-text {
 }
 
 /**************** MEDIA QUERIES -RESPONSIVE *********************/
 @media screen and (max-width: 600px) {
-  .navbar-search > form > input {
-    width: 150px;
-  }
 }
 
 @media screen and (min-width: 600px) {
-  .navbar-search > form > input {
-    width: 200px;
-  }
 }
 
 @media screen and (min-width: 768px) {
-  .navbar-search {
-    padding-left: 6rem;
-  }
-
-  .navbar-search > form > input {
-    width: 350px;
-  }
-
-  .navbar-logo > a:nth-child(2) {
+  .navbar__logo-name-link {
     font-size: 1rem;
     white-space: nowrap;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .navbar-search {
-    padding-left: 6rem;
-  }
-
-  .navbar-search > form > input {
-    width: 400px;
-  }
-
-  .navbar-logo > a:nth-child(2) {
+  .navbar__logo-name-link {
     font-size: 1rem;
     white-space: nowrap;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .navbar-container {
+  .navbar {
     justify-content: space-around;
     height: 100px;
     padding: 0 1rem;
   }
 
-  .navbar-search {
-    padding-left: 0;
-  }
-
   /* LOGO */
-  .navbar-logo {
+  .navbar__logo {
     gap: 5px;
   }
 
-  .navbar-logo > a > img {
+  .navbar__logo-image {
     width: 50px;
     height: 50px;
   }
 
-  .navbar-logo > a:nth-child(2) {
+  .navbar__logo-name-link {
     font-size: 1.2rem;
     white-space: nowrap;
   }
 
-  /* PHARMACY */
+  .navbar__logo-name {
+    font-size: 2rem;
+  }
 
-  .find-pharmacy {
+  /* PHARMACY */
+  .navbar__find {
     display: block;
   }
 
-  .find-pharmacy-link {
+  .navbar__find-link {
     text-decoration: none;
     padding: 4px 8px;
-    /* width: 10rem; */
-    /* background-color: var(--GRAY-400); */
     color: var(--REDISH);
     display: flex;
     justify-content: flex-start;
@@ -233,29 +195,36 @@
     font-family: var(--TITLE-FONT);
   }
 
-  .find-pharmacy-link:hover {
+  .navbar__find-link:hover {
     border-bottom: 3px solid var(--RED);
     margin-top: 3px;
   }
 
-  .find-pharmacy-link > i {
+  .navbar__find-icon {
     font-size: 2rem;
+    color: var(--RED);
+  }
+
+  .navbar__find-text {
+    font-size: 1.2rem;
+    font-weight: 500;
   }
 
   /* LINKS */
-  .navbar-links > .navbar-menu {
+  .menu__items {
     display: flex;
   }
-  .navbar-links > .toggle {
+
+  .navbar__menu > .navbar__menu-toggler {
     display: none;
   }
 
   /* SEARCH */
-  .navbar-search {
+  .navbar__search {
     display: block;
   }
 
-  .navbar-search-link {
+  .navbar__search-link {
     text-decoration: none;
     padding: 12px 16px;
     width: 12.5rem;
@@ -269,13 +238,13 @@
     font-family: var(--TITLE-FONT);
   }
 
-  .navbar-search-link:hover {
+  .navbar__search-link:hover {
     background-color: var(--GRAY-150);
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .navbar-container {
+  .navbar {
     padding: 0;
   }
 }

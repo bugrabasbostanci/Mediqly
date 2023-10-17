@@ -43,18 +43,23 @@
   padding: 3rem;
   box-shadow: 0 0 0 3px var(--GRAY-400), 9px 9px 0 0 var(--GRAY-400);
   border-radius: 5px;
+  background-color: var(--MAIN-COLOR);
 }
 
-.contact-title {
+.contact__title {
   font-size: 3rem;
   padding-bottom: 1rem;
   color: var(--WHITE);
 }
 
 .contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.name-email-wrapper {
+.top-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,12 +68,12 @@
   padding-bottom: 2rem;
 }
 
-.contact-label-name {
+.form__name-label {
   font-size: 1.3rem;
   color: var(--WHITE-50);
 }
 
-.contact-input-name {
+.form__name-input {
   width: 300px;
   height: 40px;
   padding: 8px 12px;
@@ -85,12 +90,12 @@
   gap: 0.3rem;
 }
 
-.contact-label-email {
+.form__email-label {
   font-size: 1.3rem;
   color: var(--WHITE-50);
 }
 
-.contact-input-email {
+.form__email-input {
   width: 300px;
   height: 40px;
   padding: 8px 12px;
@@ -107,12 +112,21 @@
   gap: 0.3rem;
 }
 
-.contact-label-message {
+.message-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  align-self: flex-start;
+  width: 100%;
+  padding-bottom: 2rem;
+}
+
+.form__message-label {
   font-size: 1.3rem;
   color: var(--WHITE-50);
 }
 
-.contact-input-message {
+.form__message-input {
   width: 300px;
   height: 200px;
   padding: 8px 12px;
@@ -123,20 +137,12 @@
   background-color: var(--WHITE);
 }
 
-.message-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-  align-self: flex-start;
+.form__submit-link {
+  align-self: center;
   width: 100%;
-  padding-bottom: 2rem;
 }
 
-.contact-link {
-  align-self: flex-start;
-}
-
-.contact-btn {
+.form__submit-btn {
   font-size: 1.2rem;
   padding: 8px 16px;
   border: none;
@@ -144,6 +150,11 @@
   cursor: pointer;
   background-color: var(--BLUE);
   color: white;
+  width: 100%;
+}
+
+.form__submit-btn:hover {
+  background-color: var(--BLUE-LINK);
 }
 
 /**************** MEDIA QUERIES -RESPONSIVE *********************/
@@ -154,12 +165,16 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .name-email-wrapper {
+  .top-wrapper {
     flex-direction: row;
   }
 
-  .contact-input-message {
+  .form__message-input {
     width: 100%;
     height: 200px;
+  }
+
+  .form__submit-link {
+    width: 25%;
   }
 }

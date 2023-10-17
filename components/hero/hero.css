@@ -35,7 +35,7 @@
   font-family: var(--TITLE-FONT);
 }
 
-.hero-container {
+.hero {
   background-image: url("https://images.unsplash.com/photo-1628771065518-0d82f1938462?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
   background-position: 75% 60%;
   background-repeat: no-repeat;
@@ -48,7 +48,7 @@
   gap: 1.5rem;
 }
 
-.hero-title {
+.hero__title {
   font-size: 53px;
   line-height: 48px;
   letter-spacing: -0.01em;
@@ -59,24 +59,24 @@
     -2px 0px 0px rgba(0, 0, 0, 0.65), 0px -2px 0px rgba(0, 0, 0, 0.65);
 }
 
-.hero-text {
+.hero__text {
   font-size: 20px;
   line-height: 20px;
   width: 70%;
   text-align: center;
   color: var(--GRAY-400);
 }
-.hero-btn {
+.hero__btn {
   background-color: var(--GRAY-250);
   border: none;
   font-size: 18px;
   color: var(--WHITE-50);
-  border-radius: 50px;
+  border-radius: 5px;
   padding: 8px 20px;
   cursor: pointer;
 }
 
-.hero-btn:hover {
+.hero__btn:hover {
   background-color: var(--GRAY-400);
 }
 
@@ -88,24 +88,24 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .hero-container {
+  .hero {
     height: 500px;
     align-items: start;
     gap: 3rem;
-    padding-left: 6%;
+    padding-left: 9.5%;
   }
-  .hero-title {
+  .hero__title {
     font-size: 106px;
     line-height: 95px;
     letter-spacing: -0.02em;
   }
-  .hero-text {
+  .hero__text {
     font-size: 24px;
-    line-height: 24px;
-    width: 30%;
+    line-height: 30px;
+    width: 25%;
     text-align: start;
   }
-  .hero-btn {
+  .hero__btn {
     font-size: 20px;
   }
 }

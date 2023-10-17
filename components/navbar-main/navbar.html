@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar Component</title>
+    <link rel="stylesheet" href="/components/navbar-main/navbar.css" />
+    <script
+      src="https://kit.fontawesome.com/d50705f12e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <!-- navbar left side -->
+      <section class="navbar__left">
+        <!-- Navbar logo -->
+        <div class="navbar__logo">
+          <!-- logo -->
+          <a href="#" class="navbar__logo-image-link">
+            <img
+              src="/assets/images/ilac-dunyasi-logo.png"
+              class="navbar__logo-image"
+              alt="logo"
+            />
+          </a>
+          <!-- name -->
+          <a href="#" class="navbar__logo-name-link">
+            <h1 class="navbar__logo-name">MediCenter</h1>
+          </a>
+        </div>
+
+        <!-- Find Pharmacy -->
+        <div class="navbar__find">
+          <a href="/pharmacy.php" class="navbar__find-link">
+            <i class="fa-solid fa-location-dot navbar__find-icon"></i>
+            <h1 class="navbar__find-text">Find Pharmacy</h1>
+          </a>
+        </div>
+      </section>
+
+      <!-- navbar right side -->
+      <section class="navbar__right">
+        <!-- Navbar menu -->
+        <div class="navbar__menu">
+          <i class="navbar__menu-toggler fa-solid fa-bars"></i>
+          <ul class="menu__items">
+            <li class="menu__item">
+              <a class="item__link item__link-home" href="/index.php">Home</a>
+            </li>
+            <li class="menu__item menu__item--normal">
+              <a class="item__link item__link-meds" href="/medicine-page.php"
+                >Medicines</a
+              >
+            </li>
+            <li class="menu__item menu__item--normal">
+              <a class="item__link item__link-normal" href="">Blogs</a>
+            </li>
+            <li class="menu__item menu__item--normal">
+              <a class="item__link item__link-normal" href="">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="navbar__search">
+          <a href="/medicine-page.php" class="navbar__search-link">
+            <i class="fa-solid fa-magnifying-glass navbar__search-icon"></i>
+            <p class="navbar__search-text">Search</p>
+          </a>
+        </div>
+      </section>
+    </nav>
+  </body>
+</html>

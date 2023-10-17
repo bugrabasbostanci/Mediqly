@@ -41,9 +41,11 @@
   align-items: center;
   gap: 1.5rem;
   padding: 4rem;
+  background-color: var(--MAIN-COLOR);
+  height: 100%;
 }
 
-.subscribe-title-container {
+.subscribe__header {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,23 +54,23 @@
   text-align: center;
 }
 
-.subscribe-title {
+.subscribe__title {
   font-size: 2rem;
   color: var(--WHITE);
 }
 
-.subscribe-subtitle {
+.subscribe__subtitle {
   font-size: 1.2rem;
   color: var(--GRAY-100);
 }
 
-.input-form {
+.subscribe__form {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.input-form > input {
+.form__input {
   font-size: 1.2rem;
   width: 250px;
   height: 40px;
@@ -78,15 +80,15 @@
   background-color: transparent;
   color: var(--WHITE-50);
 }
-.input-form > input::placeholder {
+.form__input::placeholder {
   color: var(--WHITE-50);
 }
 
-.input-form > input:focus {
+.form__input:focus {
   outline: none;
 }
 
-.input-btn {
+.form__btn {
   font-size: 1.2rem;
   border: none;
   border-radius: 0 5px 5px 0;
@@ -94,6 +96,10 @@
   background-color: var(--GREEN-1);
   color: var(--WHITE);
   cursor: pointer;
+}
+
+.form__btn:hover {
+  background-color: var(--GREEN-ALL);
 }
 
 /**************** MEDIA QUERIES -RESPONSIVE *********************/
@@ -106,9 +112,12 @@
 @media screen and (min-width: 1200px) {
   .subscribe-container {
     gap: 2rem;
+    height: 32vh;
+    /* padding: 0 5rem; */
+    margin: 5rem 0;
   }
 
-  .subscribe-title {
+  .subscribe__title {
     font-size: 3rem;
   }
 }

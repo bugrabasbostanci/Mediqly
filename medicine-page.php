@@ -21,46 +21,9 @@
   <body>
     <div class="container">
       <!-- Navbar | Start -->
-      <nav class="navbar-container">
-      <!-- Navbar logo -->
-      <div class="navbar-logo">
-        <!-- logo -->
-        <a href="#">
-          <img src="/assets/images/ilac-dunyasi-logo.png" alt="logo" />
-        </a>
-        <!-- name -->
-        <a href="#">
-          <h1>MediCenter</h1>
-        </a>
-      </div>
-
-      <!-- Search Bar -->
-      <div class="navbar-search">
-          <form action="" method="post">
-            <input id="search" type="text" name="search" placeholder="Search"  />
-            <input type="submit" value="search">
-          </form>
-        </div>
-
-        <!-- Links -->
-        <div class="navbar-links">
-          <i class="fa-solid fa-bars toggle"></i>
-          <ul class="navbar-menu">
-            <li>
-              <a href="/index.php">Home</a>
-            </li>
-            <li>
-              <a href="#">Medicines</a>
-            </li>
-            <li>
-              <a href="/crud-dashboard/index.php">Add</a>
-            </li>
-            <li>
-              <a href="/login/index.php">Login</a>
-            </li>
-          </ul>
-        </div>
-    </nav>
+      <?php
+      include "/xampp/htdocs/online-recete/components/navbar-search/navbar.html";
+      ?>
       <!-- Navbar | End -->
 
       <!-- Card Section | Start -->
@@ -102,33 +65,9 @@
       <!-- Card Section | End -->
 
       <!-- Footer | Start -->
-      <footer class="footer-container">
-        <!-- footer logo -->
-        <div class="footer-logo">
-          <a href="#">
-            <img
-              class="footer-image"
-              src="/assets/images/ilac-dunyasi-logo.png"
-              alt="logo"
-            />
-          </a>
-          <!-- name -->
-          <a href="#" class="footer-name">
-            <h1>İlaç Dünyası</h1>
-          </a>
-        </div>
-        <!-- rights -->
-        <p class="footer-text">© 2023 İlaç Dünyası. Tüm hakları saklıdır.</p>
-
-        <!-- icons -->
-        <div class="footer-icons">
-          <i class="fa-brands fa-x-twitter"></i>
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa-brands fa-threads"></i>
-          <i class="fa-brands fa-youtube"></i>
-          <i class="fa-brands fa-facebook"></i>
-        </div>
-      </footer>
+      <?php
+      include "/xampp/htdocs/online-recete/components/footer/footer.html";
+      ?>
       <!-- Footer | End -->
     </div>
   </body>

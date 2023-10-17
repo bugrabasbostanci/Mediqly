@@ -42,6 +42,7 @@
   align-items: center;
   gap: 2rem;
   padding: 3rem 0;
+  background-color: var(--MAIN-COLOR);
 }
 
 .feature-card {
@@ -54,7 +55,7 @@
   padding: 1rem;
 }
 
-.feature-card > i {
+.feature-card__icon {
   font-size: 1.5rem;
   color: var(--GRAY-50);
   background-color: var(--GRAY-400);
@@ -62,26 +63,16 @@
   border-radius: 50%;
 }
 
-.feature-card-title {
+.feature-card__title {
   font-size: 1.5rem;
   color: var(--WHITE);
   letter-spacing: 0.5px;
 }
 
-.feature-card-text {
+.feature-card__text {
   font-size: 1rem;
   color: var(--WHITE-50);
   width: 70%;
-}
-
-.feature-card-btn {
-  border: none;
-  background-color: var(--BLUE);
-  color: var(--WHITE);
-  border-radius: 5px;
-  font-size: 1rem;
-  padding: 8px 16px;
-  cursor: pointer;
 }
 
 /**************** MEDIA QUERIES -RESPONSIVE *********************/
@@ -95,13 +86,14 @@
   .feature-card-container {
     flex-direction: row;
     gap: 4rem;
+    height: 50vh;
   }
 
   .feature-card {
     width: 30%;
   }
 
-  .feature-card > i {
+  .feature-card__icon {
     font-size: 2rem;
     padding: 1rem;
   }

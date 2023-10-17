@@ -35,47 +35,52 @@
   font-family: var(--TITLE-FONT);
 }
 
-.info-card-container-bg {
+.bg-full-w {
   background-color: var(--GRAY-400);
   width: 100%;
 }
 
-.info-card-container {
+.info-card {
   width: 100%;
   margin: 0 auto;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  padding: 1rem 0;
 }
 
-.info-card-description {
+.info-card__image {
+  width: 350px;
+  height: 233px;
+  border-radius: 15px;
+}
+
+.info-card__description {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
-  padding: 2rem;
+  padding: 0 3rem;
 }
 
-.info-card-image {
-  width: 300px;
-  height: 200px;
-  border-radius: 15px;
-  padding-top: 1rem;
-}
-
-.info-card-title {
-  color: var(--RED);
-  font-size: 3rem;
-}
-
-.info-card-text {
+.info-card__text {
   color: var(--WHITE-50);
+  font-size: 1rem;
 }
 
-.info-card-btn {
+.info-card__text::first-letter {
+  color: var(--BLUE);
+  initial-letter: 4;
+  margin-right: 16px;
+  background-color: var(--WHITE-50);
+  box-shadow: 5px 5px 0 var(--BLUE);
+  padding: 10px 5px;
+  border-radius: 5px;
+}
+
+/* BTN */
+.info-card__btn {
   border: none;
   background-color: #248046;
   color: white;
@@ -83,6 +88,12 @@
   font-size: 1rem;
   padding: 8px 16px;
   cursor: pointer;
+  margin-top: 1rem;
+}
+
+.info-card__btn:hover {
+  cursor: pointer;
+  background-color: var(--GREEN-ALL);
 }
 
 /**************** MEDIA QUERIES -RESPONSIVE *********************/
@@ -93,7 +104,7 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .info-card-container {
+  .info-card {
     width: 60%;
     flex-direction: row;
     align-items: start;
@@ -101,14 +112,21 @@
     padding: 3rem 0;
   }
 
-  .info-card-description {
+  .info-card__image {
+    width: 600px;
+    height: 400px;
+  }
+  .info-card__description {
     align-items: start;
     gap: 1.5rem;
     padding: 1rem;
   }
 
-  .info-card-image {
-    width: 600px;
-    height: 400px;
+  .info-card__text {
+    font-size: 1.15rem;
+  }
+
+  .info-card__btn {
+    font-size: 1.3rem;
   }
 }
