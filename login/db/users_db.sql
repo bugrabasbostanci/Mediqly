@@ -41,8 +41,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `role`, `username`, `password`, `name`) VALUES
-(1, 'admin', 'elias', '81dc9bdb52d04dc20036dbd8313ed055', 'Elias Abdurrahman'),
-(2, 'user', 'John', 'e2fc714c4727ee9395f324cd2e7f331f', 'John Doe');
+(1, 'admin', 'admin', '81dc9bdb52d04dc20036dbd8313ed055', 'Bugra Basbostanci'), --1234
+(2, 'user', 'user', 'e2fc714c4727ee9395f324cd2e7f331f', 'John Doe'), --abcd
+(3, 'admin', 'tolg', '099ebea48ea9666a7da2177267983138', 'Tolga Zorlu'), --56789
+(4, 'user', 'brb', 'b992bdb865efa8b3b7333d0458323f4e', 'Serhat Aydin'); --brb
 
 --
 -- Indexes for dumped tables

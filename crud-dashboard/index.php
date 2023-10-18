@@ -7,19 +7,18 @@ if (isset($_SESSION['username']) && isset($_SESSION['id']))   ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Medicine Dashboard</title>
+    <link rel="shortcut icon" href="/assets/images/lo" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         .wrapper{
-            width: 600px;
+            width: 100%;
             margin: 0 auto;
         }
         table tr td:last-child{
-            width: 120px;
+            width: 100px;
         }
     </style>
     <script>
@@ -32,15 +31,12 @@ if (isset($_SESSION['username']) && isset($_SESSION['id']))   ?>
         <div class="wrapper">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="d-flex justify-content-between w-100">
-                    <!-- <a href="/medicine-page.php" class="btn btn-danger">Back to Main</a> -->
-                    <a href="/login/logout.php" class="btn btn-danger">Logout</a>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="mt-5 mb-3 clearfix">
-                            <h2 class="pull-left">Medicines Database</h2>
-                            <p>Merhaba <?=$_SESSION['name']?></p>
-                            <!-- <a href="create.php" class="btn btn-success pull-right"><i class="fa fa-plus"></i> Add New Medicine</a> -->
+                    <div class="col-md-12 d-flex flex-column justify-content-center align-items-center">
+                        <div class="mt-5 mb-3 mx-auto d-flex flex-column justify-content-center align-items-center" style="width:max-content">
+                            <h1 class="fs-1 text-black">Medicine Database</h1>
+                            <p class="fs-4">Hello <?=$_SESSION['name']?></p>
+                            <p class="fs-4">(<?=$_SESSION['role'] ?>)</p>
+                            <a href="/login/logout.php" class="btn btn-danger">Logout</a>
                         </div>
                         <?php
                         require_once "config.php";
@@ -52,23 +48,24 @@ if (isset($_SESSION['username']) && isset($_SESSION['id']))   ?>
 
                         if($_SESSION['role'] == 'admin') {
                             if(mysqli_num_rows($result) > 0){
-                                echo '<a href="create.php" class="btn btn-success pull-right"><i class="fa fa-plus"></i> Add New Medicine</a>';
-                                echo '<table class="table table-bordered table-striped">';
+                                echo '<a href="create.php" class="btn btn-success mb-5"><i class="fa fa-plus"></i> Add New Medicine</a>';
+                                echo '<table class="table table-info table-bordered table-striped">';
                                     echo "<thead>";
-                                        echo "<tr>";
+                                        echo "<tr class='text-center'>";
                                             echo "<th>#</th>";
                                             echo "<th>Name</th>";
-                                            echo "<th>power</th>";
-                                            echo "<th>powerText</th>";
-                                            echo "<th>category</th>";
-                                            echo "<th>method</th>";
-                                            echo "<th>methodText</th>";
-                                            echo "<th>ageA</th>";
+                                            echo "<th>Power</th>";
+                                            echo "<th>PowerText</th>";
+                                            echo "<th>Category</th>";
+                                            echo "<th>Method</th>";
+                                            echo "<th>MethodText</th>";
+                                            echo "<th>AgeA</th>";
                                             echo "<th>ageC</th>";
                                             echo "<th>Purpose</th>";
                                             echo "<th>Instruction</th>";
                                             echo "<th>ImageURL</th>";
-                                            echo "<th>prescription</th>";
+                                            echo "<th>Prescription</th>";
+                                            echo "<th>Operations</th>";
                                         echo "</tr>";
                                     echo "</thead>";
                                     echo "<tbody>";
@@ -86,18 +83,18 @@ if (isset($_SESSION['username']) && isset($_SESSION['id']))   ?>
                                             echo "<td>" . $row['purpose'] . "</td>";
                                             echo "<td>" . $row['instruction'] . "</td>";
                                             echo "<td><img src=" . $row['imageURL'] . " style='width: 100px;height: 100px;'  > </td>";
-                                            echo "<td><a href=" . $row['prescription'] . " target='_blank'>Prospektüs</a> </td>";
+                                            echo "<td><a href=" . $row['prescription'] . " target='_blank' >Prospektüs</a> </td>";
 
-                                            echo "<td>";
-                                                echo '<a href="read.php?id='. $row['id'] .'" class="mr-3" title="View Record" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
-                                                echo '<a href="update.php?id='. $row['id'] .'" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
-                                                echo '<a href="delete.php?id='. $row['id'] .'" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
+                                            echo "<td class='d-flex flex-column justify-content-center align-items-center gap-2' style='height:120px'>";
+                                                echo '<a href="read.php?id='. $row['id'] .'" class="mr-3" title="View Record" data-toggle="tooltip"><span class="fa fa-eye text-black fs-5"></span></a>';
+                                                echo '<a href="update.php?id='. $row['id'] .'" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil text-black fs-5"></span></a>';
+                                                echo '<a href="delete.php?id='. $row['id'] .'" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash text-black fs-5"></span></a>';
                                             echo "</td>";
                                         echo "</tr>";
                                     }
                                     echo "</tbody>";                            
                                 echo "</table>";
-                                
+                                echo '<p>Bütün bilgiler ilaçların resmi prospektüsleri incelenerek hazırlanmıştır.</p>';  
                                 mysqli_free_result($result);
                             } else{
                                 echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
@@ -106,9 +103,9 @@ if (isset($_SESSION['username']) && isset($_SESSION['id']))   ?>
 
                         else if($_SESSION['role'] == 'user'){
                             if(mysqli_num_rows($result) > 0){
-                                echo '<table class="table table-bordered table-striped">';
+                                echo '<table class="table table-info table-bordered table-striped">';
                                     echo "<thead>";
-                                        echo "<tr>";
+                                        echo "<tr class='text-center'>";
                                             echo "<th>#</th>";
                                             echo "<th>Name</th>";
                                             echo "<th>power</th>";
@@ -140,13 +137,11 @@ if (isset($_SESSION['username']) && isset($_SESSION['id']))   ?>
                                             echo "<td>" . $row['instruction'] . "</td>";
                                             echo "<td><img src=" . $row['imageURL'] . " style='width: 100px;height: 100px;'  > </td>";
                                             echo "<td><a href=" . $row['prescription'] . " target='_blank'>Prospektüs</a> </td>";
-
-                                        
                                         echo "</tr>";
                                     }
-                                    echo "</tbody>";                            
+                                    echo "</tbody>";                          
                                 echo "</table>";
-                                
+                                echo '<p>Bütün bilgiler ilaçların resmi prospektüsleri incelenerek hazırlanmıştır.</p>';   
                                 mysqli_free_result($result);
                             } else{
                                 echo '<div class="alert alert-danger"><em>No records were found.</em></div>';

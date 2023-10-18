@@ -1,3 +1,4 @@
+
 <?php  
 session_start();
 include "/xampp/htdocs/online-recete/login/db_conn.php";
@@ -16,9 +17,9 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role
 	$role = test_input($_POST['role']);
 
 	if (empty($username)) {
-		header("Location: ../index.php?error=User Name is Required");
+		header("Location: index.php?error=User Name is Required");
 	}else if (empty($password)) {
-		header("Location: ../index.php?error=Password is Required");
+		header("Location: index.php?error=Password is Required");
 	}else {
 
 		// Hashing the password
@@ -39,14 +40,14 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role
         		header("Location: ../../crud-dashboard/index.php");
 
         	}else {
-        		header("Location: ../index.php?error=Incorect User name or password");
+        		header("Location: index.php?error=Incorect User name or password");
         	}
         }else {
-        	header("Location: ../index.php?error=Incorect User name or password");
+        	header("Location: index.php?error=Incorect User name or password");
         }
 
 	}
 	
 }else {
-	header("Location: ../index.php");
+	header("Location: index.php");
 }

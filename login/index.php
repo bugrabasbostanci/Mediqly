@@ -14,7 +14,7 @@
       	      action="/login/check-login.php" 
       	      method="post" 
       	      style="width: 450px;">
-      	      <h1 class="text-center p-3">LOGIN</h1>
+      	      <h1 class="text-center p-3">Login to Database</h1>
       	      <?php if (isset($_GET['error'])) { ?>
       	      <div class="alert alert-danger" role="alert">
 				  <?=$_GET['error']?>
@@ -42,16 +42,15 @@
 		  <select class="form-select mb-3"
 		          name="role" 
 		          aria-label="Default select example">
-			  <option selected value="user">User</option>
-			  <option value="admin">Admin</option>
+			  <option value="user">User</option>
+			  <option selected value="admin">Admin</option>
 		  </select>
-		 
-		  <button type="submit" class="btn btn-primary">LOGIN</button>
-		  <!-- <button type="button" class="btn btn-danger">EXIT</button> -->
+		  <a href="/medicine-page.php" class="btn btn-danger">EXIT</a>
+		  <button type="submit" class="btn btn-primary float-end">LOGIN</button>
 		</form>
       </div>
 </body>
 </html>
 <?php }else{
-	header("Location: home.php");
+	header("Location: ../../crud-dashboard/index.php");
 } ?>
