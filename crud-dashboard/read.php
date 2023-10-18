@@ -55,11 +55,13 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>View Record</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>View Medicine Data</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         .wrapper{
-            width: 600px;
+            width: 100%;
             margin: 0 auto;
         }
     </style>
@@ -69,56 +71,48 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="mt-5 mb-3">View Record</h1>
-                        <div class="form-group">
-                            <label>Name</label>
-                            <p><b><?php echo $row["name"]; ?></b></p>
-                        </div>
-                        <div class="form-group">
-                            <label>Power</label>
-                            <p><b><?php echo $row["power"]; ?></b></p>
-                        </div>
-                        <div class="form-group">
-                            <label>powerText</label>
-                            <p><b><?php echo $row["powerText"]; ?></b></p>
-                        </div>
-                        <div class="form-group">
-                            <label>category</label>
-                            <p><b><?php echo $row["category"]; ?></b></p>
-                        </div>
-                        <div class="form-group">
-                            <label>method</label>
-                            <p><b><?php echo $row["method"]; ?></b></p>
-                        </div>
-                        <div class="form-group">
-                            <label>methodText</label>
-                            <p><b><?php echo $row["methodText"]; ?></b></p>
-                        </div>
-                        <div class="form-group">
-                            <label>ageA</label>
-                            <p><b><?php echo $row["ageA"]; ?></b></p>
-                        </div>
-                        <div class="form-group">
-                            <label>ageC</label>
-                            <p><b><?php echo $row["ageC"]; ?></b></p>
-                        </div>
-                        <div class="form-group">
-                            <label>Purpose</label>
-                            <p><b><?php echo $row["purpose"]; ?></b></p>
-                        </div>
-                        <div class="form-group">
-                            <label>Instruction</label>
-                            <p><b><?php echo $row["instruction"]; ?></b></p>
-                        </div>
-                        <div class="form-group">
-                            <label>ImageURL</label> <br>
-                            <img src=" <?php echo $row["imageURL"]?>" style='width: 100px;height: 100px;'>;
-                        </div>
-                        <div class="form-group">
-                            <label>prescription</label> <br>
-                            <img src=" <?php echo $row["prescription"]?>" style='width: 100px;height: 100px;'>;
-                        </div>
-                        <p><a href="index.php" class="btn btn-primary">Back</a></p>
+                        <h1 class="mt-5 mb-3 text-primary text-center">View Medicine Data</h1>
+                        <table class="table table-info table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Power</th>
+                                    <th>PowerText</th>
+                                    <th>Category</th>
+                                    <th>Method</th>
+                                    <th>MethodText</th>
+                                    <th>AgeA</th>
+                                    <th>AgeC</th>
+                                    <th>Purpose</th>
+                                    <th>Instruction</th>
+                                    <th>ImageURL</th>
+                                    <th>Prescription</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><?php echo $row["name"]; ?></td>
+                                    <td><?php echo $row["power"]; ?></td>
+                                    <td><?php echo $row["powerText"]; ?></td>
+                                    <td><?php echo $row["category"]; ?></td>
+                                    <td><?php echo $row["method"]; ?></td>
+                                    <td><?php echo $row["methodText"]; ?></td>
+                                    <td><?php echo $row["ageA"]; ?></td>
+                                    <td><?php echo $row["ageC"]; ?></td>
+                                    <td><?php echo $row["purpose"]; ?></td>
+                                    <td><?php echo $row["instruction"]; ?></td>
+                                    <td>
+                                        <a href="<?php echo $row["imageURL"]; ?>" target="_blank">
+                                        <img src="<?php echo $row["imageURL"]; ?>" alt="" style="width:100px; height:100px;">
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="<?php echo $row["prescription"]; ?>" class='d-flex justify-content-center align-items-center fs-2' target="_blank" style="height:90px">&rx;</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="text-center"><a href="index.php" class="btn btn-primary">Back</a></p>
                     </div>
                 </div>        
             </div>

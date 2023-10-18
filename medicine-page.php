@@ -27,7 +27,7 @@
       <!-- Navbar | End -->
 
       <!-- Card Section | Start -->
-        <div class="cards-container">
+        <div class="card-container">
 
         <p>İlaçlar burada görüntülensin</p> 
 

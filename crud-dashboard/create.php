@@ -52,14 +52,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
          $method = $input_method;
      }
 
-     // Validate categoryText
-     $input_categoryText = trim($_POST["categoryText"]);
-     if(empty($input_categoryText)){
-         $categoryText_err = "Please enter a method.";     
-     } else{
-         $categoryText = $input_categoryText;
-     }
-
      // Validate ageA
      $input_ageA = trim($_POST["ageA"]);
      if(empty($input_ageA)){
@@ -111,11 +103,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Check input errors before inserting in database
     if(empty($name_err) &&empty($power_err) && empty($powerText_err) && empty($category_err) && empty($method_err) && empty($ageA_err) && empty($ageC_err) && empty($purpose_err) && empty($instruction_err) && empty($imageURL_err) && empty($prescription_err)){
         // Prepare an insert statement
-        $sql = "INSERT INTO medicines (name, power, powerText, category, method, ageA, ageC purpose, instruction, imageURL, prescription) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO medicines (name, power, powerText, category, method, methodText, ageA, ageC, purpose, instruction, imageURL, prescription) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
          
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "ssssssssssss", $name , $power , $powerText , $category , $method , $methodText , $ageA , $ageC , $purpose , $instruction , $imageURL , $prescription);
+            mysqli_stmt_bind_param($stmt, "ssssssssssss", $param_name , $param_power , $param_powerText , $param_category , $param_method , $param_methodText , $param_ageA , $param_ageC , $param_purpose , $param_instruction , $param_imageURL , $param_prescription);
             
             // Set parameters
             $param_name = $name;
@@ -154,8 +146,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Create Record</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Create Medicine</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         .wrapper{
             width: 600px;
@@ -168,71 +162,73 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 class="mt-5">Create Record</h2>
-                        <p>Please fill this form and submit to add medicine record to the database.</p>
+                        <h2 class="mt-5 text-center">Create Medicine</h2>
+                        <p>Please fill this form and submit to add medicine data to the database.</p>
                         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                             <div class="form-group">
-                                <label>Name</label>
-                                <input type="text" name="name" class="form-control <?php echo (!empty($name_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $name; ?>">
+                                <label><b>Name</b></label>
+                                <input type="text" name="name" class="form-control mb-3 <?php echo (!empty($name_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $name; ?>">
                                 <span class="invalid-feedback"><?php echo $name_err;?></span>
                             </div>
                             <div class="form-group">
-                                <label>Power</label>
-                                <input type="text" name="power" class="form-control <?php echo (!empty($power_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $power; ?>">
+                                <label><b>Power</b></label>
+                                <input type="text" name="power" class="form-control mb-3 <?php echo (!empty($power_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $power; ?>">
                                 <span class="invalid-feedback"><?php echo $power_err;?></span>
                             </div>
                             <div class="form-group">
-                                <label>Power Text</label>
-                                <input type="text" name="powerText" class="form-control <?php echo (!empty($powerText_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $powerText; ?>">
+                                <label><b>PowerText</b></label>
+                                <input type="text" name="powerText" class="form-control mb-3 <?php echo (!empty($powerText_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $powerText; ?>">
                                 <span class="invalid-feedback"><?php echo $powerText_err;?></span>
                             </div>
                             <div class="form-group">
-                                <label>Category</label>
-                                <input type="text" name="category" class="form-control <?php echo (!empty($category_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $category; ?>">
+                                <label><b>Category</b></label>
+                                <input type="text" name="category" class="form-control mb-3 <?php echo (!empty($category_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $category; ?>">
                                 <span class="invalid-feedback"><?php echo $category_err;?></span>
                             </div>
                             <div class="form-group">
-                                <label>Method</label>
-                                <input type="text" name="method" class="form-control <?php echo (!empty($method_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $method; ?>">
+                                <label><b>Method</b></label>
+                                <input type="text" name="method" class="form-control mb-3 <?php echo (!empty($method_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $method; ?>">
                                 <span class="invalid-feedback"><?php echo $method_err;?></span>
                             </div>
                             <div class="form-group">
-                                <label>Method Text</label>
-                                <input type="text" name="methodText" class="form-control <?php echo (!empty($methodText_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $methodText; ?>">
+                                <label><b>MethodText</b></label>
+                                <input type="text" name="methodText" class="form-control mb-3 <?php echo (!empty($methodText_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $methodText; ?>">
                                 <span class="invalid-feedback"><?php echo $methodText_err;?></span>
                             </div>
                             <div class="form-group">
-                                <label>Age A</label>
-                                <input type="text" name="ageA" class="form-control <?php echo (!empty($ageA_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $ageA; ?>">
+                                <label><b>AgeA</b> </label>
+                                <input type="text" name="ageA" class="form-control mb-3 <?php echo (!empty($ageA_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $ageA; ?>">
                                 <span class="invalid-feedback"><?php echo $ageA_err;?></span>
                             </div>
                             <div class="form-group">
-                                <label>Age C</label>
-                                <input type="text" name="ageC" class="form-control <?php echo (!empty($ageC_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $ageC; ?>">
+                                <label><b>AgeC</b> </label>
+                                <input type="text" name="ageC" class="form-control mb-3 <?php echo (!empty($ageC_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $ageC; ?>">
                                 <span class="invalid-feedback"><?php echo $ageC_err;?></span>
                             </div>
                             <div class="form-group">
-                                <label>purpose</label>
-                                <textarea name="purpose" class="form-control <?php echo (!empty($purpose_err)) ? 'is-invalid' : ''; ?>"><?php echo $purpose; ?></textarea>
+                                <label><b>purpose</b></label>
+                                <textarea name="purpose" class="form-control mb-3 <?php echo (!empty($purpose_err)) ? 'is-invalid' : ''; ?>"><?php echo $purpose; ?></textarea>
                                 <span class="invalid-feedback"><?php echo $purpose_err;?></span>
                             </div>
                             <div class="form-group">
-                                <label>instruction</label>
-                                <input type="text" name="instruction" class="form-control <?php echo (!empty($instruction_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $instruction; ?>">
+                                <label><b>instruction</b></label>
+                                <input type="text" name="instruction" class="form-control mb-3 <?php echo (!empty($instruction_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $instruction; ?>">
                                 <span class="invalid-feedback"><?php echo $instruction_err;?></span>
                             </div>
                             <div class="form-group">
-                                <label>imageURL</label>
-                                <input type="text" name="imageURL" class="form-control <?php echo (!empty($imageURL_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $imageURL; ?>">
+                                <label><b>imageURL</b></label>
+                                <input type="text" name="imageURL" class="form-control mb-3 <?php echo (!empty($imageURL_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $imageURL; ?>">
                                 <span class="invalid-feedback"><?php echo $imageURL_err;?></span>
                             </div>
                             <div class="form-group">
-                                <label>Prescription</label>
-                                <input type="text" name="prescription" class="form-control <?php echo (!empty($prescription_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $prescription; ?>">
+                                <label><b>Prescription</b></label>
+                                <input type="text" name="prescription" class="form-control mb-4 <?php echo (!empty($prescription_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $prescription; ?>">
                                 <span class="invalid-feedback"><?php echo $prescription_err;?></span>
                             </div>
-                            <input type="submit" class="btn btn-primary" value="Submit">
-                            <a href="index.php" class="btn btn-secondary ml-2">Cancel</a>
+                            <div class="w-100 mt-3">
+                            <a href="index.php" class="btn btn-danger  float-start">Cancel</a>
+                            <input type="submit" class="btn btn-success float-end" value="Submit">
+                            </div>
                         </form>
                     </div>
                 </div>        

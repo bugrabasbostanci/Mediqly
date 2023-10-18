@@ -7,7 +7,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id']))   ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Medicine Dashboard</title>
+    <title>Medicine Database Dashboard</title>
     <link rel="shortcut icon" href="/assets/images/lo" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -33,7 +33,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id']))   ?>
                 <div class="row">
                     <div class="col-md-12 d-flex flex-column justify-content-center align-items-center">
                         <div class="mt-5 mb-3 mx-auto d-flex flex-column justify-content-center align-items-center" style="width:max-content">
-                            <h1 class="fs-1 text-black">Medicine Database</h1>
+                            <h1 class="fs-1 text-black">Medicine Database Dashboard</h1>
                             <p class="fs-4">Hello <?=$_SESSION['name']?></p>
                             <p class="fs-4">(<?=$_SESSION['role'] ?>)</p>
                             <a href="/login/logout.php" class="btn btn-danger">Logout</a>
@@ -82,8 +82,8 @@ if (isset($_SESSION['username']) && isset($_SESSION['id']))   ?>
                                             echo "<td>" . $row['ageC'] . "</td>";
                                             echo "<td>" . $row['purpose'] . "</td>";
                                             echo "<td>" . $row['instruction'] . "</td>";
-                                            echo "<td><img src=" . $row['imageURL'] . " style='width: 100px;height: 100px;'  > </td>";
-                                            echo "<td><a href=" . $row['prescription'] . " target='_blank' >Prospektüs</a> </td>";
+                                            echo "<td><a href=" . $row['imageURL'] . " target='_blank'><img src=" . $row['imageURL'] . " style='width: 100px;height: 100px;'></a> </td>";
+                                            echo "<td class='text-center align-middle fs-2'><a href=" . $row['prescription'] . " target='_blank' >&rx;</a> </td>";
 
                                             echo "<td class='d-flex flex-column justify-content-center align-items-center gap-2' style='height:120px'>";
                                                 echo '<a href="read.php?id='. $row['id'] .'" class="mr-3" title="View Record" data-toggle="tooltip"><span class="fa fa-eye text-black fs-5"></span></a>';
