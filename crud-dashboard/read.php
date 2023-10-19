@@ -76,6 +76,7 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
                             <thead>
                                 <tr>
                                     <th>Name</th>
+                                    <th>Slug</th>
                                     <th>Power</th>
                                     <th>PowerText</th>
                                     <th>Category</th>
@@ -92,6 +93,7 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
                             <tbody>
                                 <tr>
                                     <td><?php echo $row["name"]; ?></td>
+                                    <td><?php echo $row["slug"]; ?></td>
                                     <td><?php echo $row["power"]; ?></td>
                                     <td><?php echo $row["powerText"]; ?></td>
                                     <td><?php echo $row["category"]; ?></td>

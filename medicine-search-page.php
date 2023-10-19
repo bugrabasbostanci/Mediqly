@@ -17,6 +17,7 @@
     ></script>
     <!-- JS Files -->
     <!-- <script defer src="js/main.js"></script> -->
+    <script defer src="/js/test.js"></script>
   </head>
   <body>
     <div class="container">
@@ -29,38 +30,40 @@
       <!-- Card Section | Start -->
         <div class="card-container">
 
-        <p>İlaçlar burada görüntülensin</p> 
+        <?php
+        
+  define('DB_SERVER', 'localhost');
+  define('DB_USERNAME', 'root');
+  define('DB_PASSWORD', '');
+  define('DB_NAME', 'medicinedb');
+   
+  
+  $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+   
+  
+  if($link === false){
+      die("ERROR: Could not connect. " . mysqli_connect_error());
+  }
+  
+  // Veritabanından ilaç verilerini çekme sorgusu
+  $sql = "SELECT id, name, slug, power, powerText, category, method, methodText, ageA, ageC, purpose, instruction, imageURL, prescription FROM medicines";
+  $result = mysqli_query($link, $sql);
+  
+  if ($result->num_rows > 0) {
+      // Verileri döngü ile alıp kullanma
+      while($row = mysqli_fetch_assoc($result)) {
+          include "/xampp/htdocs/online-recete/card.php" ;
+      }
+      
+  } else {
+      echo "Veritabanında ilaç bulunamadı.";
+  }
+  
+  // Bağlantıyı kapat
+  mysqli_close($link);
+  
+        ?>
 
-          <?php
-          
-          require "/xampp/htdocs/online-recete/config.php";
-          
-            // Formun submit işlemini işleyen kod
-            if (isset($_POST['search'])) {
-              // Kullanıcının girdiği ilaç adını alın
-              $input = $_POST['search'];
-
-              // SEARCH
-              $sql = "SELECT id, name, power, powerText, category, method, methodText, ageA, ageC, purpose, instruction, imageURL, prescription FROM medicines WHERE name LIKE '%$input%'";
-              // FETCH
-              $result = mysqli_query($conn, $sql);
-
-          
-              // Arama sonucunu gösteren kod
-              if (mysqli_num_rows($result) > 0) {
-                
-                  while($row = mysqli_fetch_assoc($result)) {
-                    // MAP
-                    include "/xampp/htdocs/online-recete/map.php";
-                  }
-                  
-              } else {
-                  echo "0 results";
-              }
-          }
-
-          mysqli_close($conn);
-          ?>
         </div>
       <!-- Card Section | End -->
 
@@ -72,3 +75,5 @@
     </div>
   </body>
 </html>
+
+

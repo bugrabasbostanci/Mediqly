@@ -67,3 +67,48 @@
 -Sağlık Günlüğü: Kullanıcıların sağlık bilgilerini ve semptomlarını izlemelerine olanak tanıyacak bir sağlık günlüğü ekleyebilirsiniz.
 
 -Uzaktan Online Doktorluk: Sağlık çalışanı olan ve belli bir bilgi düzeyinde olan insanlar için, bulunduğu koşullar veya sadece istediği için evinden insanlara yardımcı olabileceği ve aynı zamanda para kazanabileceği bir özellik. Online Hastane, Klinik diyebiliriz. Hasta evinde, doktor evinde ve tedavi, reçete, ne gerekiyorsa gerçekleşiyor.
+
+<!-- Search kodu  -->
+
+<div class="card-container">
+
+        <?php
+      include "/xampp/htdocs/online-recete/components/navbar-search/navbar.html";
+      ?>
+      <!-- Navbar | End -->
+
+      <!-- Card Section | Start -->
+        <div class="card-container">
+
+        <p>İlaçlar burada görüntülensin</p>
+
+          <?php
+
+          require "/xampp/htdocs/online-recete/config.php";
+
+            // Formun submit işlemini işleyen kod
+            if (isset($_POST['search'])) {
+              // Kullanıcının girdiği ilaç adını alın
+              $input = $_POST['search'];
+
+              // SEARCH
+              $sql = "SELECT id, name, slug, power, powerText, category, method, methodText, ageA, ageC, purpose, instruction, imageURL, prescription FROM medicines WHERE name LIKE '%$input%'";
+              // FETCH
+              $result = mysqli_query($link, $sql);
+
+
+              // Arama sonucunu gösteren kod
+              if (mysqli_num_rows($result) > 0) {
+
+                  while($row = mysqli_fetch_assoc($result)) {
+                    // MAP
+                    include "/xampp/htdocs/online-recete/card.php";
+                  }
+
+              } else {
+                  echo "0 results";
+              }
+          }
+
+          mysqli_close($link);
+          ?>

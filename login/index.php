@@ -45,7 +45,7 @@
 			  <option value="user">User</option>
 			  <option selected value="admin">Admin</option>
 		  </select>
-		  <a href="/medicine-page.php" class="btn btn-danger">EXIT</a>
+		  <a href="/medicine-search-page.php" class="btn btn-danger">EXIT</a>
 		  <button type="submit" class="btn btn-primary float-end">LOGIN</button>
 		</form>
       </div>

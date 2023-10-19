@@ -53,6 +53,9 @@ echo "
               Check the 
             <a href='". $row["prescription"]."' class='card__prescription-link' title='&rx;' target='_blank'>prescription</a>
           </p>
+          <a href='http://localhost:3000/medicine-page-template.php?slug=". $row["slug"]."'>
+          <button>test</button>
+          </a>
         </div>
       </div>
 ";

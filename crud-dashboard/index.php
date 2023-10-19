@@ -54,6 +54,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id']))   ?>
                                         echo "<tr class='text-center'>";
                                             echo "<th>#</th>";
                                             echo "<th>Name</th>";
+                                            echo "<th>Slug</th>";
                                             echo "<th>Power</th>";
                                             echo "<th>PowerText</th>";
                                             echo "<th>Category</th>";
@@ -73,6 +74,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id']))   ?>
                                         echo "<tr>";
                                             echo "<td>" . $row['id'] . "</td>";
                                             echo "<td>" . $row['name'] . "</td>";
+                                            echo "<td>" . $row['slug'] . "</td>";
                                             echo "<td>" . $row['power'] . "</td>";
                                             echo "<td>" . $row['powerText'] . "</td>";
                                             echo "<td>" . $row['category'] . "</td>";
@@ -108,6 +110,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id']))   ?>
                                         echo "<tr class='text-center'>";
                                             echo "<th>#</th>";
                                             echo "<th>Name</th>";
+                                            echo "<th>Slug</th>";
                                             echo "<th>power</th>";
                                             echo "<th>powerText</th>";
                                             echo "<th>category</th>";
@@ -126,6 +129,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id']))   ?>
                                         echo "<tr>";
                                             echo "<td>" . $row['id'] . "</td>";
                                             echo "<td>" . $row['name'] . "</td>";
+                                            echo "<td>" . $row['slug'] . "</td>";
                                             echo "<td>" . $row['power'] . "</td>";
                                             echo "<td>" . $row['powerText'] . "</td>";
                                             echo "<td>" . $row['category'] . "</td>";

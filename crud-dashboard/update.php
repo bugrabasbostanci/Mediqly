@@ -3,15 +3,16 @@
 require_once "config.php";
  
 // Define variables and initialize with empty values
-$name = $power = $powerText = $category = $method = $methodText = $ageA = $ageC = $purpose = $instruction = $imageURL = $prescription = "";
+$name = $slug= $power = $powerText = $category = $method = $methodText = $ageA = $ageC = $purpose = $instruction = $imageURL = $prescription = "";
 
-$name_err = $power_err = $powerText_err = $category_err = $method_err = $methodText_err = $ageA_err = $ageC_err = $purpose_err = $instruction_err = $imageURL_err = $prescription_err = "";
+$name_err = $slug_err= $power_err = $powerText_err = $category_err = $method_err = $methodText_err = $ageA_err = $ageC_err = $purpose_err = $instruction_err = $imageURL_err = $prescription_err = "";
 
  
 // Processing form data when form is submitted
 if(isset($_POST["id"]) && !empty($_POST["id"])){
     // Get hidden input value
     $id = $_POST["id"];
+
     // Validate name
     $input_name = trim($_POST["name"]);
     if (empty($input_name)) {
@@ -20,6 +21,16 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
         $name_err = "Please enter a valid name.";
     } else {
         $name = $input_name;
+    }
+
+    // Validate slug
+    $input_slug = trim($_POST["slug"]);
+    if (empty($input_slug)) {
+        $slug_err = "Please enter a slug.";
+    } elseif (!filter_var($input_slug, FILTER_VALIDATE_REGEXP, array("options" => array("regexp" => "/^(?!\s*$).{1,}$/")))) {
+        $slug_err = "Please enter a valid slug.";
+    } else {
+        $slug = $input_slug;
     }
     
     // Validate power
@@ -104,16 +115,17 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
     }
     
     // Check input errors before inserting in database
-    if(empty($name_err) &&empty($power_err) && empty($powerText_err) && empty($category_err) && empty($method_err) && empty($ageA_err) && empty($ageC_err) && empty($purpose_err) && empty($instruction_err) && empty($imageURL_err) && empty($prescription_err)){
+    if(empty($name_err) &&empty($slug_err) &&empty($power_err) && empty($powerText_err) && empty($category_err) && empty($method_err) && empty($ageA_err) && empty($ageC_err) && empty($purpose_err) && empty($instruction_err) && empty($imageURL_err) && empty($prescription_err)){
         // Prepare an insert statement
-        $sql = "UPDATE medicines SET name=?, power=?, powerText=?, category=?, method=?, ageA=?, ageC=?, purpose=?, instruction=?, imageURL=?, prescription=? WHERE id=?"; 
+        $sql = "UPDATE medicines SET name=?, slug=?, power=?, powerText=?, category=?, method=?, ageA=?, ageC=?, purpose=?, instruction=?, imageURL=?, prescription=? WHERE id=?"; 
          
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "sssssssssssi", $param_name , $param_power , $param_powerText , $param_category , $param_method , $param_ageA , $param_ageC , $param_purpose , $param_instruction , $param_imageURL , $param_prescription, $param_id);
+            mysqli_stmt_bind_param($stmt, "ssssssssssssi", $param_name , $param_slug, $param_power , $param_powerText , $param_category , $param_method , $param_ageA , $param_ageC , $param_purpose , $param_instruction , $param_imageURL , $param_prescription, $param_id);
             
             // Set parameters
             $param_name = $name;
+            $param_slug = $slug;
             $param_power = $power;
             $param_powerText = $powerText;
             $param_category = $category;
@@ -169,6 +181,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
                     
                     // Retrieve individual field value
                     $name = $row["name"];
+                    $slug = $row["slug"];
                     $power = $row["power"];
                     $powerText = $row["powerText"];
                     $category = $row["category"];
@@ -231,6 +244,11 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
                                 <label><b>Name</b></label>
                                 <input type="text" name="name" class="form-control mb-3 <?php echo (!empty($name_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $name; ?>">
                                 <span class="invalid-feedback"><?php echo $name_err;?></span>
+                            </div>
+                            <div class="form-group">
+                                <label><b>Slug</b></label>
+                                <input type="text" name="slug" class="form-control mb-3 <?php echo (!empty($slug_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $slug; ?>">
+                                <span class="invalid-feedback"><?php echo $slug_err;?></span>
                             </div>
                             <div class="form-group">
                                 <label><b>Power</b></label>

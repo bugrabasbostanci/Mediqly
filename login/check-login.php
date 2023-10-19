@@ -26,7 +26,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role
 		$password = md5($password);
         
         $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
-        $result = mysqli_query($conn, $sql);
+        $result = mysqli_query($link, $sql);
 
         if (mysqli_num_rows($result) === 1) {
         	// the user name must be unique
