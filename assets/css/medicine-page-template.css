@@ -36,11 +36,28 @@
 }
 
 body {
-  background-color: bisque;
+  background-color: var(--MAIN-COLOR);
 }
 
-.container {
-  margin: 10% 0 10% 10%;
+.main-container {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.back-btn {
+  background-color: var(--BLUE);
+  color: var(--GRAY-400);
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 0%;
+  left: 21%;
 }
 
 .card {
@@ -59,9 +76,11 @@ body {
 }
 
 .card__title {
+  color: var(--WHITE);
 }
 
 .card__subtitle {
+  color: var(--WHITE-50);
 }
 
 .card__description {
@@ -73,14 +92,112 @@ body {
 }
 
 .purpose-title {
+  color: var(--WHITE);
 }
 
 .purpose-text {
+  color: var(--WHITE-50);
 }
 
 .instruction-wrapper {
 }
 .instruction-title {
+  color: var(--WHITE);
 }
 .instruction-text {
+  color: var(--WHITE-50);
+}
+/* FORM */
+.comment-container {
+  background-color: var(--MAIN-COLOR);
+  box-shadow: 0 0 0 3px var(--GRAY-400), 9px 9px 0 0 var(--GRAY-400);
+  border-radius: 5px;
+  padding: 3rem;
+  margin-bottom: 5rem;
+}
+.comment__form {
+  /* align-self: center;
+  text-align: center; */
+}
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.name-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.label__name {
+  font-size: 1.3rem;
+  color: var(--WHITE-50);
+}
+
+.input__name {
+  /* width: 300px; */
+  height: 40px;
+  padding: 8px 12px;
+  font-size: 1.2rem;
+  border: 3px solid black;
+  border-radius: 5px;
+  outline: none;
+  background-color: var(--WHITE);
+}
+
+.comment-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.label__comment {
+  font-size: 1.3rem;
+  color: var(--WHITE-50);
+}
+
+.input__comment {
+  /* width: 300px; */
+  height: 200px;
+  padding: 8px 12px;
+  font-size: 1.2rem;
+  border: 3px solid black;
+  border-radius: 5px;
+  outline: none;
+  background-color: var(--WHITE);
+}
+
+.submit-btn {
+  font-size: 1.2rem;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--BLUE);
+  color: white;
+  /* width: 100%; */
+  align-self: flex-start;
+}
+
+/* SHOW COMMENTS */
+.posted-comments {
+  background-color: var(--GRAY-400);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.posted-comments__title {
+  color: var(--WHITE-50);
+}
+
+.posted-comment__body {
+  margin: 1rem 0;
+}
+
+.posted-comment__name {
+  color: var(--WHITE);
+}
+.posted-comment__text {
+  color: var(--GRAY-100);
 }
