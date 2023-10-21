@@ -57,13 +57,40 @@ if (!empty($slug)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><?php echo $medicine['name']; ?> Page</title>
     <link rel="stylesheet" href="/assets/css/medicine-page-template.css" />
+    <script src="https://kit.fontawesome.com/d50705f12e.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <!-- navbar -->
     <?php include "/xampp/htdocs/online-recete/components/navbar-main/navbar.html"; ?>
 
-    <!-- main -->
-    <div class="main-container">
+    <div class="main">
+      <!-- bread crumbs -->
+      <div class="bread-crumbs-container">
+      <ul class="bread-crumbs">
+        <li>
+          <a href="/index.php">
+            <i class="fa-solid fa-house"></i>
+          </a>
+        </li>
+        <li>
+          <i class="fa-solid fa-chevron-right"></i>
+        </li>
+        <li>
+          <a href="/medicine-search-page.php">
+            Medicines
+          </a>
+        </li>
+        <li>
+          <i class="fa-solid fa-chevron-right"></i>
+        </li>
+        <li>
+          <?php echo $medicine['name']; ?>
+        </li>
+      </ul>
+      </div>
+
+      <!-- content -->
+      <div class="content-container">
       <a href="/medicine-search-page.php" class="back-btn">Back</a>
       <div class="card">
         <!-- image -->
@@ -76,8 +103,8 @@ if (!empty($slug)) {
         <header class="card__header">
           <h1 class="card__title"><?php echo $medicine['name']; ?></h1>
           <p class="card__subtitle">
-            Paranox Supozituvar nedir ne için kullanılır, Paranox nasıl
-            kullanılır, Paranox ilacının yan etkileri ve kullanırken dikkat
+            <?php echo $medicine['name']; ?>  nedir ne için kullanılır? <?php echo $medicine['name']; ?> nasıl
+            kullanılır? <?php echo $medicine['name']; ?> ilacının yan etkileri ve kullanırken dikkat
             edilmesi gerekenler nelerdir?
           </p>
         </header>
@@ -150,8 +177,8 @@ if (!empty($slug)) {
 
        
       </div>
+      </div>
     </div>
-
     <!-- footer -->
     <?php
     include "/xampp/htdocs/online-recete/components/footer/footer.html";

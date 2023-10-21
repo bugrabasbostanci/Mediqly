@@ -47,15 +47,17 @@ echo "
           </p>
 
           <!-- prescription alert -->
+          <div class='card__prescription-container'>
           <p class='card__prescription-warning'>
             <i class='fa-solid fa-triangle-exclamation'></i>
             <span>
-              Check the 
-            <a href='". $row["prescription"]."' class='card__prescription-link' title='&rx;' target='_blank'>prescription</a>
+            
+            <a href='".$row["prescription"]."' class='card__prescription-link' title='&rx;'>prescription</a>
           </p>
-          <a href='http://localhost:3000/medicine-page-template.php?slug=". $row["slug"]."'>
-          <button>test</button>
-          </a>
+          <a href='http://localhost:3000/medicine-page-template.php?slug=".$row["slug"]." 'class='card__page-link'>
+            <button class='card__page-btn'>Details</button>
+            </a>
+          </div>
         </div>
       </div>
 ";

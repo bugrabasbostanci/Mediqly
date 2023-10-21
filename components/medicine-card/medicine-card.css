@@ -156,6 +156,14 @@
   color: var(--WHITE-50);
 }
 
+.card__prescription-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
 .card__prescription-warning {
   display: flex;
   align-self: start;
@@ -182,6 +190,25 @@
 
 .card__prescription-link:hover {
   text-decoration: underline;
+}
+
+.card__page-link {
+  text-decoration: none;
+}
+
+.card__page-btn {
+  background-color: var(--GREEN-ALL);
+  color: var(--GRAY-400);
+  font-family: var(--TITLE-FONT);
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+}
+
+.card__page-btn:hover {
+  cursor: pointer;
+  opacity: 0.9;
 }
 
 @media screen and (min-width: 1200px) {

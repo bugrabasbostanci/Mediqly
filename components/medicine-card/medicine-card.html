@@ -66,13 +66,17 @@
           </p>
 
           <!-- prescription alert -->
+          <div class="card__prescription-container">
           <p class="card__prescription-warning">
             <i class="fa-solid fa-triangle-exclamation"></i>
             <span>
-              Check the 
-            <a href="" class="card__prescription-link" title="&rx;">prescription</a>
             
+            <a href="" class="card__prescription-link" title="&rx;">prescription</a>
           </p>
+          <a href='http://localhost:3000/medicine-page-template.php?slug=". $row["slug"]."' class="card__page-link">
+            <button class="card__page-btn">Details</button>
+            </a>
+          </div>
         </div>
       </div>
     </section>
