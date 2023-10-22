@@ -56,6 +56,7 @@ if (!empty($slug)) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><?php echo $medicine['name']; ?> Page</title>
+    <link rel="shortcut icon" href="/assets/images/ilac-dunyasi-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="/assets/css/medicine-page-template.css" />
     <script src="https://kit.fontawesome.com/d50705f12e.js" crossorigin="anonymous"></script>
   </head>

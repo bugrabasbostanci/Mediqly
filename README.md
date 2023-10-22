@@ -68,6 +68,10 @@
 
 -Uzaktan Online Doktorluk: Sağlık çalışanı olan ve belli bir bilgi düzeyinde olan insanlar için, bulunduğu koşullar veya sadece istediği için evinden insanlara yardımcı olabileceği ve aynı zamanda para kazanabileceği bir özellik. Online Hastane, Klinik diyebiliriz. Hasta evinde, doktor evinde ve tedavi, reçete, ne gerekiyorsa gerçekleşiyor.
 
+-Eczane bul özelliği yerine eklenebilecek özellikler:
+
+- Hastalık-Semptom Eşleştirme: Kullanıcılar belirli bir semptomu girdiklerinde, muhtemel hastalıkları listeler ve bu hastalıklar için önerilen ilaçları gösteren bir özellik ekleyebilirsiniz.
+
 <!-- Search kodu  -->
 
 <div class="card-container">
