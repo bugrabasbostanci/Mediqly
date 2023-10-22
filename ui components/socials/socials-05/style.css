@@ -1,0 +1,117 @@
+/* Cool share button made by: csozi | Website: english.csozi.hu*/
+
+.buttons {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: fit-content;
+  width: fit-content;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+.buttons:hover {
+  padding: 60px;
+}
+
+.buttons:hover .button {
+  box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+}
+
+.main-button {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  border: none;
+  background: #e8e8e8;
+  box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+  border-radius: 50%;
+  transition: 0.2s;
+  z-index: 100;
+}
+
+.button {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  border: none;
+  background: #e8e8e8;
+  box-shadow: 5px 5px 12px rgba(202, 202, 202, 0),
+    -5px -5px 12px rgba(255, 255, 255, 0);
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+.discord-button:hover {
+  background: #5865f2;
+}
+
+.buttons:hover .discord-button {
+  translate: 70px 0px;
+  box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+}
+
+.twitter-button:hover {
+  background: #1ca1f1;
+}
+
+.buttons:hover .twitter-button {
+  translate: 47px -47px;
+  box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+}
+
+.reddit-button:hover {
+  background: #ff4500;
+}
+
+.buttons:hover .reddit-button {
+  translate: 0px -70px;
+  box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+}
+
+.messenger-button:hover {
+  background: #0093ff;
+}
+
+.buttons:hover .messenger-button {
+  translate: -47px -47px;
+  box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+}
+
+.pinterest-button:hover {
+  background: #f0002a;
+}
+
+.buttons:hover .pinterest-button {
+  translate: -70px 0px;
+  box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+}
+
+.instagram-button:hover {
+  background: #f914af;
+}
+
+.buttons:hover .instagram-button {
+  translate: -47px 47px;
+  box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+}
+
+.snapchat-button:hover {
+  background: #fffc00;
+}
+
+.buttons:hover .snapchat-button {
+  translate: 0px 70px;
+  box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+}
+
+.whatsapp-button:hover {
+  background: #25d366;
+}
+
+.buttons:hover .whatsapp-button {
+  translate: 47px 47px;
+  box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+}

@@ -1,0 +1,19 @@
+# Project Name Ideas and Meanings
+
+- Mediqly olsun, en mantıklısı bu.
+
+0-Mediqly: The name "Mediqly" is a combination of the words "medicine" and "quickly." The name suggests that the web application provides quick and concise information about medicines. The "qly" ending also adds a modern and tech-savvy feel to the name, which is appropriate for a web-based application. Overall, the name effectively communicates the purpose of the business and is memorable and easy to pronounce.
+
+1-Mediq: The name "Mediq" is a combination of the words "medicine" and "IQ." The word "medicine" relates to the business description of providing information about medicines, while "IQ" suggests intelligence and knowledge. Therefore, the name "Mediq" conveys the idea of a platform that offers smart and concise information about medications.
+
+2-Rx Info: The name "Rx Info" is derived from the medical symbol "Rx" which is commonly used to indicate a prescription or medication. The word "Info" is short for information, which accurately reflects the purpose of the web application - to provide short information about medicines. Therefore, the name "Rx Info" effectively communicates the focus and function of the business.
+
+3-Medsy: Medsy is a business name that combines the words "medicine" and "info" to create a short and memorable name that is easy to remember. The "sy" at the end of the name gives it a modern and tech-savvy feel, suggesting that the business is up-to-date with the latest developments in the field of medicine. Overall, the name Medsy effectively conveys the business's focus on providing short and useful information about medicines to help people make informed decisions about their health.
+
+4-Medrix: Medrix is a combination of the words "Medicine" and "Info" which perfectly captures the essence of the business description. The name suggests a platform that provides concise and helpful information about various medicines, making it easier for individuals to understand their prescriptions and make informed decisions about their health. The addition of the letter "x" at the end of the name gives it a modern and tech-savvy feel, which is appropriate for a web application. Overall, Medrix is a catchy and memorable name that effectively communicates the purpose of the business.
+
+5-Medizine: The name MEDizine is a clever combination of the words "medicine" and "magazine." The "MED" portion of the name is a common abbreviation for medicine, while the "-izine" suffix is often used in the names of magazines or publications. This name suggests that the web application provides concise and informative articles about various medicines, similar to a magazine format. The use of the "z" instead of an "s" adds a modern and trendy touch to the name. Overall, MEDizine effectively conveys the purpose of the business as a source of helpful information about medications.
+
+6-Medicinem: The name "Medicinem" is a combination of the words "medicine" and "info," forming a unique and memorable name for a web application providing short information about medicines. The "m" at the end of the name could be interpreted as an abbreviation for "medication" or "medical," adding to the relevance of the name to the business description. Overall, the name suggests a platform that provides helpful and concise information about different types of medications, making it a suitable and appealing choice for the business.
+
+7-Rxgist: Rxgist is a name that combines the commonly used abbreviation for prescription, "Rx," with the suffix "-gist," which means "one who specializes in." Together, the name suggests a web application that specializes in providing information about prescription medications, or a "specialist" in medication information. The name is catchy and easy to remember, making it a strong choice for a business focused on providing short information about medicines.
