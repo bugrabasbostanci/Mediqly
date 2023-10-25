@@ -1,5 +1,5 @@
-
 <?php
+if(isset($row)){
 echo "
 <div class='card'>
         <!-- image -->
@@ -52,7 +52,7 @@ echo "
             <i class='fa-solid fa-triangle-exclamation'></i>
             <span>
             
-            <a href='".$row["prescription"]."' class='card__prescription-link' title='&rx;'>prescription</a>
+            <a href='".$row["prescription"]."' class='card__prescription-link' title='&rx;' target='_blank'>prescription</a>
           </p>
           <a href='http://localhost:3000/medicine-page-template.php?slug=".$row["slug"]." 'class='card__page-link'>
             <button class='card__page-btn'>Details</button>
@@ -61,4 +61,8 @@ echo "
         </div>
       </div>
 ";
+}
+else{
+  echo "Undefined variable error: \$row is not set.";
+}
 ?>

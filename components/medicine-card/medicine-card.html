@@ -42,17 +42,29 @@
           ></i> -->
             <!-- <i class="fa-solid fa-spoon" title="Şurup"></i> -->
           </div>
+          
         </div>
 
         <!-- informations -->
         <div class="information-wrapper">
           <div class="information-top-wrapper">
+            <div class="info-left">
             <h1 class="card__name">Majezik</h1>
             <!-- rates -->
             <div class="rate-wrapper" title="Güçlü">
               (<i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>)
+            </div>
+          </div>
+            <!-- add button -->
+            <div class="add-button">
+              <form method='post' action='add-to-list.php'>
+                <input type='hidden' name='medicine_id' value=" .$row['id'].">
+                <button type='submit' class="add-btn">
+                  <i class='fa-solid fa-plus'></i>
+                </button>
+            </form>
             </div>
           </div>
           <!-- descriptions -->

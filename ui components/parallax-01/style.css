@@ -1,49 +1,46 @@
-
 :root {
-    --background: #3C343D;
-    --background-border: #6B626C;
+  --background: #3c343d;
+  --background-border: #6b626c;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Poppins;
-    height: 100vh;
-    display: grid;
-    place-items: center;
+  font-family: Poppins;
+  height: 100vh;
+  display: grid;
+  place-items: center;
 }
 
 .parallax-image {
-    display: block;
-    height: 940px;
-    width: 100%;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+  display: block;
+  height: 940px;
+  width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .parallax-image-01 {
-    background-image: url("assets/autumn_forest.jpg");
+  background-image: url("https://github.com/atherosai/ui/blob/main/parallax-01/assets/autumn_forest.jpg?raw=true");
 }
 
 .parallax-image-02 {
-    background-image: url("assets/forest_pathway.jpg");
-
+  background-image: url("https://github.com/atherosai/ui/blob/main/parallax-01/assets/forest_pathway.jpg?raw=true");
 }
 
 .parallax-image-03 {
-    background-image: url("assets/winter_forest.jpg");
+  background-image: url("https://github.com/atherosai/ui/blob/main/parallax-01/assets/winter_forest.jpg?raw=true");
 }
 section {
-    padding: 64px;
+  padding: 64px;
 }
 
 section > h2 {
-    text-transform: uppercase;
-    margin-bottom: 24px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
 }
-  

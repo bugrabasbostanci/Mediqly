@@ -7,47 +7,39 @@
     <link rel="stylesheet" href="/components/contact/contact.css" />
   </head>
   <body>
-    <section class="contact-container">
-      <!-- title -->
-      <h1 class="contact__title">Contact Us</h1>
+    <div class="wrapper">
+      <section class="contact-container">
+        <form class="form">
+          <div class="descr">Contact us</div>
+          <div class="top-wrapper">
+            <div class="input">
+              <input required="" autocomplete="off" type="text" />
+              <label for="name">Name</label>
+            </div>
 
-      <!-- form -->
-      <form class="contact-form">
-        <!-- name-email wrapper -->
-        <div class="top-wrapper">
-          <!-- name -->
-          <div class="name-wrapper">
-            <label for="Name" class="form__name-label">Name</label>
-            <input
-              type="text"
-              placeholder="Enter your name"
-              class="form__name-input"
-            />
+            <div class="input">
+              <input required="" autocomplete="off" name="email" type="text" />
+              <label for="email">E-mail</label>
+            </div>
           </div>
-          <!-- email -->
-          <div class="email-wrapper">
-            <label for="Name" class="form__email-label">Email</label>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              class="form__email-input"
-            />
+          <div class="input">
+            <textarea required="" cols="30" rows="1" id="message"></textarea>
+            <label for="message">Message</label>
           </div>
-        </div>
-        <!-- message -->
-        <div class="message-wrapper">
-          <label for="Name" class="form__message-label">Message</label>
-          <textarea
-            name="email"
-            placeholder="Enter your message"
-            class="form__message-input"
-          ></textarea>
-        </div>
-        <!-- button -->
-        <a class="form__submit-link" href=""
-          ><button class="form__submit-btn">Submit</button></a
-        >
-      </form>
-    </section>
+          <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+          </a>
+        </form>
+      </section>
+      <img
+        src="/components/contact/undraw_contact_us_re_4qqt.svg"
+        alt=""
+        class="form-img"
+      />
+    </div>
   </body>
 </html>

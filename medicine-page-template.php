@@ -62,7 +62,7 @@ if (!empty($slug)) {
   </head>
   <body>
     <!-- navbar -->
-    <?php include "/xampp/htdocs/online-recete/components/navbar-main/navbar.html"; ?>
+    <?php include "/xampp/htdocs/online-recete/components/navbar-main/navbar.php"; ?>
 
     <div class="main">
       <!-- bread crumbs -->
@@ -92,7 +92,6 @@ if (!empty($slug)) {
 
       <!-- content -->
       <div class="content-container">
-      <a href="/medicine-search-page.php" class="back-btn">Back</a>
       <div class="card">
         <!-- image -->
         <img

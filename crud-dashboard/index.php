@@ -35,7 +35,6 @@ if (isset($_SESSION['username']) && isset($_SESSION['id']))   ?>
                         <div class="mt-5 mb-3 mx-auto d-flex flex-column justify-content-center align-items-center" style="width:max-content">
                             <h1 class="fs-1 text-black">Medicine Database Dashboard</h1>
                             <p class="fs-4">Hello <?=$_SESSION['name']?></p>
-                            <p class="fs-4">(<?=$_SESSION['role'] ?>)</p>
                             <a href="/login/logout.php" class="btn btn-danger">Logout</a>
                         </div>
                         <?php
@@ -96,7 +95,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id']))   ?>
                                     }
                                     echo "</tbody>";                            
                                 echo "</table>";
-                                echo '<p>Bütün bilgiler ilaçların resmi prospektüsleri incelenerek hazırlanmıştır.</p>';  
+                                echo '<p>All information has been prepared by reviewing the official prescriptions of the medicines.</p>';  
                                 mysqli_free_result($result);
                             } else{
                                 echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
@@ -145,7 +144,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id']))   ?>
                                     }
                                     echo "</tbody>";                          
                                 echo "</table>";
-                                echo '<p>Bütün bilgiler ilaçların resmi prospektüsleri incelenerek hazırlanmıştır.</p>';   
+                                echo '<p>All information has been prepared by reviewing the official prescriptions of the medicines.</p>';   
                                 mysqli_free_result($result);
                             } else{
                                 echo '<div class="alert alert-danger"><em>No records were found.</em></div>';

@@ -37,7 +37,14 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role
         		$_SESSION['role'] = $row['role'];
         		$_SESSION['username'] = $row['username'];
 
-        		header("Location: ../../crud-dashboard/index.php");
+				if($row['role'] == 'admin'){
+					header("Location: ../../crud-dashboard/index.php");
+
+				}
+				else{
+					header("Location: ../../medicine-search-page.php");
+
+				}
 
         	}else {
         		header("Location: index.php?error=Incorect User name or password");

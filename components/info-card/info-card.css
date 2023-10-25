@@ -9,7 +9,7 @@
 :root {
   --MAIN-COLOR: #313338; /* >> MAIN BG COLOR*/
   --GREEN-1: #248046; /* >> buton*/
-  --GREEN-ALL: #23a55a; /* >> other things except buttons */
+  --GREEN-ALL: #23a55a; /* >> other things except .info-card__spans */
   --YELLOW: #f0b232;
   --RED: #f23f43;
   --REDISH: #fa777c; /* >> alert-danger*/
@@ -62,9 +62,14 @@
   flex-direction: column;
   align-items: center;
   padding: 0 3rem;
+  gap: 1rem 0;
 }
 
 .info-card__text {
+  color: var(--WHITE-50);
+  font-size: 1rem;
+}
+.info-card__text-2 {
   color: var(--WHITE-50);
   font-size: 1rem;
 }
@@ -81,31 +86,48 @@
 
 /* BTN */
 .info-card__btn {
+  /* Variables */
+  --button_radius: 0.75em;
+  --button_color: #e8e8e8;
+  --button_outline_color: var(--BLUE);
+  font-size: 17px;
+  font-weight: bold;
   border: none;
-  background-color: #248046;
-  color: white;
-  border-radius: 5px;
-  font-size: 1rem;
-  padding: 8px 16px;
-  cursor: pointer;
-  margin-top: 1rem;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+  align-self: flex-end;
 }
 
-.info-card__btn:hover {
+.info-card__span {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+.info-card__btn:hover .info-card__span {
+  /* Pull the button upwards when hovered */
+  transform: translateY(-0.33em);
   cursor: pointer;
-  background-color: var(--GREEN-ALL);
+}
+
+.info-card__btn:active .info-card__span {
+  /* Push the button downwards when pressed */
+  transform: translateY(0);
 }
 
 /**************** MEDIA QUERIES -RESPONSIVE *********************/
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
 }
 
-@media screen and (min-width: 600px) {
-}
-
-@media screen and (min-width: 1200px) {
+@media (min-width: 600px) {
   .info-card {
-    width: 60%;
+    width: 80%;
     flex-direction: row;
     align-items: start;
     gap: 2rem;
@@ -113,8 +135,8 @@
   }
 
   .info-card__image {
-    width: 600px;
-    height: 400px;
+    width: 750px;
+    height: 500px;
   }
   .info-card__description {
     align-items: start;
@@ -125,8 +147,11 @@
   .info-card__text {
     font-size: 1.15rem;
   }
+  .info-card__text-2 {
+    font-size: 1.15rem;
+  }
 
-  .info-card__btn {
+  .info-card__span {
     font-size: 1.3rem;
   }
 }

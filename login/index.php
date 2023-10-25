@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>multi-user role-based-login-system</title>
+	<title>Multi User Role Based Login System</title> 
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
@@ -45,7 +45,7 @@
 			  <option value="user">User</option>
 			  <option selected value="admin">Admin</option>
 		  </select>
-		  <a href="/medicine-search-page.php" class="btn btn-danger">EXIT</a>
+		  <a href="/index.php" class="btn btn-danger">EXIT</a>
 		  <button type="submit" class="btn btn-primary float-end">LOGIN</button>
 		</form>
       </div>

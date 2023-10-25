@@ -39,7 +39,7 @@ body {
   background-color: var(--MAIN-COLOR);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
 }
 /* BREADCRUMBS */
@@ -68,6 +68,7 @@ body {
 
 .main {
   width: 60%;
+  margin-top: 5rem;
 }
 
 /* CONTENT */

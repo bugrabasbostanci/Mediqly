@@ -146,6 +146,103 @@
   border-bottom: 3px solid var(--ORANGE);
 }
 
+/* LOGIN */
+/* PHARMACY */
+.navbar__login {
+  display: block;
+}
+
+.navbar__login-link {
+  text-decoration: none;
+  padding: 4px 8px;
+  color: var(--REDISH);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 0.3rem;
+  font-family: var(--TITLE-FONT);
+}
+
+.navbar__login-link:hover {
+  border-bottom: 3px solid var(--RED);
+  margin-top: 3px;
+}
+
+.navbar__login-icon {
+  font-size: 2rem;
+  color: var(--RED);
+}
+
+.navbar__login-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* DROPDOWN */
+
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown > a {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 72px;
+}
+.dropdown > a > img {
+  width: 20px;
+}
+
+.dropdown:hover .menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu {
+  position: absolute;
+  top: 60px;
+  right: -20px;
+  display: grid;
+  width: 180px;
+  padding: 8px 0;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e1e1e1;
+  box-shadow: 0 40px 40px rgb(0 0 0 / 6%);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.25s;
+}
+
+.menu::before {
+  content: "";
+  background: inherit;
+  border-top: 1px solid #e1e1e1;
+  border-right: 1px solid #e1e1e1;
+  position: absolute;
+  top: -7px;
+  right: 22px;
+  width: 12px;
+  height: 12px;
+  rotate: -45deg;
+}
+
+.menu.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu > a {
+  font-size: 14px;
+  padding: 12px 20px;
+}
+
+.menu > a:hover {
+  background: #f5f5f5;
+}
+
 /**************** MEDIA QUERIES -RESPONSIVE *********************/
 @media screen and (max-width: 600px) {
   .search__input {
@@ -215,6 +312,8 @@
   /* LINKS */
   .menu__items {
     display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .navbar__menu > .navbar__menu-toggler {

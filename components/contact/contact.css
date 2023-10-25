@@ -34,147 +34,234 @@
   padding: 0;
   font-family: var(--TITLE-FONT);
 }
-
+.wrapper {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.form-img {
+  width: 750px;
+}
 .contact-container {
+  /* width: 90%; */
+  order: 2;
+  height: 600px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 3rem;
-  box-shadow: 0 0 0 3px var(--GRAY-400), 9px 9px 0 0 var(--GRAY-400);
-  border-radius: 5px;
-  background-color: var(--MAIN-COLOR);
-}
-
-.contact__title {
-  font-size: 3rem;
-  padding-bottom: 1rem;
-  color: var(--WHITE);
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3rem;
+  position: relative;
+  border-radius: 10px;
+  padding: 2rem;
+  background: var(--GRAY-400);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
 }
 
 .top-wrapper {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.container form .descr {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #e8e8e8;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.form {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
-  padding-bottom: 2rem;
+  gap: 2rem;
 }
 
-.form__name-label {
-  font-size: 1.3rem;
-  color: var(--WHITE-50);
-}
-
-.form__name-input {
-  width: 300px;
-  height: 40px;
-  padding: 8px 12px;
-  font-size: 1.2rem;
-  border: 3px solid black;
-  border-radius: 5px;
-  outline: none;
-  background-color: var(--WHITE);
-}
-
-.name-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-
-.form__email-label {
-  font-size: 1.3rem;
-  color: var(--WHITE-50);
-}
-
-.form__email-input {
-  width: 300px;
-  height: 40px;
-  padding: 8px 12px;
-  font-size: 1.2rem;
-  border: 3px solid black;
-  border-radius: 5px;
-  outline: none;
-  background-color: var(--WHITE);
-}
-
-.email-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-
-.message-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-  align-self: flex-start;
+.input,
+textarea {
+  margin: 1em 0 1em 0;
   width: 100%;
-  padding-bottom: 2rem;
+  position: relative;
 }
 
-.form__message-label {
-  font-size: 1.3rem;
-  color: var(--WHITE-50);
-}
-
-.form__message-input {
-  width: 300px;
-  height: 200px;
-  padding: 8px 12px;
-  font-size: 1.2rem;
-  border: 3px solid black;
-  border-radius: 5px;
+.input input,
+textarea {
+  font-size: 100%;
+  padding: 0.7em;
   outline: none;
-  background-color: var(--WHITE);
-}
-
-.form__submit-link {
-  align-self: center;
-  width: 100%;
-}
-
-.form__submit-btn {
-  font-size: 1.2rem;
-  padding: 8px 16px;
+  color: #e8e8e8;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: var(--BLUE);
-  color: white;
+  border-bottom: 2px solid #e8e8e8;
+  background: transparent;
+  border-radius: none;
   width: 100%;
+  resize: none;
 }
 
-.form__submit-btn:hover {
-  background-color: var(--BLUE-LINK);
+.input label {
+  font-size: 100%;
+  position: absolute;
+  left: 0;
+  color: #e8e8e8;
+  padding: 0.7em;
+  margin-left: 0.1em;
+  pointer-events: none;
+  transition: all 0.5s ease;
+  text-transform: uppercase;
+}
+
+.input :is(input:focus, input:valid) ~ label {
+  transform: translateY(-50%) scale(0.9);
+  margin: 0em;
+  padding: 0.4em;
+  background: transparent;
+}
+
+.input textarea:focus ~ label,
+.input textarea:valid ~ label {
+  transform: translateY(-50%) scale(0.9);
+  margin: 0em;
+  padding: 0.4em;
+  background: transparent;
+}
+
+.inputGroup :is(input:focus, input:valid) {
+  border-color: rgb(37, 37, 211);
+}
+
+/*  */
+.contact-container form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 40px;
+  letter-spacing: 3px;
+}
+
+.contact-container a:hover {
+  background: #fff;
+  color: #272727;
+  border-radius: 5px;
+}
+
+.contact-container a span {
+  position: absolute;
+  display: block;
+}
+
+.contact-container a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #fff);
+  animation: btn-anim1 1.5s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.contact-container a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #fff);
+  animation: btn-anim2 1.5s linear infinite;
+  animation-delay: 0.375s;
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.contact-container a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #fff);
+  animation: btn-anim3 1.5s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.contact-container a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #fff);
+  animation: btn-anim4 1.5s linear infinite;
+  animation-delay: 1.125s;
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+.contact-container p:last-child {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.contact-container a.a2 {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-container a.a2:hover {
+  background: transparent;
+  color: #aaa;
+  border-radius: 5px;
 }
 
 /**************** MEDIA QUERIES -RESPONSIVE *********************/
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
 }
 
-@media screen and (min-width: 600px) {
-}
-
-@media screen and (min-width: 1200px) {
-  .top-wrapper {
-    flex-direction: row;
-  }
-
-  .form__message-input {
-    width: 100%;
-    height: 200px;
-  }
-
-  .form__submit-link {
-    width: 25%;
-  }
+@media (min-width: 600px) {
 }

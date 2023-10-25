@@ -51,3 +51,5 @@ DOWNLOAD
 https://www.drawkit.com/illustrations/medical-health-illustrations
 
 ---
+
+<a href="https://storyset.com/data">Data illustrations by Storyset</a>
