@@ -1,3 +1,0 @@
-# Components
-
-https://uiverse.io/

@@ -1,3 +1,0 @@
-# Icons
-
-https://feathericons.com/

@@ -1,1 +1,0 @@
-# Hero kısmındaki butonda kullan
