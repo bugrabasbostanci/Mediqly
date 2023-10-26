@@ -1,15 +1,13 @@
-<!-- TR HALİNİ YAZ -->
-
 <a name="readme-top"></a>
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="#">
-    <img src="/assets/images/ilac-dunyasi-logo.png" alt="Logo" width="80" height="80">
+    <img src="/mediqly.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">MediCenter</h3>
+  <h3 align="center">Mediqly</h3>
  <p align="center">
     by Buğra Başbostancı
     <br />
@@ -47,15 +45,15 @@
 
 ## About The Project
 
-<img src="uygulama görseli" alt="Alt text" title="Optional title">
+<img src="/mediqly-wallpaper.png" alt="Alt text" title="Optional title">
 
 ### English
 
-I developed the MediCenter informational web project using **PHP**, **MySQL**, **HTML**, **CSS**, and **JavaScript** technologies. The purpose of the project is to provide users with information about medication and health.
+I developed the **Mediqly** informational web project using **PHP**, **MySQL**, **HTML**, **CSS**, and **JavaScript** technologies. The purpose of the project is to provide users with information about medication and health.
 
 ### Türkçe
 
-**PHP, MySQL, HTML, CSS, JavaScript** teknolojilerini kullanarak **MediCenter** bilgilendirme web projesini geliştirdim. Projenin amacı, kullanıcılara ilaç ve sağlık hakkında bilgi sağlamaktır.
+**PHP, MySQL, HTML, CSS, JavaScript** teknolojilerini kullanarak **Mediqly** bilgilendirme web projesini geliştirdim. Projenin amacı, kullanıcılara ilaç ve sağlık hakkında bilgi sağlamaktır.
 
 <p align="right">[<a href="#readme-top">back to top</a>]</p>
 

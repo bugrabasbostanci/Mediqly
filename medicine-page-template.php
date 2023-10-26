@@ -56,13 +56,13 @@ if (!empty($slug)) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><?php echo $medicine['name']; ?> Page</title>
-    <link rel="shortcut icon" href="/assets/images/ilac-dunyasi-logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/images/logo-group-16.svg" type="image/x-icon">
     <link rel="stylesheet" href="/assets/css/medicine-page-template.css" />
     <script src="https://kit.fontawesome.com/d50705f12e.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <!-- navbar -->
-    <?php include "/xampp/htdocs/online-recete/components/navbar-main/navbar.php"; ?>
+    <?php include "/xampp/htdocs/Mediqly/components/navbar-main/navbar.php"; ?>
 
     <div class="main">
       <!-- bread crumbs -->
@@ -181,7 +181,7 @@ if (!empty($slug)) {
     </div>
     <!-- footer -->
     <?php
-    include "/xampp/htdocs/online-recete/components/footer/footer.html";
+    include "/xampp/htdocs/Mediqly/components/footer-basic/footer-basic.html";
     ?>
 
   </body>

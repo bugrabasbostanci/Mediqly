@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mediqly</title>
-    <link rel="shortcut icon" href="/assets/images/ilac-dunyasi-logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/images/logo-group-16.svg" type="image/x-icon">
     <!-- CSS Files -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <!-- JS Files -->

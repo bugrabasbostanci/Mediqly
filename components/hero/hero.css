@@ -58,10 +58,10 @@
   line-height: 48px;
   letter-spacing: -0.01em;
   color: white;
-  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.65), 2px -2px 0px rgba(0, 0, 0, 0.65),
+  /* text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.65), 2px -2px 0px rgba(0, 0, 0, 0.65),
     -2px 2px 0px rgba(0, 0, 0, 0.65), -2px -2px 0px rgba(0, 0, 0, 0.65),
     2px 0px 0px rgba(0, 0, 0, 0.65), 0px 2px 0px rgba(0, 0, 0, 0.65),
-    -2px 0px 0px rgba(0, 0, 0, 0.65), 0px -2px 0px rgba(0, 0, 0, 0.65);
+    -2px 0px 0px rgba(0, 0, 0, 0.65), 0px -2px 0px rgba(0, 0, 0, 0.65); */
 }
 
 .hero__text {
@@ -173,7 +173,7 @@
 }
 
 /* SVG */
-.svg {
+.hero-img {
   display: none;
 }
 
@@ -205,8 +205,10 @@
   .hero__btn {
     font-size: 20px;
   }
-  .svg {
+  .hero-img {
     display: block;
-    height: 640px;
+    /* height: 640px; */
+    max-width: 100%;
+    height: auto;
   }
 }

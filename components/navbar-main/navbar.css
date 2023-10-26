@@ -35,6 +35,10 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .navbar {
   position: fixed;
   width: 100%;
@@ -67,8 +71,8 @@
 }
 
 .navbar__logo-image {
-  width: 45px;
-  height: 45px;
+  width: 60px;
+  height: 60px;
   margin-left: 16px;
 }
 
@@ -79,6 +83,7 @@
   font-size: 0.65rem;
   white-space: wrap;
   text-align: center;
+  display: none;
 }
 
 /********************* LOGIN *********************/
@@ -91,7 +96,64 @@
   color: var(--WHITE);
 }
 .navbar__login-icon {
+  font-size: 2rem;
   color: var(--RED);
+}
+
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown:hover .menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu {
+  position: absolute;
+  top: 60px;
+  right: -20px;
+  display: grid;
+  width: 180px;
+  padding: 8px 0;
+  background: var(--GRAY-400);
+  border-radius: 10px;
+  border: 1px solid var(--RED);
+  box-shadow: 0 40px 40px rgb(0 0 0 / 6%);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.25s;
+}
+
+.menu::before {
+  content: "";
+  background: inherit;
+  border-top: 1px solid var(--RED);
+  border-right: 1px solid var(--RED);
+  position: absolute;
+  top: -7px;
+  right: 22px;
+  width: 12px;
+  height: 12px;
+  rotate: -45deg;
+}
+
+.menu.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu > a {
+  font-size: 14px;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: var(--WHITE);
+}
+
+.menu > a:hover {
+  background: var(--MAIN-COLOR);
 }
 
 /* NAVBAR RIGHT */
@@ -163,10 +225,11 @@
 
 /**************** MEDIA QUERIES -RESPONSIVE *********************/
 /* 600px ve smaller */
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .actual-text {
     font-size: 1.4rem;
   }
+
   .hover-text {
     display: none;
   }
@@ -219,12 +282,17 @@
     }
   }
 }
-/* 800px ve bigger */
-@media (min-width: 800px) {
+/* 600px ve bigger */
+@media (min-width: 600px) {
   .navbar {
     padding: 0 10%;
     height: 80px;
   }
+
+  .navbar__logo-name-link {
+    display: block;
+  }
+
   .navbar__login-link {
     color: white;
     border-bottom: 2px solid transparent;
@@ -276,60 +344,6 @@
     background-color: var(--MAIN-COLOR);
   }
 
-  /* DROPDOWN */
-  .dropdown {
-    position: relative;
-    cursor: pointer;
-  }
-
-  .dropdown:hover .menu {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .menu {
-    position: absolute;
-    top: 60px;
-    right: -20px;
-    display: grid;
-    width: 180px;
-    padding: 8px 0;
-    background: #ffffff;
-    border-radius: 10px;
-    border: 1px solid #e1e1e1;
-    box-shadow: 0 40px 40px rgb(0 0 0 / 6%);
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.25s;
-  }
-
-  .menu::before {
-    content: "";
-    background: inherit;
-    border-top: 1px solid #e1e1e1;
-    border-right: 1px solid #e1e1e1;
-    position: absolute;
-    top: -7px;
-    right: 22px;
-    width: 12px;
-    height: 12px;
-    rotate: -45deg;
-  }
-
-  .menu.open {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .menu > a {
-    font-size: 14px;
-    padding: 12px 20px;
-  }
-
-  .menu > a:hover {
-    background: #f5f5f5;
-  }
-
   /* MENU ITEMS */
   .navbar__menu-toggler {
     display: none !important;
@@ -366,8 +380,8 @@
   /* logo-button styling */
   .navbar__logo > .logo-button {
     --border-right: 6px;
-    --text-stroke-color: rgba(255, 255, 255, 0.6);
-    --animation-color: #37ff8b;
+    --text-stroke-color: var(--WHITE-50);
+    --animation-color: var(--GREEN-ALL);
     --fs-size: 2em;
     letter-spacing: 3px;
     text-decoration: none;

@@ -40,7 +40,7 @@
   justify-content: space-between;
 }
 .form-img {
-  width: 750px;
+  display: none;
 }
 .contact-container {
   /* width: 90%; */
@@ -264,4 +264,11 @@ textarea {
 }
 
 @media (min-width: 600px) {
+  .wrapper {
+    padding: 7% 0;
+  }
+  .form-img {
+    display: block;
+    width: 750px;
+  }
 }

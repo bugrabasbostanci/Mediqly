@@ -35,15 +35,33 @@
   margin: 0;
 }
 
-.navbar {
-  background-color: var(--MAIN-COLOR);
-  width: 100vw;
-  height: 60px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border-bottom: 2px solid rgba(78, 80, 88, 0.48);
+html {
+  scroll-behavior: smooth;
 }
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding-right: 24px;
+  background-color: var(--MAIN-COLOR);
+  opacity: 0.95;
+  height: 60px;
+  border-bottom: 2px solid rgba(78, 80, 88, 0.48);
+  z-index: 99;
+}
+
+/* NAVBAR LEFT */
+.navbar__left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 /********************* LOGO *********************/
 .navbar__logo {
   display: flex;
@@ -52,13 +70,10 @@
   gap: 2px;
 }
 
-.navbar__logo-image-link {
-  text-decoration: none;
-}
-
 .navbar__logo-image {
-  width: 45px;
-  height: 45px;
+  width: 60px;
+  height: 60px;
+  margin-left: 16px;
 }
 
 .navbar__logo-name-link {
@@ -68,21 +83,81 @@
   font-size: 0.65rem;
   white-space: wrap;
   text-align: center;
+  display: none;
 }
 
-/********************* SEARCH *********************/
-.search__form {
+/********************* LOGIN *********************/
+.navbar__login-link {
+  text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 0.3rem;
+  color: var(--WHITE);
+}
+.navbar__login-icon {
+  color: var(--RED);
 }
 
-.search__input {
-  width: 300px;
-  height: 40px;
+/* NAVBAR RIGHT */
+.menu__items {
+  display: none;
+}
+
+.menu__item {
   display: flex;
-  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+.item__link {
+  color: white;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-weight: 500;
+  background-image: linear-gradient(
+    to right,
+    var(--GREEN-ALL),
+    var(--GREEN-ALL) 50%,
+    white 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 3px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.item__link::before {
+  content: "";
+  background: var(--GREEN-ALL);
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  transition: all 0.2s ease-in-out;
+}
+
+.item__link:hover {
+  background-position: 0;
+}
+
+.item__link:hover::before {
+  width: 100%;
+}
+
+/********************* SEARCH *********************/
+.search__input {
+  width: 180px;
+  max-width: 100%;
+  height: 40px;
   border-radius: 5px;
   border: none;
   padding: 8px 16px;
@@ -95,26 +170,11 @@
 .search__input:focus {
   outline: 1px solid var(--BLUE);
 }
-.search__button {
-  width: 60px;
-  height: 40px;
-  padding: 4px 8px;
-  background: var(--RED);
-  border: none;
-  border-radius: 5px;
-  color: var(--WHITE-50);
-  font-size: 1rem;
-}
-
-.search__button:hover {
-  cursor: pointer;
-  background-color: var(--REDISH);
-  color: var(--GRAY-400);
-}
 
 /********************* LINKS *********************/
 .navbar__menu-toggler {
   display: block;
+  cursor: pointer;
   color: var(--WHITE);
   font-size: 1.5rem;
 }
@@ -147,25 +207,8 @@
 }
 
 /* LOGIN */
-/* PHARMACY */
 .navbar__login {
   display: block;
-}
-
-.navbar__login-link {
-  text-decoration: none;
-  padding: 4px 8px;
-  color: var(--REDISH);
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  column-gap: 0.3rem;
-  font-family: var(--TITLE-FONT);
-}
-
-.navbar__login-link:hover {
-  border-bottom: 3px solid var(--RED);
-  margin-top: 3px;
 }
 
 .navbar__login-icon {
@@ -179,20 +222,9 @@
 }
 
 /* DROPDOWN */
-
 .dropdown {
   position: relative;
   cursor: pointer;
-}
-
-.dropdown > a {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-  height: 72px;
-}
-.dropdown > a > img {
-  width: 20px;
 }
 
 .dropdown:hover .menu {
@@ -207,9 +239,9 @@
   display: grid;
   width: 180px;
   padding: 8px 0;
-  background: #ffffff;
+  background: var(--GRAY-400);
   border-radius: 10px;
-  border: 1px solid #e1e1e1;
+  border: 1px solid var(--RED);
   box-shadow: 0 40px 40px rgb(0 0 0 / 6%);
   opacity: 0;
   visibility: hidden;
@@ -219,8 +251,8 @@
 .menu::before {
   content: "";
   background: inherit;
-  border-top: 1px solid #e1e1e1;
-  border-right: 1px solid #e1e1e1;
+  border-top: 1px solid var(--RED);
+  border-right: 1px solid var(--RED);
   position: absolute;
   top: -7px;
   right: 22px;
@@ -237,110 +269,203 @@
 .menu > a {
   font-size: 14px;
   padding: 12px 20px;
+  text-decoration: none;
+  color: var(--WHITE);
 }
 
 .menu > a:hover {
-  background: #f5f5f5;
+  background: var(--MAIN-COLOR);
 }
 
 /**************** MEDIA QUERIES -RESPONSIVE *********************/
-@media screen and (max-width: 600px) {
-  .search__input {
-    width: 150px;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .search__input {
-    width: 200px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .navbar__search {
-    padding-left: 6rem;
+@media (max-width: 600px) {
+  .actual-text {
+    font-size: 1.4rem;
   }
 
-  .search__input {
-    width: 350px;
-  }
-
-  .navbar__logo-name-link {
-    font-size: 1rem;
-    white-space: nowrap;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .navbar__search {
-    padding-left: 6rem;
-  }
-
-  .search__input {
-    width: 400px;
-  }
-
-  .navbar__logo-name-link {
-    font-size: 1rem;
-    white-space: nowrap;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .navbar {
-    height: 100px;
-  }
-  /* LOGO */
-  .navbar__logo {
-    gap: 5px;
-  }
-
-  .navbar__logo-image {
-    width: 50px;
-    height: 50px;
-  }
-
-  .navbar__logo-name-link {
-    font-size: 1.2rem;
-    white-space: nowrap;
-  }
-
-  .navbar__logo-name {
-    font-size: 2rem;
-  }
-
-  /* LINKS */
-  .menu__items {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .navbar__menu > .navbar__menu-toggler {
+  .hover-text {
     display: none;
   }
 
-  /* SEARCH */
-  .search__input:focus {
-    outline: 1px solid var(--BLUE);
+  .navbar__menu-toggler {
+    display: block;
   }
-  .search__button {
-    width: min-content;
-    padding: 8px 16px;
+
+  .navigation--mobile {
+    top: 60px;
+    position: absolute;
+    right: 0px;
+    display: flex;
+    padding: 80px 60px;
+    min-height: 100%;
+    background-color: var(--MAIN-COLOR);
+    gap: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    opacity: 0.95;
+    animation: fadein 0.3s forwards;
+  }
+
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    100% {
+      opacity: 1;
+      width: 100%;
+      height: calc(100vh - 60px);
+    }
+  }
+
+  .navigation--mobile--fadeout {
+    animation: fadeout 300ms forwards;
+  }
+
+  @keyframes fadeout {
+    0% {
+      opacity: 1;
+      width: 100%;
+      height: calc(100vh - 60px);
+    }
+    100% {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media (min-width: 600px) {
   .navbar {
-    padding: 0;
+    padding: 0 10%;
+    height: 80px;
   }
 
   .navbar__logo-name-link {
-    font-size: 1.5rem;
-    white-space: nowrap;
+    display: block;
   }
 
-  .navbar__search {
-    padding-left: 16rem;
+  .search__input {
+    width: 100%;
+  }
+
+  .navbar__login-link {
+    color: white;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: 500;
+    background-image: linear-gradient(
+      to right,
+      var(--RED),
+      var(--RED) 50%,
+      white 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    padding: 3px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .navbar__login-link::before {
+    content: "";
+    background: var(--RED);
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .navbar__login-link:hover {
+    background-position: 0;
+  }
+
+  .navbar__login-link:hover::before {
+    width: 100%;
+  }
+
+  .menu__items {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    align-items: center;
+    gap: 24px;
+    padding: 0px;
+    background-color: var(--MAIN-COLOR);
+  }
+
+  /* MENU ITEMS */
+  .navbar__menu-toggler {
+    display: none !important;
+  }
+  .navbar__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .navbar__search-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--WHITE);
+    text-decoration: none;
+  }
+  .navbar__search-icon {
+    display: block !important;
+  }
+
+  /* test */
+  .navbar__logo > .logo-button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* logo-button styling */
+  .navbar__logo > .logo-button {
+    --border-right: 6px;
+    --text-stroke-color: var(--WHITE-50);
+    --animation-color: var(--GREEN-ALL);
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: var(--TITLE-FONT);
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+  /* this is the text, when you hover on button */
+  .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--GREEN-ALL);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--GREEN-ALL);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--GREEN-ALL);
+  }
+  /* hover */
+  .navbar__logo > .logo-button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--GREEN-ALL));
   }
 }

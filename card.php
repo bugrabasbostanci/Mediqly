@@ -4,7 +4,7 @@ echo "
 <div class='card'>
         <!-- image -->
         <div class='image-wrapper'>
-          <a href='null' class='card__image-link'>
+          <a href='http://localhost:3000/medicine-page-template.php?slug=".$row["slug"]." ' class='card__image-link'>
             <img
               class='card__image'
               src='". $row["imageURL"]."'
@@ -49,13 +49,10 @@ echo "
           <!-- prescription alert -->
           <div class='card__prescription-container'>
           <p class='card__prescription-warning'>
-            <i class='fa-solid fa-triangle-exclamation'></i>
-            <span>
-            
             <a href='".$row["prescription"]."' class='card__prescription-link' title='&rx;' target='_blank'>prescription</a>
           </p>
           <a href='http://localhost:3000/medicine-page-template.php?slug=".$row["slug"]." 'class='card__page-link'>
-            <button class='card__page-btn'>Details</button>
+            <button class='card__page-btn'>More Info</button>
             </a>
           </div>
         </div>

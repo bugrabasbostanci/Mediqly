@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>List</title>
+    <link rel="shortcut icon" href="/assets/images/logo-group-16.svg" type="image/x-icon">
     <link rel="stylesheet" href="/assets/css/medicine-list-page.css" />
-    <!-- <link rel="stylesheet" href="assets/css/style.css" /> -->
     <link rel="stylesheet" href="/components/medicine-card/medicine-card.css" />
 
     <script
@@ -15,7 +15,7 @@
   </head>
   <body>
     <?php
-    include "/xampp/htdocs/online-recete/components/navbar-list/navbar.php";
+    include "/xampp/htdocs/Mediqly/components/navbar-list/navbar.php";
 
     ?>
      <div class="card-container">
@@ -41,7 +41,7 @@
   if ($result->num_rows > 0) {
       // Verileri döngü ile alıp kullanma
       while($row = mysqli_fetch_assoc($result)) {
-          include "/xampp/htdocs/online-recete/card.php" ;
+          include "/xampp/htdocs/Mediqly/card.php" ;
       }
       
   } else {
@@ -54,7 +54,7 @@
   </div>
 
     <?php
-    include "/xampp/htdocs/online-recete/components/footer/footer.html";
+    include "/xampp/htdocs/Mediqly/components/footer/footer.html";
     ?>
   </body>
 </html>

@@ -6,6 +6,7 @@
   font-family: "Poppins";
   src: url("/assets/fonts/Poppins-Medium.ttf");
 }
+
 :root {
   --MAIN-COLOR: #313338; /* >> MAIN BG COLOR*/
   --GREEN-1: #248046; /* >> buton*/
@@ -23,48 +24,31 @@
   --GRAY-150: #80848e; /* >> invisible status | MAIN BG üzerindeki badge bg rengi*/
   --GRAY-200: #42444a; /* >> MAIN BG üzerindeki BTN BG*/
   --GRAY-250: #2b2d31; /* >> BG COLOR 1 |MAIN BG üzerindeki iconların bg rengi*/
-  --GRAY-300: #232428; /* >> CARD BG COLOR */
   --GRAY-400: #1e1f22; /* >> BG COLOR 2 | MAIN BG üzerindeki search bar bg*/
   --TITLE-FONT: "Inter";
   --TEXT-FONT: "Poppins";
+  /* -- */
+  --footer-background: white;
+  --text-color: #111420;
+  --text-gray: #e1e1e1;
+  --text-heading-gray: #b9b9b9;
 }
 
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  font-family: var(--TITLE-FONT);
 }
 
-body {
+footer {
+  border-top: 1px solid var(--GRAY-150);
+  width: 100%;
+  text-align: center;
   background-color: var(--MAIN-COLOR);
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.card-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 2rem;
-  min-height: 100vh;
-  width: 60%;
-  margin-top: 10rem;
-}
-
-.clear-list-btn {
-  background-color: var(--BLUE);
-  padding: 8px 16px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.5rem;
-  margin-top: 1rem;
-}
-.clear-list-btn:hover {
-  cursor: pointer;
-  opacity: 0.9;
+footer p {
+  padding: 24px 0;
+  color: white;
 }

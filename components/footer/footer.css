@@ -6,6 +6,7 @@
   font-family: "Poppins";
   src: url("/assets/fonts/Poppins-Medium.ttf");
 }
+
 :root {
   --MAIN-COLOR: #313338; /* >> MAIN BG COLOR*/
   --GREEN-1: #248046; /* >> buton*/
@@ -26,6 +27,11 @@
   --GRAY-400: #1e1f22; /* >> BG COLOR 2 | MAIN BG üzerindeki search bar bg*/
   --TITLE-FONT: "Inter";
   --TEXT-FONT: "Poppins";
+  /* -- */
+  --footer-background: white;
+  --text-color: #111420;
+  --text-gray: #e1e1e1;
+  --text-heading-gray: #b9b9b9;
 }
 
 * {
@@ -39,101 +45,477 @@ body {
   overflow-x: hidden;
 }
 
-.footer-container {
+footer {
   background-color: var(--MAIN-COLOR);
-  width: 100%;
-  height: 100px;
+  min-width: 300px;
+  width: 100vw;
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  border-top: 2px solid rgba(78, 80, 88, 0.48);
+  flex-direction: column;
   margin-top: 5rem;
 }
 
-/* LOGO */
-.footer__logo {
+.footer-wrapper {
   display: flex;
-  align-items: center;
-  gap: 2px;
+  background: var(--MAIN-COLOR);
+  flex-direction: column;
+  max-width: 1320px;
+  padding: 16px;
 }
 
-.footer__logo-image {
-  width: 45px;
-  height: 45px;
+/*? top section */
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: start;
+  padding: 16px 0px;
+  justify-content: space-between;
 }
 
-.footer__logo-name-link {
-  text-decoration: none;
+.footer-line {
+  display: block;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(to right, var(--BLUE), var(--GREEN-ALL));
 }
 
-.footer__logo-name {
-  text-decoration: none;
-  color: var(--WHITE);
-  font-family: var(--TITLE-FONT);
-  font-size: 1.5rem;
-  width: 50px;
-  white-space: wrap;
-  text-align: center;
+/*? footer subscribe */
+.footer-subscribe {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
-.footer__text {
+.footer-subscribe > input {
+  border: 1px solid var(--text-gray);
+  color: var(--GRAY-400);
+  min-height: 36px;
+  font-size: 1.2rem;
+  flex: 1 0 120px;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.footer-subscribe > button {
+  cursor: pointer;
+  background-color: var(--GRAY-400);
+  border-radius: 8px;
   color: var(--WHITE-50);
-  white-space: wrap;
-  text-align: center;
-  width: 180px;
-  padding-left: 10px;
+  font-size: 1.25rem;
+  min-width: 120px;
+  min-height: 36px;
+  flex: 1 0 80px;
+  white-space: nowrap;
+  padding: 8px 12px;
+  border: 0px;
+  outline: none;
 }
 
-.footer__icons {
+/*? footer columns */
+.footer-columns {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 0.7rem;
+  flex: 2 0 140px;
+  width: 100%;
+  /* height: 300px; */
+  gap: 16px;
+  padding: 24px 8px 16px 8px;
+  margin: 0 auto;
+  border-top: 1px solid var(--GRAY-150);
 }
 
-.footer__icons > i {
-  color: var(--WHITE);
-  font-size: 1.5rem;
+.footer-columns ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-.footer__icons > i:hover {
+.footer-columns ul a {
+  color: var(--GRAY-100);
+  text-decoration: none;
+}
+
+.footer-columns ul a:hover {
+  text-decoration: underline;
+}
+
+.footer-columns ul li {
+  margin-bottom: 16px;
+}
+
+.footer-columns h3 {
+  color: white;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 1.125rem;
+}
+
+.footer-centering {
+  margin: 0 auto;
+}
+
+.footer-columns > section {
+  min-width: 150px;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  min-width: 180px;
+}
+
+.footer-logo .hide {
+  color: white;
+  font-size: 2rem;
+}
+
+.footer-logo > svg {
+  width: 100px;
+  height: 100px;
+}
+
+/*? Footer bottom */
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid var(--GRAY-150);
+  margin-top: 48px;
+  width: 100%;
+  gap: 8px;
+  padding: 16px 0px;
+}
+
+.footer-bottom > small {
+  font-size: 16px;
+  margin: 0 4px;
+  color: white;
+}
+
+.footer-headline > h2 {
+  color: white;
+  margin: 0px;
+}
+
+.footer-headline > p {
+  color: var(--GRAY-100);
+  margin: 12px 0px;
+}
+
+/* SOCIALS */
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 14em;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.card {
+  width: 60px;
+  height: 60px;
+  border-top-left-radius: 10px;
+  transition: 0.4s ease-in-out, 0.2s background-color ease-in-out,
+    0.2s background-image ease-in-out;
+  /* background: rgba(255, 255, 255, 0.596); */
+  background: transparent;
+  backdrop-filter: blur(5px);
+  border: 1px solid transparent;
+  -webkit-backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .instagram {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  fill: #cc39a4;
+}
+
+.card:nth-child(2) {
+  border-radius: 0px;
+}
+
+.card:nth-child(2) .twitter {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  fill: #03a9f4;
+}
+
+.card:nth-child(3) {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 0px;
+}
+
+.card:nth-child(3) .dribble {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  fill: #ffb5d2;
+}
+
+.card:nth-child(4) {
+  border-radius: 0px;
+}
+
+.card:nth-child(4) .codepen {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  fill: black;
+}
+
+.card:nth-child(5) {
+  border-radius: 0px;
+}
+
+.card:nth-child(5) .uiverse {
+  position: absolute;
+  margin-left: 0.2em;
+  margin-top: 0.2em;
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+}
+
+.card:nth-child(6) {
+  border-radius: 0px;
+}
+
+.card:nth-child(6) .discord {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  fill: #8c9eff;
+}
+
+.card:nth-child(7) {
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 0px;
+}
+
+.card:nth-child(7) .github {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  fill: black;
+}
+
+.card:nth-child(8) {
+  border-radius: 0px;
+}
+
+.card:nth-child(8) .telegram {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  fill: #29b6f6;
+}
+
+.card:nth-child(9) {
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 0px;
+}
+
+.card:nth-child(9) .reddit {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+}
+
+.main:hover {
+  width: 14em;
   cursor: pointer;
-  color: var(--BLUE-LINK);
 }
 
-/**************** MEDIA QUERIES -RESPONSIVE *********************/
-@media screen and (max-width: 600px) {
+.main:hover .main_back {
+  opacity: 0;
 }
 
-@media screen and (min-width: 600px) {
+.main:hover .card {
+  margin: 0.2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
 }
 
-@media screen and (min-width: 1200px) {
-  .footer-container {
+.main:hover .card:nth-child(5) {
+  border: transparent;
+}
+
+.main:hover .text {
+  opacity: 0;
+  z-index: -3;
+}
+
+.main:hover .instagram {
+  opacity: 1;
+}
+
+.main:hover .twitter {
+  opacity: 1;
+}
+
+.main:hover .dribble {
+  opacity: 1;
+}
+
+.main:hover .codepen {
+  opacity: 1;
+}
+
+.main:hover .uiverse {
+  opacity: 1;
+}
+
+.main:hover .discord {
+  opacity: 1;
+}
+
+.main:hover .github {
+  opacity: 1;
+}
+
+.main:hover .telegram {
+  opacity: 1;
+}
+
+.main:hover .reddit {
+  opacity: 1;
+}
+
+.card:nth-child(1):hover {
+  background-color: #cc39a4;
+}
+
+.card:nth-child(1):hover .instagram {
+  fill: white;
+}
+
+.card:nth-child(2):hover {
+  background-color: #03a9f4;
+}
+
+.card:nth-child(2):hover .twitter {
+  fill: white;
+}
+
+.card:nth-child(3):hover {
+  background-color: #ffb5d2;
+}
+
+.card:nth-child(3):hover .dribble {
+  fill: white;
+}
+
+.card:nth-child(4):hover {
+  background-color: #1e1f26;
+}
+
+.card:nth-child(4):hover .codepen {
+  fill: white;
+}
+
+.card:nth-child(5):hover {
+  animation: backgroundIMG 0.1s;
+  animation-fill-mode: forwards;
+}
+
+.card:nth-child(5):hover .uiverse #paint0_linear_501_142 stop {
+  stop-color: white;
+}
+
+.card:nth-child(5):hover .uiverse #paint1_linear_501_142 stop {
+  stop-color: white;
+}
+
+.card:nth-child(5):hover .uiverse #paint2_linear_501_142 stop {
+  stop-color: white;
+}
+
+@keyframes backgroundIMG {
+  100% {
+    background-image: linear-gradient(#5865f2, #23a55a);
+  }
+}
+
+.card:nth-child(6):hover {
+  background-color: #8c9eff;
+}
+
+.card:nth-child(6):hover .discord {
+  fill: white;
+}
+
+.card:nth-child(7):hover {
+  background-color: black;
+}
+
+.card:nth-child(7):hover .github {
+  fill: white;
+}
+
+.card:nth-child(8):hover {
+  background-color: #29b6f6;
+}
+
+.card:nth-child(8):hover .telegram > path:nth-of-type(1) {
+  fill: white;
+}
+
+.card:nth-child(8):hover .telegram > path:nth-of-type(2) {
+  fill: #29b6f6;
+}
+
+.card:nth-child(8):hover .telegram > path:nth-of-type(3) {
+  fill: #29b6f6;
+}
+
+.card:nth-child(9):hover {
+  background-color: rgb(255, 69, 0);
+}
+
+.card:nth-child(9) .reddit > g circle {
+  fill: rgb(255, 69, 0);
+}
+
+.card:nth-child(9) .reddit > g path {
+  fill: white;
+}
+
+.text {
+  position: absolute;
+  font-size: 0.7em;
+  transition: 0.4s ease-in-out;
+  color: var(--WHITE-50);
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.33em;
+  z-index: 3;
+}
+
+/*? mobile */
+
+@media (max-width: 800px) {
+  .footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 16px 8px 32px 8px;
   }
 
-  .footer__logo {
-    gap: 5px;
+  .footer-columns {
+    flex-wrap: wrap;
   }
 
-  .footer__logo-image {
-    width: 50px;
-    height: 50px;
-  }
-
-  .footer__logo-name {
-    white-space: nowrap;
-  }
-
-  .footer__text {
-    white-space: nowrap;
-  }
-
-  .footer__icons {
-    gap: 1rem;
-  }
-
-  .footer-icons > i {
-    font-size: 2rem;
+  .footer-bottom {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: space-between;
+    justify-content: center;
+    margin: 0 auto;
   }
 }

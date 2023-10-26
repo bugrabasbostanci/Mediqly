@@ -37,34 +37,33 @@
             <i class="fa-solid fa-user-plus" title="Yetişkinler içindir"></i>
 
             <!-- <i
-            class="fa-solid fa-hand-holding-droplet"
-            title="Sürerek uygulayınız"
+            class='fa-solid fa-hand-holding-droplet'
+            title='Sürerek uygulayınız'
           ></i> -->
-            <!-- <i class="fa-solid fa-spoon" title="Şurup"></i> -->
+            <!-- <i class='fa-solid fa-spoon' title='Şurup'></i> -->
           </div>
-          
         </div>
 
         <!-- informations -->
         <div class="information-wrapper">
           <div class="information-top-wrapper">
             <div class="info-left">
-            <h1 class="card__name">Majezik</h1>
-            <!-- rates -->
-            <div class="rate-wrapper" title="Güçlü">
-              (<i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>)
+              <h1 class="card__name">Majezik</h1>
+              <!-- rates -->
+              <div class="rate-wrapper" title="Güçlü">
+                (<i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>)
+              </div>
             </div>
-          </div>
             <!-- add button -->
             <div class="add-button">
-              <form method='post' action='add-to-list.php'>
-                <input type='hidden' name='medicine_id' value=" .$row['id'].">
-                <button type='submit' class="add-btn">
-                  <i class='fa-solid fa-plus'></i>
+              <form method="post" action="add-to-list.php">
+                <input type="hidden" name="medicine_id" value=' .$row["id"].' />
+                <button type="submit" class="add-btn">
+                  <i class="fa-solid fa-plus"></i>
                 </button>
-            </form>
+              </form>
             </div>
           </div>
           <!-- descriptions -->
@@ -79,14 +78,16 @@
 
           <!-- prescription alert -->
           <div class="card__prescription-container">
-          <p class="card__prescription-warning">
-            <i class="fa-solid fa-triangle-exclamation"></i>
-            <span>
-            
-            <a href="" class="card__prescription-link" title="&rx;">prescription</a>
-          </p>
-          <a href='http://localhost:3000/medicine-page-template.php?slug=". $row["slug"]."' class="card__page-link">
-            <button class="card__page-btn">Details</button>
+            <p class="card__prescription-warning">
+              <a href="" class="card__prescription-link" title="&rx;"
+                >prescription</a
+              >
+            </p>
+            <a
+              href='http://localhost:3000/medicine-page-template.php?slug=". $row["slug"]."'
+              class="card__page-link"
+            >
+              <button class="card__page-btn">More Info</button>
             </a>
           </div>
         </div>

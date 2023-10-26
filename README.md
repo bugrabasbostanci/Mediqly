@@ -1,118 +1,180 @@
-# Online Reçete Uygulaması
+<a name="readme-top"></a>
 
-## Projede Olması Gereken Özellikler
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="#">
+    <img src="/mediqly.png" alt="Logo" width="80" height="80">
+  </a>
 
--İlaç Arama Özelliği: Kullanıcıların, aradıkları ilacı kolayca bulabilmeleri için bir ilaç arama özelliği ekleyebilirsiniz. Bu özellik, ilaca ait isim, etken madde veya kullanım alanı gibi bilgilere göre arama yapmayı mümkün kılabilir.
+  <h3 align="center">Mediqly</h3>
+ <p align="center">
+    by Buğra Başbostancı
+    <br />
+    <a href="link"><strong>View Demo</strong></a>
+    <br />
+    <br />
+    <a href="link">Report Bug</a>
+    ·
+    <a href="link">Request Feature</a>
+  </p>
+</div>
 
--İlaç Rehberleri(Prospektüs): Kullanıcılara, ilaçlar hakkında daha fazla bilgi edinmeleri için ilaç rehberleri ekleyebilirsiniz. Bu rehberler, ilaçları kullanmadan önce dikkat edilmesi gereken noktalar, ilaçların olası yan etkileri ve ilaçlarla ilgili diğer önemli bilgiler gibi konuları içerebilir. Bir ilaçla ilgili tüm bilgilerin yer aldığı bir rehber, prospektüs.
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#technologies">Technologies</a></li>
+        <li><a href="#features">Features</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
--Kullanıcı Profili: Kullanıcıların kişisel bilgilerini ve sağlık geçmişlerini saklayabilecekleri bir profil sayfası ekleyebilirsiniz. Kullanıcılar için hesap işlemi.
+## About The Project
 
-## Projeye Eklenebilecek Özellikler
+<img src="/mediqly-wallpaper.png" alt="Alt text" title="Optional title">
 
--İlaç karşılaştırma özelliği: Kullanıcıların, farklı ilaçları karşılaştırabilmeleri için bir ilaç karşılaştırma özelliği ekleyebilirsiniz. Bu özellik, ilaçları etken madde, kullanım şekli, yan etkileri ve fiyat gibi bilgilere göre karşılaştırmayı mümkün kılabilir.
+### English
 
--İlaç etkileşimi özelliği: Kullanıcıların, kullandıkları ilaçların birbiriyle etkileşime girip girmediğini kontrol edebilmeleri için bir ilaç etkileşimi özelliği ekleyebilirsiniz. Bu özellik, kullanıcıların ilaçlarını kullanırken dikkat etmeleri gereken noktaları belirlemelerine yardımcı olabilir.
+I developed the **Mediqly** informative web project using **PHP**, **MySQL**, **HTML**, **CSS**, **Bootstrap** and **JavaScript** technologies. The purpose of the project is to provide users with information about medication and health.
 
--İlaç yorumları: Kullanıcıların, kullandıkları ilaçlar hakkında yorum yapabilmeleri için bir ilaç yorumları bölümü ekleyebilirsiniz. Bu bölüm, kullanıcıların ilaçlarla ilgili deneyimlerini paylaşmalarına ve diğer kullanıcılara yardımcı olmalarına olanak tanır.
+### Türkçe
 
--İlaç veri tabanı oluşturma: İlaçlar hakkında kapsamlı ve güncel bilgiler içeren bir ilaç veri tabanı oluşturabilirsiniz. Bu veri tabanı, ilaçları etken madde, kullanım şekli, yan etkileri, fiyat ve diğer bilgilere göre listeleyebilir.
+**PHP, MySQL, HTML, CSS, **Bootstrap** ve JavaScript** teknolojilerini kullanarak **Mediqly** bilgilendirici web projesini geliştirdim. Projenin amacı, kullanıcılara ilaç ve sağlık hakkında bilgi sağlamaktır.
 
--İlaç araştırması yapma: İlaçlar hakkında yeni bilgiler edinmek için araştırma yapabilirsiniz. Bu araştırmalar, ilaçların geliştirilmesi, yan etkilerinin azaltılması veya yeni kullanım alanlarının bulunması gibi konularda faydalı olabilir.
+<p align="right">[<a href="#readme-top">back to top</a>]</p>
 
--İlaç eğitimi verme: İlaçlar hakkında bilgi edinmek isteyen kişilere eğitim verebilirsiniz. Bu eğitimler, ilaçları güvenli ve etkili bir şekilde kullanmalarına yardımcı olabilir.
+## Technologies
 
--İlaç dozaj hesaplama aracı: Kullanıcıların ilaçların dozajlarını hesaplayabilecekleri bir ilaç dozaj hesaplama aracı ekleyebilirsiniz.
+<p align="center">
+  <a><img src="https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white"/></a>
+  <a><img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white"/></a>
+  <a><img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"/></a>
+  <a><img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"/></a>
+  <a><img src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white"/></a>
+  <a><img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/></a>
+  <a><img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white"/></a>
+  <a><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"/></a>
+  <a><img src="https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white"/></a>
+  <a><img src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white"/></a>
+  <a><img src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white"/></a>
 
--İlaç arşivi: Kullanıcıların geçmişte kullandıkları ilaçları takip edebilecekleri bir ilaç arşivi ekleyebilirsiniz.
+</p>
 
--İlaç hatırlatıcısı: Kullanıcıların ilaçlarını zamanında almalarını hatırlatacak bir ilaç hatırlatıcısı ekleyebilirsiniz.
+<p align="right">[<a href="#readme-top">back to top</a>]</p>
 
--İlaç yan etkisi takip aracı: Kullanıcıların ilaçların olası yan etkilerini takip edebilecekleri bir ilaç yan etkisi takip aracı ekleyebilirsiniz.
+<!-- Features -->
 
--İlaç etkileşimi uyarısı: Kullanıcıların kullandıkları ilaçların birbiriyle etkileşime girip girmediğini kontrol edebilecekleri bir ilaç etkileşimi uyarısı ekleyebilirsiniz.
+## Features
 
--Video ve Sesli Rehberlik: Kullanıcılara ilaçların nasıl kullanılacağı veya sağlık konularında bilgi veren video veya sesli rehberlik ekleyebilirsiniz.
+- [x] Pages
+  - [x] Home
+  - [x] Search
+  - [x] Single Medicine
+  - [x] Login
+  - [x] Dashboard
+    - [x] Medicine
+- [x] Features
+  - [x] Search Medicine
+  - [x] User Comment post
+  - [x] Admin Dashboard Page (only admin access)
+    - [x] Medicine List
+    - [x] Create new medicine
+    - [x] Read medicine
+    - [x] Update medicine
+    - [x] Delete medicine
+- [ ] New features coming soon
+  - [ ] About Page
+  - [ ] Contact Page
 
-## Projeye İlaçlara Ek Olarak Eklenebilecek Özellikler
+<p align="right">[<a href="#readme-top">back to top</a>]</p>
 
--İlaç Kullanımının Zararı hakkında içerikler: İlaçların ne kadar zararlı olduğunu, bazı hastalık durumlarının ilaç kullanmadan kendiliğinde veya doğal yöntemler ile geçebileciğini anlatan ve ihtiyaç dışında ilaç kullanmamayı anlatan içerikler,araştırmalar...
+<!-- GETTING STARTED -->
 
--Sağlık bilgileri: İlaçlar hakkında bilgi edinmenin yanı sıra, kullanıcıların diğer sağlık bilgileri hakkında da bilgi edinebilecekleri bir bölüm ekleyebilirsiniz. Bu bölüm, hastalıklar, beslenme, egzersiz ve diğer sağlık konuları hakkında bilgiler içerebilir.
+## Getting Started
 
--Sağlık haberleri: Kullanıcıların güncel sağlık haberleri hakkında bilgi edinebilecekleri bir bölüm ekleyebilirsiniz. Bu bölüm, yeni ilaçların geliştirilmesi, sağlık politikaları ve diğer sağlık konuları hakkında haberler içerebilir.
+This is a simple yet informative full stack web project. Follow the simple example steps below to get a local copy running.
 
--Sağlık forumları: Kullanıcıların sağlık hakkında bilgi ve deneyimlerini paylaşabilecekleri forumlar ekleyebilirsiniz. Bu forumlar, kullanıcıların ilaçlarla ilgili sorularına cevap bulmalarına ve diğer kullanıcılardan destek alabilmelerine yardımcı olabilir.
+### Prerequisites ? gerek var mı
 
--Sağlık blogları: Kullanıcıların sağlık hakkında bilgi edinebilecekleri bloglar ekleyebilirsiniz. Bu bloglar, ilaçlar, hastalıklar ve diğer sağlık konuları hakkında bilgiler içerebilir.
+This is an example of how to list things you need to use the software and how to install them.
 
--Sağlık uygulamaları: Kullanıcıların ilaçlarını takip edebilecekleri, sağlık bilgilerini yönetebilecekleri veya sağlıkla ilgili diğer görevleri gerçekleştirebilecekleri uygulamalar ekleyebilirsiniz.
+- npm
+  ```
+  HERE
+  ```
 
-## Proje gerçek bir uygulama olsaydı eklenecek özellikler
+### Installation ?
 
--Doktor ile İletişim: Kullanıcılar reçetelerini doktorlarına paylaşabilir ve iletişim kurabilirler. Bu, kullanıcıların sağlık durumlarını daha yakından takip etmelerine yardımcı olabilir.
+_Below is an example of how you can instruct your audience on installing and setting up your app. This project doesn't rely on any external dependencies or services._
 
--İlaç Fiyat Karşılaştırması: Kullanıcılara ilaçların farklı eczanelerdeki fiyatlarını karşılaştırma imkanı sunabilirsiniz. Bu, kullanıcıların daha uygun fiyatlı ilaçlar bulmalarına yardımcı olabilir.
+1. Clone the repo
+   ```sh
+   git clone URL
+   ```
+2. STEP 2
+   ```
+   HERE
+   ```
+3. STEP 3
+   ```
+   HERE
+   ```
+4. STEP 4
+   ```
+   HERE
+   ```
 
--Eczane Bulucu: Kullanıcılara yakınlarındaki eczanelerin konumunu ve iletişim bilgilerini bulmalarına yardımcı olacak bir eczane bulucu ekleyebilirsiniz.
+<p align="right">[<a href="#readme-top">back to top</a>]</p>
 
--Çoklu Dil Desteği: Kullanıcıların farklı dillerde bilgi edinmelerine olanak tanımak için çoklu dil desteği ekleyebilirsiniz.
+<!-- CONTRIBUTING -->
 
--Sosyal Paylaşım Entegrasyonu: Kullanıcıların ilaçlarını sosyal medyada paylaşmalarını veya sağlık deneyimlerini diğer kullanıcılarla paylaşmalarını sağlayacak entegrasyonlar ekleyebilirsiniz.
+## Contributing
 
--Online Reçete Alma: Kullanıcıların evlerinden hastalıkları(basit hastalık) için durumlarını öğrenip reçete almalarını ekleyebilirsiniz.
+Contributions are what make the open source community so great. We appreciate any and all contributions, **big or small.**
 
--Sağlık Koçluğu: Kullanıcılara sağlık ve ilaç yönetimi konularında tavsiyelerde bulunacak bir sağlık koçluğu özelliği ekleyebilirsiniz.
+If you have an idea for how to improve this project, please fork the repository and create a pull request. You can also simply open an issue with the label "enhancement".
 
--Sağlık Günlüğü: Kullanıcıların sağlık bilgilerini ve semptomlarını izlemelerine olanak tanıyacak bir sağlık günlüğü ekleyebilirsiniz.
+1. Fork the Project
+2. Create your Feature Branch
+3. Commit your Changes
+4. Push to the Branch
+5. Open a Pull Request
 
--Uzaktan Online Doktorluk: Sağlık çalışanı olan ve belli bir bilgi düzeyinde olan insanlar için, bulunduğu koşullar veya sadece istediği için evinden insanlara yardımcı olabileceği ve aynı zamanda para kazanabileceği bir özellik. Online Hastane, Klinik diyebiliriz. Hasta evinde, doktor evinde ve tedavi, reçete, ne gerekiyorsa gerçekleşiyor.
+_Per aspera ad astra_ (through suffering to the stars)
+Thank you for your support!
 
--Eczane bul özelliği yerine eklenebilecek özellikler:
+<p align="right">[<a href="#readme-top">back to top</a>]</p>
 
-- Hastalık-Semptom Eşleştirme: Kullanıcılar belirli bir semptomu girdiklerinde, muhtemel hastalıkları listeler ve bu hastalıklar için önerilen ilaçları gösteren bir özellik ekleyebilirsiniz.
+<!-- LICENSE -->
 
-<!-- Search kodu  -->
+## License ?
 
-<div class="card-container">
+Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-        <?php
-      include "/xampp/htdocs/online-recete/components/navbar-search/navbar.html";
-      ?>
-      <!-- Navbar | End -->
+<p align="right">[<a href="#readme-top">back to top</a>]</p>
 
-      <!-- Card Section | Start -->
-        <div class="card-container">
+<!-- CONTACT -->
 
-        <p>İlaçlar burada görüntülensin</p>
+## Contact
 
-          <?php
+Buğra Başbostancı | [LinkedIn](https://www.linkedin.com/in/bugrabasbostanci/) | bugrabasbostanci143@gmail.com
 
-          require "/xampp/htdocs/online-recete/config.php";
+Project Link: [https://github.com/bugrabasbostanci/Mediqly](https://github.com/bugrabasbostanci/Mediqly)
 
-            // Formun submit işlemini işleyen kod
-            if (isset($_POST['search'])) {
-              // Kullanıcının girdiği ilaç adını alın
-              $input = $_POST['search'];
+<p align="right">[<a href="#readme-top">back to top</a>]</p>
 
-              // SEARCH
-              $sql = "SELECT id, name, slug, power, powerText, category, method, methodText, ageA, ageC, purpose, instruction, imageURL, prescription FROM medicines WHERE name LIKE '%$input%'";
-              // FETCH
-              $result = mysqli_query($link, $sql);
-
-
-              // Arama sonucunu gösteren kod
-              if (mysqli_num_rows($result) > 0) {
-
-                  while($row = mysqli_fetch_assoc($result)) {
-                    // MAP
-                    include "/xampp/htdocs/online-recete/card.php";
-                  }
-
-              } else {
-                  echo "0 results";
-              }
-          }
-
-          mysqli_close($link);
-          ?>
+<!-- ACKNOWLEDGMENTS -->

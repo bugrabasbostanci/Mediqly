@@ -3,7 +3,7 @@ echo "
 <div class='card'>
 <!-- image -->
 <div class='image-wrapper'>
-<a href='null' class='card__image-link'>
+<a href='http://localhost:3000/medicine-page-template.php?slug=".$row["slug"]." ' class='card__image-link'>
 <img
 class='card__image'
 src='". $row["imageURL"]."'
@@ -30,7 +30,7 @@ alt='". $row["name"]."'
 <div class='information-wrapper'>
 <div class='information-top-wrapper'>
 <div class='info-left'>
-            <h1 class='card__name'>Majezik</h1>
+            <h1 class='card__name'>". $row["name"]."</h1>
             <!-- rates -->
             <div class='rate-wrapper' title='Güçlü'>
               (<i class='fa-solid fa-star'></i>
@@ -61,13 +61,11 @@ alt='". $row["name"]."'
 <!-- prescription alert -->
 <div class='card__prescription-container'>
 <p class='card__prescription-warning'>
-<i class='fa-solid fa-triangle-exclamation'></i>
-<span>
 
 <a href='".$row["prescription"]."' class='card__prescription-link' title='&rx;' target='_blank'>prescription</a>
 </p>
 <a href='http://localhost:3000/medicine-page-template.php?slug=".$row["slug"]." 'class='card__page-link'>
-<button class='card__page-btn'>Details</button>
+<button class='card__page-btn'>More Info</button>
 </a>
 </div>
 </div>

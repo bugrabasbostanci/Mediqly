@@ -1,5 +1,4 @@
 <?php
-// config.php
 
 if (!defined('DB_SERVER')) {
     define('DB_SERVER', 'localhost');

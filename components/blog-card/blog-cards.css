@@ -40,6 +40,7 @@
   flex-direction: column;
   align-items: center;
   height: 100%;
+  padding: 10% 0;
 }
 
 .container__title {
@@ -57,8 +58,8 @@
 }
 
 .card-container {
-  width: 500px;
-  height: 333px;
+  width: 450px;
+  height: 300px;
   position: relative;
   border-radius: 10px;
 }
@@ -139,7 +140,16 @@
 }
 
 @media (min-width: 600px) {
+  .blog-card-container {
+    padding: 7% 0 15% 0;
+  }
   .blog-card-wrapper {
     flex-direction: row;
+  }
+  .card-container {
+    width: 500px;
+    height: 333px;
+    position: relative;
+    border-radius: 10px;
   }
 }

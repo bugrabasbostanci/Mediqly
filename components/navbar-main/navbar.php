@@ -1,5 +1,5 @@
 <?php
-include("/xampp/htdocs/online-recete/config.php");
+include("/xampp/htdocs/Mediqly/config.php");
 session_start();
 $user = "";
 if (isset($_SESSION['user'])) {
@@ -29,15 +29,15 @@ if (isset($_SESSION['user'])) {
       <!-- Navbar logo -->
       <div class='navbar__logo'>
         <!-- logo -->
-        <a href='/' class='navbar__logo-image-link'>
+        <a href='#' class='navbar__logo-image-link'>
           <img
-            src='/assets/images/ilac-dunyasi-logo.png'
+            src='/assets/images/logo-group-250-bold.svg'
             class='navbar__logo-image'
             alt='logo'
           />
         </a>
         <!-- name -->
-        <a href='/' class='navbar__logo-name-link logo-button'>
+        <a href='#' class='navbar__logo-name-link logo-button'>
           <span class='navbar__logo-name actual-text '>&nbsp;Mediqly&nbsp;</span>
           <span class='navbar__logo-name hover-text'>&nbsp;Mediqly&nbsp;</span>
         </a>
@@ -92,10 +92,10 @@ if (isset($_SESSION['user'])) {
             >
           </li>
           <li class='menu__item '>
-            <a class='item__link ' href='/'>Blogs</a>
+            <a class='item__link ' href='#blog'>Blogs</a>
           </li>
           <li class='menu__item '>
-            <a class='item__link ' href='/'>Contact</a>
+            <a class='item__link ' href='#contact'>Contact</a>
           </li>
           <li class='menu__item  menu__item--search'>
         <!-- Search Bar -->

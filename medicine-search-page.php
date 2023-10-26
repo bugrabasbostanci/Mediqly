@@ -4,38 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Medicines</title>
-    <link rel="shortcut icon" href="/assets/images/ilac-dunyasi-logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/images/logo-group-16.svg" type="image/x-icon">
     <!-- CSS Files -->
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="/components/navbar-search/navbar.css" />
     <link rel="stylesheet" href="/components/medicine-card/medicine-card.css" />
-    <link rel="stylesheet" href="/components/footer/footer.css" />
     <!-- Font Awesome -->
     <script
       src="https://kit.fontawesome.com/d50705f12e.js"
       crossorigin="anonymous"
     ></script>
-    <!-- JS Files -->
-    <!-- <script defer src="js/main.js"></script> -->
-    <script defer src="/js/test.js"></script>
   </head>
   <body>
     <div class="container">
       <!-- Navbar | Start -->
       <?php
-      include "/xampp/htdocs/online-recete/components/navbar-search/navbar.php";
+      include "/xampp/htdocs/Mediqly/components/navbar-search/navbar.php";
       ?>
       <!-- Navbar | End -->
 
       <!-- Card Section | Start -->
-        <div class="card-container">
 
-          <!-- index.php -->
+       
 
 <div class="card-container">
 
 <?php
-  include("/xampp/htdocs/online-recete/config.php");
+  include("/xampp/htdocs/Mediqly/config.php");
 
   // Arama sonucunu gösteren kod
   if (isset($_POST['search'])) {
@@ -57,9 +51,9 @@
       foreach ($search_results as $result) {
           $row = $result; // Bu satır eklenmiştir
           if (isset($_SESSION['username']) && isset($_SESSION['id']) && isset($_SESSION['role'])) {
-              include '/xampp/htdocs/online-recete/logged-card.php';
+              include '/xampp/htdocs/Mediqly/logged-card.php';
           } else {
-              include '/xampp/htdocs/online-recete/card.php';
+              include '/xampp/htdocs/Mediqly/card.php';
           }
       }
 
@@ -77,9 +71,9 @@
           while ($row_all = mysqli_fetch_assoc($result_all)) {
               $row = $row_all; // Bu satır eklenmiştir
               if (isset($_SESSION['username']) && isset($_SESSION['id']) && isset($_SESSION['role'])) {
-                  include '/xampp/htdocs/online-recete/logged-card.php';
+                  include '/xampp/htdocs/Mediqly/logged-card.php';
               } else {
-                  include '/xampp/htdocs/online-recete/card.php';
+                  include '/xampp/htdocs/Mediqly/card.php';
               }
           }
       }
@@ -90,12 +84,12 @@
 </div>
 
 
-        </div>
+       
       <!-- Card Section | End -->
 
       <!-- Footer | Start -->
       <?php
-      include "/xampp/htdocs/online-recete/components/footer/footer.html";
+      include "/xampp/htdocs/Mediqly/components/footer-basic/footer-basic.html";
       ?>
       <!-- Footer | End -->
     </div>

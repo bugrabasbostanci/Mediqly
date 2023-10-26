@@ -4,9 +4,11 @@ const toggleMenu = () => {
   const toggler = document.querySelector(".navbar__menu-toggler");
   const src = toggler.getAttribute("src");
 
-  const isBurger = src === "burger-menu.svg";
+  const isBurger = src === "/components/navbar-main/burger-menu.svg";
 
-  const iconName = isBurger ? "close.svg" : "burger-menu.svg";
+  const iconName = isBurger
+    ? "/components/navbar-main/close.svg"
+    : "/components/navbar-main/burger-menu.svg";
 
   toggler.setAttribute("src", iconName);
 
