@@ -1,5 +1,5 @@
-# ignores all .md files 
-.md
+# ignore all .md files 
+*.md
 
 # does not ignore the README.md and README.TR.md file
 !README.md
