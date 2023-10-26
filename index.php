@@ -18,11 +18,11 @@
    include "./components/feature-cards/feature-card.html";
    include "./components/info-card/info-card.html";
    include "./components/comments/comments.html";
-   include "./components/blog-card/blog-cards.html";
+   include "./components/blog-cards/blog-cards.html";
    include "./components/faq/faq.html";
    include "./components/blobz/blob.html";
    include "./components/contact/contact.html";
-   include "./components/footer/footer.html";
+   include "./components/footer-main/footer-main.html";
   ?>
     </div>
   </body>

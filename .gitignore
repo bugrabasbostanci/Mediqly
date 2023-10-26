@@ -1,9 +1,9 @@
-# ignore all .md files 
-*.md
-
 # does not ignore the README.md and README.TR.md file
 !README.md
 !README.TR.md
+
+# ignore all .md files 
+*.md
 
 # ignore these folders
 name-ideas/

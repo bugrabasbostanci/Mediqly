@@ -1,5 +1,5 @@
 <?php
-include("/xampp/htdocs/Mediqly/config.php");
+include("/xampp/htdocs/Mediqly/config/config.php");
 session_start();
 $user = "";
 if (isset($_SESSION['user'])) {
@@ -46,7 +46,7 @@ if (isset($_SESSION['user'])) {
       <!-- Login -->
       <div class='navbar__login'>
         <div class='dropdown'>
-        <a href='/login/index.php' class='navbar__login-link'>
+        <a href='/pages/login/index.php' class='navbar__login-link'>
 
         <?php
         if (isset($_SESSION['role']) && $_SESSION['role'] == "user") {
@@ -54,9 +54,9 @@ if (isset($_SESSION['user'])) {
           <h1 class='navbar__login-text'>Profile</h1>
           </a>
           <div class='menu'>
-              <a href='/medicine-search-page.php'> Medicines </a>
-              <a href='/add-to-list.php'> List </a>
-              <a href='/login/logout.php'> Logout </a>
+              <a href='/pages/medicine-search-page.php'> Medicines </a>
+              <a href='/pages/add-to-list.php'> List </a>
+              <a href='/pages/login/logout.php'> Logout </a>
           </div>";
       } else {
           echo "<i class='fa-solid fa-arrow-right-to-bracket navbar__login-icon'></i>
@@ -87,7 +87,7 @@ if (isset($_SESSION['user'])) {
           <li class='menu__item '>
             <a
               class='item__link'
-              href='/medicine-search-page.php'
+              href='/pages/medicine-search-page.php'
               >Medicines</a
             >
           </li>
@@ -100,7 +100,7 @@ if (isset($_SESSION['user'])) {
           <li class='menu__item  menu__item--search'>
         <!-- Search Bar -->
       
-        <a href='/medicine-search-page.php' class='navbar__search-link item__link'>
+        <a href='/pages/medicine-search-page.php' class='navbar__search-link item__link'>
           <i class='fa-solid fa-magnifying-glass navbar__search-icon'></i>
           Search
         </a>

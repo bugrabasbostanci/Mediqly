@@ -77,7 +77,7 @@ if (!empty($slug)) {
           <i class="fa-solid fa-chevron-right"></i>
         </li>
         <li>
-          <a href="/medicine-search-page.php">
+          <a href="/pages/medicine-search-page.php">
             Medicines
           </a>
         </li>
@@ -181,7 +181,7 @@ if (!empty($slug)) {
     </div>
     <!-- footer -->
     <?php
-    include "/xampp/htdocs/Mediqly/components/footer-basic/footer-basic.html";
+    include "/xampp/htdocs/Mediqly/components/footer-secondary/footer-secondary.html";
     ?>
 
   </body>

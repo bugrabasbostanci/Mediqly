@@ -3,7 +3,7 @@ echo "
 <div class='card'>
 <!-- image -->
 <div class='image-wrapper'>
-<a href='http://localhost:3000/medicine-page-template.php?slug=".$row["slug"]." ' class='card__image-link'>
+<a href='http://localhost:3000/pages/medicine-page-template.php?slug=".$row["slug"]." ' class='card__image-link'>
 <img
 class='card__image'
 src='". $row["imageURL"]."'
@@ -64,7 +64,7 @@ alt='". $row["name"]."'
 
 <a href='".$row["prescription"]."' class='card__prescription-link' title='&rx;' target='_blank'>prescription</a>
 </p>
-<a href='http://localhost:3000/medicine-page-template.php?slug=".$row["slug"]." 'class='card__page-link'>
+<a href='http://localhost:3000/pages/medicine-page-template.php?slug=".$row["slug"]." 'class='card__page-link'>
 <button class='card__page-btn'>More Info</button>
 </a>
 </div>

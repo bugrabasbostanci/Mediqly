@@ -6,7 +6,7 @@
     <title>Medicines</title>
     <link rel="shortcut icon" href="/assets/images/logo-group-16.svg" type="image/x-icon">
     <!-- CSS Files -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/components/medicine-card/medicine-card.css" />
     <!-- Font Awesome -->
     <script
@@ -29,7 +29,7 @@
 <div class="card-container">
 
 <?php
-  include("/xampp/htdocs/Mediqly/config.php");
+  include "/xampp/htdocs/Mediqly/config/config.php";
 
   // Arama sonucunu gösteren kod
   if (isset($_POST['search'])) {
@@ -51,9 +51,9 @@
       foreach ($search_results as $result) {
           $row = $result; // Bu satır eklenmiştir
           if (isset($_SESSION['username']) && isset($_SESSION['id']) && isset($_SESSION['role'])) {
-              include '/xampp/htdocs/Mediqly/logged-card.php';
+              include '/xampp/htdocs/Mediqly/pages/logged-card.php';
           } else {
-              include '/xampp/htdocs/Mediqly/card.php';
+              include '/xampp/htdocs/Mediqly/pages/card.php';
           }
       }
 
@@ -71,9 +71,9 @@
           while ($row_all = mysqli_fetch_assoc($result_all)) {
               $row = $row_all; // Bu satır eklenmiştir
               if (isset($_SESSION['username']) && isset($_SESSION['id']) && isset($_SESSION['role'])) {
-                  include '/xampp/htdocs/Mediqly/logged-card.php';
+                  include '/xampp/htdocs/Mediqly/pages/logged-card.php';
               } else {
-                  include '/xampp/htdocs/Mediqly/card.php';
+                  include '/xampp/htdocs/Mediqly/pages/card.php';
               }
           }
       }
@@ -89,7 +89,7 @@
 
       <!-- Footer | Start -->
       <?php
-      include "/xampp/htdocs/Mediqly/components/footer-basic/footer-basic.html";
+      include "/xampp/htdocs/Mediqly/components/footer-secondary/footer-secondary.html";
       ?>
       <!-- Footer | End -->
     </div>

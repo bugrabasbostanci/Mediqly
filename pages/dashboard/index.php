@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "config.php";
+include "/xampp/htdocs/Mediqly/pages/dashboard/config.php";
 if (isset($_SESSION['username']) && isset($_SESSION['id']))   ?>
 
 <!DOCTYPE html>
@@ -35,7 +35,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id']))   ?>
                         <div class="mt-5 mb-3 mx-auto d-flex flex-column justify-content-center align-items-center row-gap-3" style="width:max-content">
                             <h1 class="fs-1 text-black">Medicine Database Dashboard</h1>
                             <p class="fs-4">Hello <?=$_SESSION['name']?></p>
-                            <a href="/login/logout.php" class="btn btn-danger">Logout</a>
+                            <a href="/pages/login/logout.php" class="btn btn-danger">Logout</a>
                         </div>
                         <?php
                         require_once "config.php";

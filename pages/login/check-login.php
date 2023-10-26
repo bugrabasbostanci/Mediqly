@@ -1,7 +1,7 @@
 
 <?php  
 session_start();
-include "/xampp/htdocs/Mediqly/login/db_conn.php";
+include "/xampp/htdocs/Mediqly/pages/login/db_conn.php";
 
 if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role'])) {
 
@@ -38,11 +38,11 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role
         		$_SESSION['username'] = $row['username'];
 
 				if($row['role'] == 'admin'){
-					header("Location: ../../crud-dashboard/index.php");
+					header("Location: ../../pages/dashboard/index.php");
 
 				}
 				else{
-					header("Location: ../../medicine-search-page.php");
+					header("Location: ../../pages/medicine-search-page.php");
 
 				}
 

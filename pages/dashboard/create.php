@@ -1,6 +1,6 @@
 <?php
 // Include config file
-require_once "config.php";
+require_once "/xampp/htdocs/Mediqly/pages/dashboard/config.php";
  
 // Define variables and initialize with empty values
 

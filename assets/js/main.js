@@ -3,7 +3,7 @@ const cardContainer = document.querySelector(".cards-container");
 
 let medicineDatas;
 // FETCH
-fetch("./data/medicines.json")
+fetch("./assets/data/medicines.json")
   .then((response) => response.json())
   .then((data) => {
     medicineDatas = data;

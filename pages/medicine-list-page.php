@@ -41,7 +41,7 @@
   if ($result->num_rows > 0) {
       // Verileri döngü ile alıp kullanma
       while($row = mysqli_fetch_assoc($result)) {
-          include "/xampp/htdocs/Mediqly/card.php" ;
+          include "/xampp/htdocs/Mediqly/pages/card.php" ;
       }
       
   } else {
@@ -54,7 +54,7 @@
   </div>
 
     <?php
-    include "/xampp/htdocs/Mediqly/components/footer/footer.html";
+    include "/xampp/htdocs/Mediqly/components/footer-secondary/footer-secondary.html";
     ?>
   </body>
 </html>

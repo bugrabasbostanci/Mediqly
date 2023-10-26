@@ -63,7 +63,7 @@ if ($list_result) {
     
     
     while ($row = mysqli_fetch_assoc($list_result)) {
-        include "/xampp/htdocs/Mediqly/card.php";
+        include "/xampp/htdocs/Mediqly/pages/card.php";
     }
     
     
@@ -77,7 +77,7 @@ mysqli_close($link);
     </div>
 </div>
 <?php
-include "/xampp/htdocs/Mediqly/components/footer-basic/footer-basic.html";
+include "/xampp/htdocs/Mediqly/components/footer-secondary/footer-secondary.html";
 ?>
 
 </body>

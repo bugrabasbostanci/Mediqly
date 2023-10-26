@@ -14,7 +14,7 @@ align-items-center"
       style="min-height: 100vh">
 	  <img src="/assets/images/login.svg" alt="login" class="order-2 d-none d-lg-block " style="width:600px">
       	<form class="border shadow p-3 rounded d-flex flex-column row-gap-4"
-      	      action="/login/check-login.php" 
+      	      action="/pages/login/check-login.php" 
       	      method="post" 
       	      style="width: 450px;">
       	      <h1 class="text-center p-3">Login to Database</h1>
@@ -51,5 +51,5 @@ align-items-center"
 </body>
 </html>
 <?php }else{
-	header("Location: ../../crud-dashboard/index.php");
+	header("Location: ../../pages/dashboard/index.php");
 } ?>
