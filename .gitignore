@@ -1,0 +1,10 @@
+# ignores all .md files 
+.md
+
+# does not ignore the README.md file
+!README.md
+!README.TR.md
+
+# ignore folders
+name-ideas/
+ui components/

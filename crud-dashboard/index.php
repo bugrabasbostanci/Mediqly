@@ -32,7 +32,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id']))   ?>
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12 d-flex flex-column justify-content-center align-items-center">
-                        <div class="mt-5 mb-3 mx-auto d-flex flex-column justify-content-center align-items-center" style="width:max-content">
+                        <div class="mt-5 mb-3 mx-auto d-flex flex-column justify-content-center align-items-center row-gap-3" style="width:max-content">
                             <h1 class="fs-1 text-black">Medicine Database Dashboard</h1>
                             <p class="fs-4">Hello <?=$_SESSION['name']?></p>
                             <a href="/login/logout.php" class="btn btn-danger">Logout</a>
@@ -42,10 +42,6 @@ if (isset($_SESSION['username']) && isset($_SESSION['id']))   ?>
                         $sql = "SELECT * FROM medicines";
 
                         if($result = mysqli_query($link, $sql)){
-                           
-                        }
-
-                        if($_SESSION['role'] == 'admin') {
                             if(mysqli_num_rows($result) > 0){
                                 echo '<a href="create.php" class="btn btn-success mb-5"><i class="fa fa-plus"></i> Add New Medicine</a>';
                                 echo '<table class="table table-info table-bordered table-striped">';
@@ -100,59 +96,6 @@ if (isset($_SESSION['username']) && isset($_SESSION['id']))   ?>
                             } else{
                                 echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
                             }
-                        }
-
-                        else if($_SESSION['role'] == 'user'){
-                            if(mysqli_num_rows($result) > 0){
-                                echo '<table class="table table-info table-bordered table-striped">';
-                                    echo "<thead>";
-                                        echo "<tr class='text-center'>";
-                                            echo "<th>#</th>";
-                                            echo "<th>Name</th>";
-                                            echo "<th>Slug</th>";
-                                            echo "<th>power</th>";
-                                            echo "<th>powerText</th>";
-                                            echo "<th>category</th>";
-                                            echo "<th>method</th>";
-                                            echo "<th>methodText</th>";
-                                            echo "<th>ageA</th>";
-                                            echo "<th>ageC</th>";
-                                            echo "<th>Purpose</th>";
-                                            echo "<th>Instruction</th>";
-                                            echo "<th>ImageURL</th>";
-                                            echo "<th>prescription</th>";
-                                        echo "</tr>";
-                                    echo "</thead>";
-                                    echo "<tbody>";
-                                    while($row = mysqli_fetch_array($result)){
-                                        echo "<tr>";
-                                            echo "<td>" . $row['id'] . "</td>";
-                                            echo "<td>" . $row['name'] . "</td>";
-                                            echo "<td>" . $row['slug'] . "</td>";
-                                            echo "<td>" . $row['power'] . "</td>";
-                                            echo "<td>" . $row['powerText'] . "</td>";
-                                            echo "<td>" . $row['category'] . "</td>";
-                                            echo "<td>" . $row['method'] . "</td>";
-                                            echo "<td>" . $row['methodText'] . "</td>";
-                                            echo "<td>" . $row['ageA'] . "</td>";
-                                            echo "<td>" . $row['ageC'] . "</td>";
-                                            echo "<td>" . $row['purpose'] . "</td>";
-                                            echo "<td>" . $row['instruction'] . "</td>";
-                                            echo "<td><img src=" . $row['imageURL'] . " style='width: 100px;height: 100px;'  > </td>";
-                                            echo "<td><a href=" . $row['prescription'] . " target='_blank'>Prospektüs</a> </td>";
-                                        echo "</tr>";
-                                    }
-                                    echo "</tbody>";                          
-                                echo "</table>";
-                                echo '<p>All information has been prepared by reviewing the official prescriptions of the medicines.</p>';   
-                                mysqli_free_result($result);
-                            } else{
-                                echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
-                            }
-                        }
-                        
-                         else{
-                            echo "Oops! Something went wrong. Please try again later.";
                         }
                         mysqli_close($link);
                         ?>

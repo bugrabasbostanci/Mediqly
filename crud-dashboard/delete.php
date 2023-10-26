@@ -44,7 +44,10 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
 <head>
     <meta charset="UTF-8">
     <title>Delete Medicine Data</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="/assets/images/logo-group-16.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         .wrapper{
             width: 600px;
@@ -57,14 +60,14 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 class="mt-5 mb-3 text-center">Delete Medicine Data</h2>
+                        <h2 class="mt-5 mb-3 text-center text-black fs-2">Delete Medicine Data</h2>
                         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                            <div class="alert alert-danger">
+                            <div class="alert alert-warning">
                                 <input type="hidden" name="id" value="<?php echo trim($_GET["id"]); ?>"/>
                                 <p>Are you sure you want to delete this medicine data?</p>
                                 <p>
+                                    <a href="index.php" class="btn btn-dark">No</a>
                                     <input type="submit" value="Yes" class="btn btn-danger">
-                                    <a href="index.php" class="btn btn-secondary">No</a>
                                 </p>
                             </div>
                         </form>

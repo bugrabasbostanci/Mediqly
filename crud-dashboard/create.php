@@ -114,7 +114,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Check input errors before inserting in database
     if(empty($name_err) &&empty($slug_err) &&empty($power_err) && empty($powerText_err) && empty($category_err) && empty($method_err) && empty($ageA_err) && empty($ageC_err) && empty($purpose_err) && empty($instruction_err) && empty($imageURL_err) && empty($prescription_err)){
         // Prepare an insert statement
-        $sql = "INSERT INTO medicines (name, slug, power, powerText, category, method, methodText, ageA, ageC, purpose, instruction, imageURL, prescription) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO medicines (name, slug, power, powerText, category, method, methodText, ageA, ageC, purpose, instruction, imageURL, prescription) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)";
          
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
@@ -159,6 +159,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <title>Create Medicine</title>
+    <link rel="shortcut icon" href="/assets/images/logo-group-16.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -172,10 +173,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <body>
         <div class="wrapper">
             <div class="container-fluid">
-                <div class="row">
+                <div class="row mb-5">
                     <div class="col-md-12">
-                        <h2 class="mt-5 text-center">Create Medicine</h2>
-                        <p>Please fill this form and submit to add medicine data to the database.</p>
+                        <h2 class="mt-5 text-center text-black fs-1">Create Medicine</h2>
+                        <p class="text-center text-black">Please fill this form and submit to add medicine data to the database.</p>
                         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                             <div class="form-group">
                                 <label><b>Name</b></label>
@@ -242,9 +243,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                 <input type="text" name="prescription" class="form-control mb-4 <?php echo (!empty($prescription_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $prescription; ?>">
                                 <span class="invalid-feedback"><?php echo $prescription_err;?></span>
                             </div>
-                            <div class="w-100 mt-3">
-                            <a href="index.php" class="btn btn-danger  float-start">Cancel</a>
-                            <input type="submit" class="btn btn-success float-end" value="Submit">
+                            <div class="w-100 mt-3 d-flex justify-content-between">
+                            <a href="index.php" class="btn btn-danger">Cancel</a>
+                            <input type="submit" class="btn btn-success" value="Submit">
                             </div>
                         </form>
                     </div>

@@ -222,6 +222,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
 <head>
     <meta charset="UTF-8">
     <title>Update Medicine Data</title>
+    <link rel="shortcut icon" href="/assets/images/logo-group-16.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -237,8 +238,8 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12 mb-5">
-                    <h2 class="mt-5 text-center">Update Medicine Data</h2>
-                    <p>Please edit the input values and submit to update the medicine data.</p>
+                    <h2 class="mt-5 text-center text-black fs-1">Update Medicine Data</h2>
+                    <p class="text-center">Please edit the input values and submit to update the medicine data.</p>
                     <form action="<?php echo htmlspecialchars(basename($_SERVER['REQUEST_URI'])); ?>" method="post">
                             <div class="form-group">
                                 <label><b>Name</b></label>
@@ -306,9 +307,9 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
                                 <span class="invalid-feedback"><?php echo $prescription_err;?></span>
                             </div>
                             <input type="hidden" name="id" value="<?php echo $id; ?>"/>
-                            <div class="w-100 mt-3">
-                            <a href="index.php" class="btn btn-danger float-start">Cancel</a>
-                            <input type="submit" class="btn btn-success float-end" value="Submit">
+                            <div class="w-100 mt-3 d-flex justify-content-between">
+                            <a href="index.php" class="btn btn-danger">Back</a>
+                            <input type="submit" class="btn btn-success" value="Submit">
                             </div>
                         </form>
                     </div>
