@@ -1,6 +1,6 @@
 <?php
 // Include config file
-require_once "/xampp/htdocs/Mediqly/pages/dashboard/config.php";
+require_once "/xampp/htdocs/Mediqly/config/config.php";
  
 // Define variables and initialize with empty values
 
@@ -159,7 +159,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <title>Create Medicine</title>
-    <link rel="shortcut icon" href="/assets/images/logo-group-16.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/images/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

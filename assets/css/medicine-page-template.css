@@ -61,6 +61,12 @@ body {
   align-items: center;
 }
 
+/* MAIN */
+.main {
+  padding: 0 10%;
+  margin-top: var(--lengthLg3);
+}
+
 /* BREADCRUMBS */
 .bread-crumbs-container {
   padding: var(--lengthLg1) 0 var(--lengthMd1) 0;
@@ -70,11 +76,9 @@ body {
 .bread-crumbs {
   list-style-type: none;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   gap: var(--lengthMd1);
   color: var(--colorTitle);
-  width: 100%;
 }
 
 .bread-crumbs li > a {
@@ -86,30 +90,15 @@ body {
   font-size: var(--lengthMd3);
 }
 
-.main {
-  padding: 0 10%;
-  margin-top: var(--lengthLg3);
-}
-
-/* CONTENT */
-.content-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
+/* CARD */
 .card {
   display: flex;
   flex-direction: column;
   gap: var(--lengthLg4);
-  max-width: 800px;
 }
 
 .card__image {
   max-width: 100%;
-  height: auto;
   border-radius: var(--lengthMd2);
 }
 
@@ -119,7 +108,7 @@ body {
 }
 
 .card__subtitle {
-  color: var(--GRAY-100);
+  color: var(--GRAY-50);
   font-weight: 600;
   font-size: var(--lengthMd2);
 }
@@ -163,6 +152,7 @@ body {
   gap: var(--lengthMd1);
   margin: var(--lengthLg1) 0;
 }
+
 .name-wrapper {
   display: flex;
   flex-direction: column;
@@ -176,6 +166,7 @@ body {
 .input__name {
   height: calc(var(--lengthMd2) * 2);
   padding: var(--lengthSm3) calc(var(--lengthSm2) * 2);
+  font-family: var(--TEXT-FONT);
   font-size: var(--lengthMd2);
   border: var(--lengthSm1) solid black;
   border-radius: calc(var(--lengthMd2) / 4);
@@ -183,6 +174,7 @@ body {
   background-color: var(--colorTitle);
 }
 
+/* COMMENT */
 .comment-wrapper {
   display: flex;
   flex-direction: column;
@@ -196,6 +188,7 @@ body {
 .input__comment {
   height: 200px;
   padding: var(--lengthSm3) calc(var(--lengthSm2) * 2);
+  font-family: var(--TEXT-FONT);
   font-size: var(--lengthMd2);
   border: var(--lengthSm1) solid black;
   border-radius: calc(var(--lengthMd2) / 4);
@@ -209,7 +202,7 @@ body {
   border: none;
   border-radius: calc(var(--lengthMd2) / 4);
   cursor: pointer;
-  background-color: var(--BLUE);
+  background-color: var(--colorSecondary);
   color: white;
   align-self: flex-start;
 }
@@ -240,4 +233,7 @@ body {
 }
 
 @media (min-width: 600px) {
+  .card {
+    max-width: 800px;
+  }
 }

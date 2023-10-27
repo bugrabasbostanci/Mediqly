@@ -64,7 +64,7 @@ html {
 
 .container__title {
   color: var(--WHITE);
-  font-size: 2.5rem;
+  font-size: var(--lengthLg2);
   padding: var(--lengthLg1);
 }
 
@@ -80,7 +80,7 @@ html {
   width: 450px;
   height: 300px;
   position: relative;
-  border-radius: calc(var(--lengthMd2) / 2);
+  border-radius: 10px;
 }
 
 .card-container::before {
@@ -89,7 +89,7 @@ html {
   position: absolute;
   inset: 0;
   transform: translate3d(0, 0, 0) scale(0.95);
-  filter: blur(calc(var(--lengthMd2) / 2));
+  filter: blur(10px);
   background-color: var(--MAIN-COLOR);
 }
 
@@ -169,6 +169,6 @@ html {
     width: 500px;
     height: 333px;
     position: relative;
-    border-radius: calc(var(--lengthMd2) / 2);
+    border-radius: 10px;
   }
 }

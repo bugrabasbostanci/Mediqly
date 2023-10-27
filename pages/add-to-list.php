@@ -4,32 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mediqly</title>
-    <link rel="shortcut icon" href="/assets/images/logo-group-16.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/images/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="/components/medicine-card/medicine-card.css">
     <link rel="stylesheet" href="/assets/css/add-to-list.css">
 </head>
 <body>
-    
-
-<?php
-include "/xampp/htdocs/Mediqly/components/navbar-search/navbar.php";
-?>
-
+<?php include "/xampp/htdocs/Mediqly/components/navbar-search/navbar.php";?>
 
 <div class="container">
-
-
-
-
     <div class="card-container">
-<?php
 
-
-$link = mysqli_connect('localhost', 'root', '', 'medicinedb');
-
-if ($link === false) {
-    die("ERROR: Could not connect. " . mysqli_connect_error());
-}
+<?php require_once "/xampp/htdocs/Mediqly/config/config.php";
 
 // İlaç eklemek için form gönderildiyse
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -43,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     if (mysqli_query($link, $insert_query)) {
         
-include "/xampp/htdocs/Mediqly/components/toast/index.html";
+     include "/xampp/htdocs/Mediqly/components/toast/index.html";
 
 
     } else {
@@ -76,9 +61,7 @@ mysqli_close($link);
 ?>
     </div>
 </div>
-<?php
-include "/xampp/htdocs/Mediqly/components/footer-secondary/footer-secondary.html";
-?>
+<?php include "/xampp/htdocs/Mediqly/components/footer-secondary/footer-secondary.html";?>
 
 </body>
 </html>

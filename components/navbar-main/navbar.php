@@ -1,5 +1,5 @@
 <?php
-include("/xampp/htdocs/Mediqly/config/config.php");
+require_once "/xampp/htdocs/Mediqly/config/config.php";
 session_start();
 $user = "";
 if (isset($_SESSION['user'])) {

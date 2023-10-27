@@ -1,7 +1,7 @@
 
 <?php  
 session_start();
-include "/xampp/htdocs/Mediqly/pages/login/db_conn.php";
+include "/xampp/htdocs/Mediqly/config/config.php";
 
 if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role'])) {
 

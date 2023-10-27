@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Medicines</title>
-    <link rel="shortcut icon" href="/assets/images/logo-group-16.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/images/favicon.svg" type="image/x-icon">
     <!-- CSS Files -->
-    <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/components/medicine-card/medicine-card.css" />
+    <link rel="stylesheet" href="/assets/css/medicine-search-page.css">
     <!-- Font Awesome -->
     <script
       src="https://kit.fontawesome.com/d50705f12e.js"
@@ -22,7 +22,7 @@
       
       <!-- Card Section | Start -->
       <div class="card-container">
-      <?php include "/xampp/htdocs/Mediqly/config/config.php";
+      <?php require_once "/xampp/htdocs/Mediqly/config/config.php";
 
       // Arama sonucunu gösteren kod
       if (isset($_POST['search'])) {
@@ -52,7 +52,7 @@
         }
         // Eğer sonuç yoksa mesajı gösterelim
         if (empty($search_results)) {
-          echo "0 results";
+          echo "Aradığınız ilaç sistemde bulunmuyor.";
         }
       } else {
         // İlk olarak tüm ilaçları göster

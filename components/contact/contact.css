@@ -55,7 +55,8 @@ html {
 }
 
 .wrapper {
-  width: 80%;
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
@@ -283,7 +284,7 @@ textarea {
 
 @media (min-width: 600px) {
   .wrapper {
-    padding: 7% 0;
+    width: 80%;
   }
   .form-img {
     display: block;

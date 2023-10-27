@@ -505,13 +505,13 @@ footer {
 
 /*? mobile */
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .footer-top {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: var(--lengthMd1) var(sm3) 32px var(sm3);
+    padding: var(--lengthMd1) var(--lengthSm3) 32px var(--lengthSm3);
   }
 
   .footer-columns {
@@ -527,5 +527,5 @@ footer {
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 600px) {
 }

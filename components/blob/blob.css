@@ -54,9 +54,26 @@ html {
   font-family: var(--TEXT-FONT);
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: var(--colorMain);
+.blob-container {
+  margin: 12rem 0;
+}
+
+.tk-blob {
+  display: none;
+}
+
+/**************** MEDIA QUERIES -RESPONSIVE *********************/
+@media (max-width: 600px) {
+}
+
+@media (min-width: 600px) {
+  .blob-container {
+    display: flex;
+    justify-content: center;
+  }
+  .tk-blob {
+    display: block;
+    width: 300px;
+    height: auto;
+  }
 }

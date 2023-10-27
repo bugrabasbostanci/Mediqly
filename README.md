@@ -32,13 +32,8 @@
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
     </li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -49,11 +44,11 @@
 
 ### English
 
-I developed the **Mediqly** informative web project using **PHP**, **MySQL**, **HTML**, **CSS**, **Bootstrap** and **JavaScript** technologies. The purpose of the project is to provide users with information about medication and health.
+I developed the **Mediqly** fullstack web project using **PHP, MySQL, HTML, CSS, **Bootstrap** and JavaScript** technologies. The aim of the project is to provide easy and quick access to medicine information.
 
 ### Türkçe
 
-**PHP, MySQL, HTML, CSS, **Bootstrap** ve JavaScript** teknolojilerini kullanarak **Mediqly** bilgilendirici web projesini geliştirdim. Projenin amacı, kullanıcılara ilaç ve sağlık hakkında bilgi sağlamaktır.
+**PHP, MySQL, HTML, CSS, **Bootstrap** ve JavaScript** teknolojilerini kullanarak **Mediqly** fullstack web projesini geliştirdim. Projenin amacı, ilaç bilgilerine kolay ve hızlı erişim sağlamaktır.
 
 <p align="right">[<a href="#readme-top">back to top</a>]</p>
 
@@ -83,60 +78,18 @@ I developed the **Mediqly** informative web project using **PHP**, **MySQL**, **
 - [x] Pages
   - [x] Home
   - [x] Search
-  - [x] Single Medicine
+  - [x] Medicine List
   - [x] Login
   - [x] Dashboard
-    - [x] Medicine
 - [x] Features
   - [x] Search Medicine
-  - [x] User Comment post
-  - [x] Admin Dashboard Page (only admin access)
-    - [x] Medicine List
-    - [x] Create new medicine
-    - [x] Read medicine
-    - [x] Update medicine
-    - [x] Delete medicine
-- [ ] New features coming soon
-  - [ ] About Page
-  - [ ] Contact Page
-
-<p align="right">[<a href="#readme-top">back to top</a>]</p>
-
-<!-- GETTING STARTED -->
-
-## Getting Started
-
-This is a simple yet informative full stack web project. Follow the simple example steps below to get a local copy running.
-
-### Prerequisites ? gerek var mı
-
-This is an example of how to list things you need to use the software and how to install them.
-
-- npm
-  ```
-  HERE
-  ```
-
-### Installation ?
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This project doesn't rely on any external dependencies or services._
-
-1. Clone the repo
-   ```sh
-   git clone URL
-   ```
-2. STEP 2
-   ```
-   HERE
-   ```
-3. STEP 3
-   ```
-   HERE
-   ```
-4. STEP 4
-   ```
-   HERE
-   ```
+  - [x] Add Medication to List
+  - [x] Comment
+  - [x] Admin Dashboard
+    - [x] Create Medicine
+    - [x] Read Medicine
+    - [x] Update Medicine
+    - [x] Delete Medicine
 
 <p align="right">[<a href="#readme-top">back to top</a>]</p>
 
@@ -146,24 +99,13 @@ _Below is an example of how you can instruct your audience on installing and set
 
 Contributions are what make the open source community so great. We appreciate any and all contributions, **big or small.**
 
-If you have an idea for how to improve this project, please fork the repository and create a pull request. You can also simply open an issue with the label "enhancement".
+If you have an idea for how to improve this project, please fork the repository and create a pull request. You can also simply open an issue with the label "enhancement". Thank you for your support!
 
 1. Fork the Project
 2. Create your Feature Branch
 3. Commit your Changes
 4. Push to the Branch
 5. Open a Pull Request
-
-_Per aspera ad astra_ (through suffering to the stars)
-Thank you for your support!
-
-<p align="right">[<a href="#readme-top">back to top</a>]</p>
-
-<!-- LICENSE -->
-
-## License ?
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">[<a href="#readme-top">back to top</a>]</p>
 
@@ -177,4 +119,6 @@ Project Link: [https://github.com/bugrabasbostanci/Mediqly](https://github.com/b
 
 <p align="right">[<a href="#readme-top">back to top</a>]</p>
 
-<!-- ACKNOWLEDGMENTS -->
+<!-- GRINDING -->
+
+_Per aspera ad astra_

@@ -48,17 +48,22 @@ body {
 
 .container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .card-container {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
   gap: var(--lengthLg1);
-  min-height: 100vh;
   width: 60%;
-  margin-top: calc(var(--lengthLg1 * 5));
+  margin-top: 10rem;
+}
+
+/* RESPONSIVE - MEDIQ QUERIES */
+@media (max-width: 600px) {
+}
+
+@media (min-width: 600px) {
+  .card-container {
+    flex-wrap: wrap;
+  }
 }

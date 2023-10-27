@@ -59,12 +59,6 @@ body {
   font-family: var(--TITLE-FONT);
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
 * {

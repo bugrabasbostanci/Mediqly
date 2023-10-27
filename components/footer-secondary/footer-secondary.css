@@ -54,14 +54,14 @@ html {
   font-family: var(--TEXT-FONT);
 }
 
-footer {
+.footer {
   border-top: 1px solid var(--GRAY-150);
   width: 100%;
   text-align: center;
   background-color: var(--colorMain);
 }
 
-footer p {
+.footer p {
   padding: var(--lengthMd3) 0;
   color: white;
 }
