@@ -7,8 +7,6 @@
     <link rel="shortcut icon" href="/assets/images/logo-group-16.svg" type="image/x-icon">
     <!-- CSS Files -->
     <link rel="stylesheet" href="assets/css/style.css" />
-    <!-- JS Files -->
-    <!-- <script defer src="js/main.js"></script> -->
   </head>
   <body>
   <div class="container">

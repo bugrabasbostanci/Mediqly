@@ -8,59 +8,68 @@
 }
 
 :root {
-  --MAIN-COLOR: #313338; /* >> MAIN BG COLOR*/
-  --GREEN-1: #248046; /* >> buton*/
-  --GREEN-ALL: #23a55a; /* >> other things except buttons */
+  --colorMain: #313338;
+  --colorPrimary: #23a55a;
+  --colorSecondary: #5865f2;
+  --colorTitle: #f2f3f5;
+  --colorText: #dbdee1;
+  --WHITE: #f2f3f5;
+  --WHITISH: #dbdee1;
+  --GREEN: #248046;
   --YELLOW: #f0b232;
   --RED: #f23f43;
-  --REDISH: #fa777c; /* >> alert-danger*/
-  --BLUE: #5865f2;
-  --BLUE-LINK: #00a8fc; /* >> MAIN BG, LINK COLOR*/
+  --REDISH: #fa777c;
+  --BLUE-LINK: #00a8fc;
   --ORANGE: #bf861c;
-  --WHITE: #f2f3f5;
-  --WHITE-50: #dbdee1; /* >> Search bar TEXT COLOR*/
-  --GRAY-50: #b5bac1; /* >> MAIN BG üzerindeki SUBTITLE COLOR */
-  --GRAY-100: #949ba4; /* >> BG COLOR 1 | MAIN BG üzerindeki TEXT COLOR*/
-  --GRAY-150: #80848e; /* >> invisible status | MAIN BG üzerindeki badge bg rengi*/
-  --GRAY-200: #42444a; /* >> MAIN BG üzerindeki BTN BG*/
-  --GRAY-250: #2b2d31; /* >> BG COLOR 1 |MAIN BG üzerindeki iconların bg rengi*/
-  --GRAY-400: #1e1f22; /* >> BG COLOR 2 | MAIN BG üzerindeki search bar bg*/
+  --GRAY-50: #b5bac1;
+  --GRAY-100: #949ba4;
+  --GRAY-150: #80848e;
+  --GRAY-200: #42444a;
+  --GRAY-250: #2b2d31;
+  --GRAY-300: #232428;
+  --GRAY-400: #1e1f22;
+  --lengthSm1: 0.25rem;
+  --lengthSm2: 0.375rem;
+  --lengthSm3: 0.5rem;
+  --lengthMd1: 1rem; /* 16px*/
+  --lengthMd2: 1.25rem;
+  --lengthMd3: 1.5rem;
+  --lengthLg1: 2rem;
+  --lengthLg2: 3rem;
+  --lengthLg3: 4rem;
+  --lengthLg4: 5rem;
   --TITLE-FONT: "Inter";
   --TEXT-FONT: "Poppins";
-  /* -- */
-  --footer-background: white;
-  --text-color: #111420;
-  --text-gray: #e1e1e1;
-  --text-heading-gray: #b9b9b9;
 }
 
 * {
   box-sizing: border-box;
-  margin: 0;
   padding: 0;
-  font-family: var(--TITLE-FONT);
+  margin: 0;
+  border: 0;
 }
 
-body {
-  overflow-x: hidden;
+html {
+  font-size: var(--lengthMd1);
+  font-family: var(--TEXT-FONT);
 }
 
 footer {
-  background-color: var(--MAIN-COLOR);
+  background-color: var(--colorMain);
   min-width: 300px;
-  width: 100vw;
+  max-width: 100vw;
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 5rem;
+  margin-top: var(--lengthLg4);
 }
 
 .footer-wrapper {
   display: flex;
-  background: var(--MAIN-COLOR);
+  background: var(--colorMain);
   flex-direction: column;
   max-width: 1320px;
-  padding: 16px;
+  padding: var(--lengthMd1);
 }
 
 /*? top section */
@@ -69,15 +78,15 @@ footer {
   flex-wrap: wrap;
   justify-content: start;
   align-items: start;
-  padding: 16px 0px;
+  padding: var(--lengthMd1) 0px;
   justify-content: space-between;
 }
 
 .footer-line {
   display: block;
   width: 100%;
-  height: 8px;
-  background: linear-gradient(to right, var(--BLUE), var(--GREEN-ALL));
+  height: var(--lengthSm3);
+  background: linear-gradient(to right, var(--colorSecondary), var(--GREEN));
 }
 
 /*? footer subscribe */
@@ -88,26 +97,26 @@ footer {
 }
 
 .footer-subscribe > input {
-  border: 1px solid var(--text-gray);
+  border: 1px solid var(--GRAY-400);
   color: var(--GRAY-400);
-  min-height: 36px;
-  font-size: 1.2rem;
+  min-height: calc(var(--lengthMd2) + var(--lengthMd1));
+  font-size: var(--lengthMd2);
   flex: 1 0 120px;
-  padding: 8px 12px;
-  border-radius: 8px;
+  padding: var(--lengthSm3) 12px;
+  border-radius: var(--lengthSm3);
 }
 
 .footer-subscribe > button {
   cursor: pointer;
   background-color: var(--GRAY-400);
-  border-radius: 8px;
-  color: var(--WHITE-50);
-  font-size: 1.25rem;
+  border-radius: var(--lengthSm3);
+  color: var(--WHITISH);
+  font-size: var(--lengthMd2);
   min-width: 120px;
-  min-height: 36px;
+  min-height: calc(var(--lengthMd2) + var(--lengthMd1));
   flex: 1 0 80px;
   white-space: nowrap;
-  padding: 8px 12px;
+  padding: var(--lengthSm3) 12px;
   border: 0px;
   outline: none;
 }
@@ -120,9 +129,8 @@ footer {
   align-items: center;
   flex: 2 0 140px;
   width: 100%;
-  /* height: 300px; */
-  gap: 16px;
-  padding: 24px 8px 16px 8px;
+  gap: var(--lengthMd1);
+  padding: var(--lengthMd3) var(--lengthSm3) var(--lengthMd1) var(--lengthSm3);
   margin: 0 auto;
   border-top: 1px solid var(--GRAY-150);
 }
@@ -143,7 +151,7 @@ footer {
 }
 
 .footer-columns ul li {
-  margin-bottom: 16px;
+  margin-bottom: var(--lengthMd1);
 }
 
 .footer-columns h3 {
@@ -151,7 +159,7 @@ footer {
   font-weight: 500;
   margin-top: 0;
   margin-bottom: 25px;
-  font-size: 1.125rem;
+  font-size: calc(var(--lengthSm2) * 3);
 }
 
 .footer-centering {
@@ -172,7 +180,7 @@ footer {
 
 .footer-logo .hide {
   color: white;
-  font-size: 2rem;
+  font-size: var(--lengthLg1);
 }
 
 .footer-logo > svg {
@@ -185,15 +193,15 @@ footer {
 .footer-bottom {
   text-align: center;
   border-top: 1px solid var(--GRAY-150);
-  margin-top: 48px;
+  margin-top: var(--lengthLg2);
   width: 100%;
-  gap: 8px;
-  padding: 16px 0px;
+  gap: var(--lengthSm3);
+  padding: var(--lengthMd1) 0px;
 }
 
 .footer-bottom > small {
-  font-size: 16px;
-  margin: 0 4px;
+  font-size: var(--lengthMd1);
+  margin: 0 var(--lengthSm1);
   color: white;
 }
 
@@ -212,7 +220,7 @@ footer {
 .main {
   display: flex;
   flex-wrap: wrap;
-  width: 14em;
+  width: 14rem;
   align-items: center;
   justify-content: center;
   z-index: 1;
@@ -224,7 +232,6 @@ footer {
   border-top-left-radius: 10px;
   transition: 0.4s ease-in-out, 0.2s background-color ease-in-out,
     0.2s background-image ease-in-out;
-  /* background: rgba(255, 255, 255, 0.596); */
   background: transparent;
   backdrop-filter: blur(5px);
   border: 1px solid transparent;
@@ -489,7 +496,7 @@ footer {
   position: absolute;
   font-size: 0.7em;
   transition: 0.4s ease-in-out;
-  color: var(--WHITE-50);
+  color: var(--WHITISH);
   text-align: center;
   font-weight: bold;
   letter-spacing: 0.33em;
@@ -504,7 +511,7 @@ footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 16px 8px 32px 8px;
+    padding: var(--lengthMd1) var(sm3) 32px var(sm3);
   }
 
   .footer-columns {
@@ -518,4 +525,7 @@ footer {
     justify-content: center;
     margin: 0 auto;
   }
+}
+
+@media (min-width: 800px) {
 }

@@ -16,82 +16,67 @@
   </head>
   <body>
     <div class="container">
-      <!-- Navbar | Start -->
-      <?php
-      include "/xampp/htdocs/Mediqly/components/navbar-search/navbar.php";
-      ?>
-      <!-- Navbar | End -->
-
+      
+      <!-- Navbar -->
+      <?php include "/xampp/htdocs/Mediqly/components/navbar-search/navbar.php"?>
+      
       <!-- Card Section | Start -->
+      <div class="card-container">
+      <?php include "/xampp/htdocs/Mediqly/config/config.php";
 
-       
-
-<div class="card-container">
-
-<?php
-  include "/xampp/htdocs/Mediqly/config/config.php";
-
-  // Arama sonucunu gösteren kod
-  if (isset($_POST['search'])) {
+      // Arama sonucunu gösteren kod
+      if (isset($_POST['search'])) {
       // Kullanıcının girdiği ilaç adını al
       $input = $_POST['search'];
 
       // SEARCH
       $sql_search = "SELECT id, name, slug, power, powerText, category, method, methodText, ageA, ageC, purpose, instruction, imageURL, prescription FROM medicines WHERE name LIKE '%$input%'";
+
       // FETCH
       $result_search = mysqli_query($link, $sql_search);
 
       // Arama sonuçlarını bir diziye ekleyelim
       $search_results = [];
-      while ($row_search = mysqli_fetch_assoc($result_search)) {
+        while ($row_search = mysqli_fetch_assoc($result_search)) {
           $search_results[] = $row_search;
-      }
+        }
 
-      // Tek bir card.php dosyasını döngü içinde dahil ederek sonuçları gösterelim
-      foreach ($search_results as $result) {
-          $row = $result; // Bu satır eklenmiştir
-          if (isset($_SESSION['username']) && isset($_SESSION['id']) && isset($_SESSION['role'])) {
-              include '/xampp/htdocs/Mediqly/pages/logged-card.php';
-          } else {
-              include '/xampp/htdocs/Mediqly/pages/card.php';
-          }
-      }
-
-      // Eğer sonuç yoksa mesajı gösterelim
-      if (empty($search_results)) {
+        // Tek bir card.php dosyasını döngü içinde dahil ederek sonuçları gösterelim
+        foreach ($search_results as $result) {
+            $row = $result; // Bu satır eklenmiştir
+            if (isset($_SESSION['username']) && isset($_SESSION['id']) && isset($_SESSION['role'])) {
+                include '/xampp/htdocs/Mediqly/pages/logged-card.php';
+            } else {
+                include '/xampp/htdocs/Mediqly/pages/card.php';
+            }
+        }
+        // Eğer sonuç yoksa mesajı gösterelim
+        if (empty($search_results)) {
           echo "0 results";
-      }
-  } else {
-      // İlk olarak tüm ilaçları göster
-      $sql_all = "SELECT * FROM medicines";
-      $result_all = mysqli_query($link, $sql_all);
+        }
+      } else {
+        // İlk olarak tüm ilaçları göster
+        $sql_all = "SELECT * FROM medicines";
+        $result_all = mysqli_query($link, $sql_all);
 
-      if ($result_all->num_rows > 0) {
-          // Verileri döngü ile alıp kullanma
-          while ($row_all = mysqli_fetch_assoc($result_all)) {
-              $row = $row_all; // Bu satır eklenmiştir
-              if (isset($_SESSION['username']) && isset($_SESSION['id']) && isset($_SESSION['role'])) {
-                  include '/xampp/htdocs/Mediqly/pages/logged-card.php';
-              } else {
-                  include '/xampp/htdocs/Mediqly/pages/card.php';
+        if ($result_all->num_rows > 0) {
+            // Verileri döngü ile alıp kullanma
+            while ($row_all = mysqli_fetch_assoc($result_all)) {
+                $row = $row_all; // Bu satır eklenmiştir
+                if (isset($_SESSION['username']) && isset($_SESSION['id']) && isset($_SESSION['role'])) {
+                    include '/xampp/htdocs/Mediqly/pages/logged-card.php';
+                } else {
+                    include '/xampp/htdocs/Mediqly/pages/card.php';
               }
-          }
+           }
+        }
       }
-  }
-  ?>
-
-
-</div>
-
-
-       
+      ?>
+    </div>
       <!-- Card Section | End -->
 
-      <!-- Footer | Start -->
-      <?php
-      include "/xampp/htdocs/Mediqly/components/footer-secondary/footer-secondary.html";
-      ?>
-      <!-- Footer | End -->
+      <!-- Footer -->
+      <?php include "/xampp/htdocs/Mediqly/components/footer-secondary/footer-secondary.html"?>
     </div>
   </body>
 </html>

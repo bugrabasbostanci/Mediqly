@@ -6,38 +6,57 @@
   font-family: "Poppins";
   src: url("/assets/fonts/Poppins-Medium.ttf");
 }
+
 :root {
-  --MAIN-COLOR: #313338; /* >> MAIN BG COLOR*/
-  --GREEN-1: #248046; /* >> buton*/
-  --GREEN-ALL: #23a55a; /* >> other things except buttons */
+  --colorMain: #313338;
+  --colorPrimary: #23a55a;
+  --colorSecondary: #5865f2;
+  --colorTitle: #f2f3f5;
+  --colorText: #dbdee1;
+  --WHITE: #f2f3f5;
+  --WHITISH: #dbdee1;
+  --GREEN: #248046;
   --YELLOW: #f0b232;
   --RED: #f23f43;
-  --REDISH: #fa777c; /* >> alert-danger*/
-  --BLUE: #5865f2;
-  --BLUE-LINK: #00a8fc; /* >> MAIN BG, LINK COLOR*/
+  --REDISH: #fa777c;
+  --BLUE-LINK: #00a8fc;
   --ORANGE: #bf861c;
-  --WHITE: #f2f3f5;
-  --WHITE-50: #dbdee1; /* >> Search bar TEXT COLOR*/
-  --GRAY-50: #b5bac1; /* >> MAIN BG üzerindeki SUBTITLE COLOR */
-  --GRAY-100: #949ba4; /* >> BG COLOR 1 | MAIN BG üzerindeki TEXT COLOR*/
-  --GRAY-150: #80848e; /* >> invisible status | MAIN BG üzerindeki badge bg rengi*/
-  --GRAY-200: #42444a; /* >> MAIN BG üzerindeki BTN BG*/
-  --GRAY-250: #2b2d31; /* >> BG COLOR 1 |MAIN BG üzerindeki iconların bg rengi*/
-  --GRAY-400: #1e1f22; /* >> BG COLOR 2 | MAIN BG üzerindeki search bar bg*/
+  --GRAY-50: #b5bac1;
+  --GRAY-100: #949ba4;
+  --GRAY-150: #80848e;
+  --GRAY-200: #42444a;
+  --GRAY-250: #2b2d31;
+  --GRAY-300: #232428;
+  --GRAY-400: #1e1f22;
+  --lengthSm1: 0.25rem;
+  --lengthSm2: 0.375rem;
+  --lengthSm3: 0.5rem;
+  --lengthMd1: 1rem; /* 16px*/
+  --lengthMd2: 1.25rem;
+  --lengthMd3: 1.5rem;
+  --lengthLg1: 2rem;
+  --lengthLg2: 3rem;
+  --lengthLg3: 4rem;
+  --lengthLg4: 5rem;
   --TITLE-FONT: "Inter";
   --TEXT-FONT: "Poppins";
 }
 
 * {
   box-sizing: border-box;
-  margin: 0;
   padding: 0;
-  font-family: var(--TITLE-FONT);
+  margin: 0;
+  border: 0;
+}
+
+html {
+  font-size: var(--lengthMd1);
+  font-family: var(--TEXT-FONT);
 }
 
 .blob-container {
-  margin: 8rem 0;
-  background-color: var(--MAIN-COLOR);
+  margin: calc(var(--lengthLg3) * 2) 0;
+  background-color: var(--colorMain);
   height: 100%;
 }
 

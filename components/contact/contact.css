@@ -6,34 +6,54 @@
   font-family: "Poppins";
   src: url("/assets/fonts/Poppins-Medium.ttf");
 }
+
 :root {
-  --MAIN-COLOR: #313338; /* >> MAIN BG COLOR*/
-  --GREEN-1: #248046; /* >> buton*/
-  --GREEN-ALL: #23a55a; /* >> other things except buttons */
+  --colorMain: #313338;
+  --colorPrimary: #23a55a;
+  --colorSecondary: #5865f2;
+  --colorTitle: #f2f3f5;
+  --colorText: #dbdee1;
+  --WHITE: #f2f3f5;
+  --WHITISH: #dbdee1;
+  --GREEN: #248046;
   --YELLOW: #f0b232;
   --RED: #f23f43;
-  --REDISH: #fa777c; /* >> alert-danger*/
-  --BLUE: #5865f2;
-  --BLUE-LINK: #00a8fc; /* >> MAIN BG, LINK COLOR*/
+  --REDISH: #fa777c;
+  --BLUE-LINK: #00a8fc;
   --ORANGE: #bf861c;
-  --WHITE: #f2f3f5;
-  --WHITE-50: #dbdee1; /* >> Search bar TEXT COLOR*/
-  --GRAY-50: #b5bac1; /* >> MAIN BG üzerindeki SUBTITLE COLOR */
-  --GRAY-100: #949ba4; /* >> BG COLOR 1 | MAIN BG üzerindeki TEXT COLOR*/
-  --GRAY-150: #80848e; /* >> invisible status | MAIN BG üzerindeki badge bg rengi*/
-  --GRAY-200: #42444a; /* >> MAIN BG üzerindeki BTN BG*/
-  --GRAY-250: #2b2d31; /* >> BG COLOR 1 |MAIN BG üzerindeki iconların bg rengi*/
-  --GRAY-400: #1e1f22; /* >> BG COLOR 2 | MAIN BG üzerindeki search bar bg*/
+  --GRAY-50: #b5bac1;
+  --GRAY-100: #949ba4;
+  --GRAY-150: #80848e;
+  --GRAY-200: #42444a;
+  --GRAY-250: #2b2d31;
+  --GRAY-300: #232428;
+  --GRAY-400: #1e1f22;
+  --lengthSm1: 0.25rem;
+  --lengthSm2: 0.375rem;
+  --lengthSm3: 0.5rem;
+  --lengthMd1: 1rem; /* 16px*/
+  --lengthMd2: 1.25rem;
+  --lengthMd3: 1.5rem;
+  --lengthLg1: 2rem;
+  --lengthLg2: 3rem;
+  --lengthLg3: 4rem;
+  --lengthLg4: 5rem;
   --TITLE-FONT: "Inter";
   --TEXT-FONT: "Poppins";
 }
 
 * {
   box-sizing: border-box;
-  margin: 0;
   padding: 0;
-  font-family: var(--TITLE-FONT);
+  margin: 0;
+  border: 0;
 }
+
+html {
+  font-size: var(--lengthMd1);
+  font-family: var(--TEXT-FONT);
+}
+
 .wrapper {
   width: 80%;
   display: flex;
@@ -43,16 +63,15 @@
   display: none;
 }
 .contact-container {
-  /* width: 90%; */
   order: 2;
   height: 600px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 3rem;
+  gap: var(--lengthLg2);
   position: relative;
-  border-radius: 10px;
-  padding: 2rem;
+  border-radius: calc(var(--lengthMd2) / 2);
+  padding: var(--lengthLg1);
   background: var(--GRAY-400);
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
 }
@@ -61,15 +80,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: var(--lengthMd1);
 }
 
 .container form .descr {
-  font-size: 3rem;
+  font-size: var(--lengthLg2);
   font-weight: 500;
   color: #e8e8e8;
-  margin-bottom: 25px;
-  margin-top: 25px;
+  margin-bottom: var(--lengthMd3);
+  margin-top: var(--lengthMd3);
   text-align: center;
 }
 
@@ -78,12 +97,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: var(--lengthLg1);
 }
 
 .input,
 textarea {
-  margin: 1em 0 1em 0;
+  margin: var(--lengthMd1) 0 var(--lengthMd1) 0;
   width: 100%;
   position: relative;
 }
@@ -91,11 +110,11 @@ textarea {
 .input input,
 textarea {
   font-size: 100%;
-  padding: 0.7em;
+  padding: calc(var(--lengthSm1) * 3);
   outline: none;
   color: #e8e8e8;
   border: none;
-  border-bottom: 2px solid #e8e8e8;
+  border-bottom: calc(var(--lengthSm1) / 2) solid #e8e8e8;
   background: transparent;
   border-radius: none;
   width: 100%;
@@ -107,8 +126,8 @@ textarea {
   position: absolute;
   left: 0;
   color: #e8e8e8;
-  padding: 0.7em;
-  margin-left: 0.1em;
+  padding: calc(var(--lengthSm1) * 3);
+  margin-left: calc(var(--lengthMd1) / 10);
   pointer-events: none;
   transition: all 0.5s ease;
   text-transform: uppercase;
@@ -116,16 +135,16 @@ textarea {
 
 .input :is(input:focus, input:valid) ~ label {
   transform: translateY(-50%) scale(0.9);
-  margin: 0em;
-  padding: 0.4em;
+  margin: 0;
+  padding: calc(var(--lengthLg1) / 5);
   background: transparent;
 }
 
 .input textarea:focus ~ label,
 .input textarea:valid ~ label {
   transform: translateY(-50%) scale(0.9);
-  margin: 0em;
-  padding: 0.4em;
+  margin: 0;
+  padding: calc(var(--lengthLg1) / 5);
   background: transparent;
 }
 
@@ -133,26 +152,25 @@ textarea {
   border-color: rgb(37, 37, 211);
 }
 
-/*  */
 .contact-container form a {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
   font-weight: bold;
   color: #fff;
-  font-size: 16px;
+  font-size: var(--lengthMd1);
   text-decoration: none;
   text-transform: uppercase;
   overflow: hidden;
   transition: 0.5s;
   margin-top: 40px;
-  letter-spacing: 3px;
+  letter-spacing: var(--lengthSm1);
 }
 
 .contact-container a:hover {
   background: #fff;
   color: #272727;
-  border-radius: 5px;
+  border-radius: calc(var(--lengthMd2) / 4);
 }
 
 .contact-container a span {
@@ -256,7 +274,7 @@ textarea {
 .contact-container a.a2:hover {
   background: transparent;
   color: #aaa;
-  border-radius: 5px;
+  border-radius: calc(var(--lengthMd2) / 4);
 }
 
 /**************** MEDIA QUERIES -RESPONSIVE *********************/

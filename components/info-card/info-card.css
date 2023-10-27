@@ -6,33 +6,52 @@
   font-family: "Poppins";
   src: url("/assets/fonts/Poppins-Medium.ttf");
 }
+
 :root {
-  --MAIN-COLOR: #313338; /* >> MAIN BG COLOR*/
-  --GREEN-1: #248046; /* >> buton*/
-  --GREEN-ALL: #23a55a; /* >> other things except .info-card__spans */
+  --colorMain: #313338;
+  --colorPrimary: #23a55a;
+  --colorSecondary: #5865f2;
+  --colorTitle: #f2f3f5;
+  --colorText: #dbdee1;
+  --WHITE: #f2f3f5;
+  --WHITISH: #dbdee1;
+  --GREEN: #248046;
   --YELLOW: #f0b232;
   --RED: #f23f43;
-  --REDISH: #fa777c; /* >> alert-danger*/
-  --BLUE: #5865f2;
-  --BLUE-LINK: #00a8fc; /* >> MAIN BG, LINK COLOR*/
+  --REDISH: #fa777c;
+  --BLUE-LINK: #00a8fc;
   --ORANGE: #bf861c;
-  --WHITE: #f2f3f5;
-  --WHITE-50: #dbdee1; /* >> Search bar TEXT COLOR*/
-  --GRAY-50: #b5bac1; /* >> MAIN BG üzerindeki SUBTITLE COLOR */
-  --GRAY-100: #949ba4; /* >> BG COLOR 1 | MAIN BG üzerindeki TEXT COLOR*/
-  --GRAY-150: #80848e; /* >> invisible status | MAIN BG üzerindeki badge bg rengi*/
-  --GRAY-200: #42444a; /* >> MAIN BG üzerindeki BTN BG*/
-  --GRAY-250: #2b2d31; /* >> BG COLOR 1 |MAIN BG üzerindeki iconların bg rengi*/
-  --GRAY-400: #1e1f22; /* >> BG COLOR 2 | MAIN BG üzerindeki search bar bg*/
+  --GRAY-50: #b5bac1;
+  --GRAY-100: #949ba4;
+  --GRAY-150: #80848e;
+  --GRAY-200: #42444a;
+  --GRAY-250: #2b2d31;
+  --GRAY-300: #232428;
+  --GRAY-400: #1e1f22;
+  --lengthSm1: 0.25rem;
+  --lengthSm2: 0.375rem;
+  --lengthSm3: 0.5rem;
+  --lengthMd1: 1rem; /* 16px*/
+  --lengthMd2: 1.25rem;
+  --lengthMd3: 1.5rem;
+  --lengthLg1: 2rem;
+  --lengthLg2: 3rem;
+  --lengthLg3: 4rem;
+  --lengthLg4: 5rem;
   --TITLE-FONT: "Inter";
   --TEXT-FONT: "Poppins";
 }
 
 * {
   box-sizing: border-box;
-  margin: 0;
   padding: 0;
-  font-family: var(--TITLE-FONT);
+  margin: 0;
+  border: 0;
+}
+
+html {
+  font-size: var(--lengthMd1);
+  font-family: var(--TEXT-FONT);
 }
 
 .bg-full-w {
@@ -43,17 +62,15 @@
 .info-card {
   width: 100%;
   margin: 0 auto;
-  padding: 1rem;
+  padding: var(--lengthMd1);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: var(--lengthMd1);
 }
 
 .info-card__image {
-  /* width: 350px;
-  height: 233px; */
   border-radius: 15px;
   max-width: 100%;
   height: auto;
@@ -63,29 +80,28 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 3rem;
-  gap: 1rem 0;
+  padding: 0 var(--lengthLg2);
+  gap: var(--lengthMd1) 0;
 }
 
 .info-card__text {
-  color: var(--WHITE-50);
-  /* font-size: 1rem; */
-  font-size: calc(16px + (24-16) * ((100vw - 320px) / (1920 - 320)));
+  color: var(--WHITISH);
+  font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
 }
 .info-card__text-2 {
-  color: var(--WHITE-50);
-  /* font-size: 1rem; */
-  font-size: calc(16px + (24-16) * ((100vw - 320px) / (1920 - 320)));
+  color: var(--WHITISH);
+  font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
 }
 
 .info-card__text::first-letter {
-  color: var(--BLUE);
+  color: var(--colorSecondary);
   initial-letter: 4;
-  margin-right: 16px;
-  background-color: var(--WHITE-50);
-  box-shadow: 5px 5px 0 var(--BLUE);
-  padding: 10px 5px;
-  border-radius: 5px;
+  margin-right: var(--lengthMd1);
+  background-color: var(--WHITISH);
+  box-shadow: calc(var(--lengthMd2) / 4) calc(var(--lengthMd2) / 4) 0
+    var(--colorSecondary);
+  padding: calc(var(--lengthMd2) / 2) calc(var(--lengthMd2) / 4);
+  border-radius: calc(var(--lengthMd2) / 4);
 }
 
 /* BTN */
@@ -93,14 +109,14 @@
   /* Variables */
   --button_radius: 0.75em;
   --button_color: #e8e8e8;
-  --button_outline_color: var(--BLUE);
-  font-size: 17px;
+  --button_outline_color: var(--colorSecondary);
+  font-size: var(--lengthMd1);
   font-weight: bold;
   border: none;
   border-radius: var(--button_radius);
   background: var(--button_outline_color);
   align-self: flex-end;
-  margin-top: 1rem;
+  margin-top: var(--lengthMd1);
 }
 
 .info-card__span {
@@ -135,8 +151,8 @@
     width: 80%;
     flex-direction: row;
     align-items: start;
-    gap: 2rem;
-    padding: 3rem 0;
+    gap: var(--lengthLg1);
+    padding: var(--lengthLg2) 0;
   }
 
   .info-card__image {
@@ -145,18 +161,18 @@
   }
   .info-card__description {
     align-items: start;
-    gap: 1.5rem;
-    padding: 1rem;
+    gap: var(--lengthMd3);
+    padding: var(--lengthMd1);
   }
 
   .info-card__text {
-    font-size: 1.15rem;
+    font-size: calc(var(--lengthMd1) + 0.15rem);
   }
   .info-card__text-2 {
-    font-size: 1.15rem;
+    font-size: calc(var(--lengthMd1) + 0.15rem);
   }
 
   .info-card__span {
-    font-size: 1.3rem;
+    font-size: var(--lengthMd2);
   }
 }
