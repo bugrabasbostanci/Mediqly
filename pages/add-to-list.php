@@ -16,11 +16,9 @@
 
 <?php require_once "/xampp/htdocs/Mediqly/config/config.php";
 
-// İlaç eklemek için form gönderildiyse
+// If a form was sent to select a medication
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // İlaç eklemek için gerekli işlemleri buraya ekleyin
-    
-    // Örneğin:
+    // Needed operations for add medicine
     $medicine_id = $_POST['medicine_id'];
     $user_id = $_SESSION['id'];
     
@@ -36,27 +34,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-// Kullanıcının ilaç listesini görüntülemek için sorgu
+// Show user medicine list
     $user_id = $_SESSION['id'];
     $list_query = "SELECT m.name, m.slug, m.power, m.method, m.methodText, m.powerText, m.category, m.ageA, m.ageC, m.purpose, m.imageURL, m.prescription, m.instruction FROM user_medicine_list uml JOIN medicines m ON uml.medicine_id = m.id WHERE uml.user_id = $user_id";
 
 $list_result = mysqli_query($link, $list_query);
 
-// İlaç listesini ekrana yazdır
+// Render medicine list
 if ($list_result) {
-    
-    
-    
     while ($row = mysqli_fetch_assoc($list_result)) {
         include "/xampp/htdocs/Mediqly/pages/card.php";
     }
-    
-    
 } else {
     echo "Error: " . mysqli_error($link);
 }
-
-// Veritabanı bağlantısını kapat
 mysqli_close($link);
 ?>
     </div>

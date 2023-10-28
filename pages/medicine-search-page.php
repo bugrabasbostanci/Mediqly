@@ -24,9 +24,9 @@
       <div class="card-container">
       <?php require_once "/xampp/htdocs/Mediqly/config/config.php";
 
-      // Arama sonucunu gösteren kod
+      // Search result
       if (isset($_POST['search'])) {
-      // Kullanıcının girdiği ilaç adını al
+      // Take search input
       $input = $_POST['search'];
 
       // SEARCH
@@ -35,34 +35,33 @@
       // FETCH
       $result_search = mysqli_query($link, $sql_search);
 
-      // Arama sonuçlarını bir diziye ekleyelim
+      // Add results into array
       $search_results = [];
         while ($row_search = mysqli_fetch_assoc($result_search)) {
           $search_results[] = $row_search;
         }
 
-        // Tek bir card.php dosyasını döngü içinde dahil ederek sonuçları gösterelim
+        // Show results with card template
         foreach ($search_results as $result) {
-            $row = $result; // Bu satır eklenmiştir
+            $row = $result; 
             if (isset($_SESSION['username']) && isset($_SESSION['id']) && isset($_SESSION['role'])) {
                 include '/xampp/htdocs/Mediqly/pages/logged-card.php';
             } else {
                 include '/xampp/htdocs/Mediqly/pages/card.php';
             }
         }
-        // Eğer sonuç yoksa mesajı gösterelim
+        // No result
         if (empty($search_results)) {
           echo "Aradığınız ilaç sistemde bulunmuyor.";
         }
       } else {
-        // İlk olarak tüm ilaçları göster
+        // Firstly show medicines
         $sql_all = "SELECT * FROM medicines";
         $result_all = mysqli_query($link, $sql_all);
 
         if ($result_all->num_rows > 0) {
-            // Verileri döngü ile alıp kullanma
             while ($row_all = mysqli_fetch_assoc($result_all)) {
-                $row = $row_all; // Bu satır eklenmiştir
+                $row = $row_all; 
                 if (isset($_SESSION['username']) && isset($_SESSION['id']) && isset($_SESSION['role'])) {
                     include '/xampp/htdocs/Mediqly/pages/logged-card.php';
                 } else {
