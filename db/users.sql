@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 03, 2021 at 03:39 PM
--- Server version: 10.4.6-MariaDB
--- PHP Version: 7.3.9
+-- Generation Time: Oct 27, 2023 at 06:23 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `my_db`
+-- Database: `medicinedb`
 --
 
 -- --------------------------------------------------------
@@ -34,17 +33,17 @@ CREATE TABLE `users` (
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `role`, `username`, `password`, `name`) VALUES
-(1, 'admin', 'admin', '81dc9bdb52d04dc20036dbd8313ed055', 'Bugra Basbostanci'), --1234
-(2, 'user', 'user', 'e2fc714c4727ee9395f324cd2e7f331f', 'John Doe'), --abcd
-(3, 'admin', 'tolg', '099ebea48ea9666a7da2177267983138', 'Tolga Zorlu'), --56789
-(4, 'user', 'brb', 'b992bdb865efa8b3b7333d0458323f4e', 'Serhat Aydin'); --brb
+(1, 'admin', 'admin', '81dc9bdb52d04dc20036dbd8313ed055', 'Bugra Basbostanci'),
+(2, 'user', 'user', 'e2fc714c4727ee9395f324cd2e7f331f', 'John Doe'),
+(3, 'admin', 'tolg', '099ebea48ea9666a7da2177267983138', 'Tolga Zorlu'),
+(4, 'user', 'brb', 'b992bdb865efa8b3b7333d0458323f4e', 'Serhat Aydin');
 
 --
 -- Indexes for dumped tables
@@ -64,7 +63,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

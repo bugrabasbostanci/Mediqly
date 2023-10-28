@@ -93,6 +93,43 @@ I developed the **Mediqly** fullstack web project using **PHP, MySQL, HTML, CSS,
 
 <p align="right">[<a href="#readme-top">back to top</a>]</p>
 
+<!-- GETTING STARTED -->
+
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
+
+### Installation ??ÇALIŞMIYOR
+
+_Below is an example of how you can installing and setting up your app._
+
+1. Install **XAMPP**.
+
+2. Open **XAMPP Control panel** and start **Apache** and **MySQL**.
+
+3. Clone the repo
+   ```sh
+   git clone https://github.com/bugrabasbostanci/Mediqly
+   ```
+4. Put the files in files in **C:\xampp\htdocs** folder
+
+5. Click the **MySQL Admin button** in the XAMPP Control panel and go to the **PhpMyAdmin page**
+
+6. Create a database named **"medicinedb"**
+
+7. Click on the **import** button and import the files in the **"db"** folder in the project files
+
+8. After importing successfully open any browser and type **"http://localhost/Mediqly/index.php"**
+
+9. You can login with admin and user type:
+
+```
+username:admin password:1234
+username:user password:abcd
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- CONTRIBUTING -->
 
 ## Contributing
