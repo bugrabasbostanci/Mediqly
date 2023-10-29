@@ -18,11 +18,12 @@
     <div class="container">
       
       <!-- Navbar -->
-      <?php include "/xampp/htdocs/Mediqly/components/navbar-search/navbar.php"?>
+      
+      <?php include "../components/navbar-search/navbar.php"?>
       
       <!-- Card Section | Start -->
       <div class="card-container">
-      <?php require_once "/xampp/htdocs/Mediqly/config/config.php";
+      <?php require_once "../config/config.php"; 
 
       // Search result
       if (isset($_POST['search'])) {
@@ -45,9 +46,9 @@
         foreach ($search_results as $result) {
             $row = $result; 
             if (isset($_SESSION['username']) && isset($_SESSION['id']) && isset($_SESSION['role'])) {
-                include '/xampp/htdocs/Mediqly/pages/logged-card.php';
+                include '../pages/logged-card.php';
             } else {
-                include '/xampp/htdocs/Mediqly/pages/card.php';
+                include '../pages/card.php';
             }
         }
         // No result
@@ -63,9 +64,9 @@
             while ($row_all = mysqli_fetch_assoc($result_all)) {
                 $row = $row_all; 
                 if (isset($_SESSION['username']) && isset($_SESSION['id']) && isset($_SESSION['role'])) {
-                    include '/xampp/htdocs/Mediqly/pages/logged-card.php';
+                    include '../pages/logged-card.php';
                 } else {
-                    include '/xampp/htdocs/Mediqly/pages/card.php';
+                    include '../pages/card.php';
               }
            }
         }
@@ -75,7 +76,7 @@
       <!-- Card Section | End -->
 
       <!-- Footer -->
-      <?php include "/xampp/htdocs/Mediqly/components/footer-secondary/footer-secondary.html"?>
+      <?php include "../components/footer-secondary/footer-secondary.html"?>
     </div>
   </body>
 </html>

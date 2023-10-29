@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="/assets/css/add-to-list.css">
 </head>
 <body>
-<?php include "/xampp/htdocs/Mediqly/components/navbar-search/navbar.php";?>
+<?php include "../components/navbar-search/navbar.php";?>
 
 <div class="container">
     <div class="card-container">
 
-<?php require_once "/xampp/htdocs/Mediqly/config/config.php";
+<?php require_once "../config/config.php";
 
 // If a form was sent to select a medication
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     if (mysqli_query($link, $insert_query)) {
         
-     include "/xampp/htdocs/Mediqly/components/toast/index.html";
+     include "../components/toast/index.html";
 
 
     } else {
@@ -43,7 +43,7 @@ $list_result = mysqli_query($link, $list_query);
 // Render medicine list
 if ($list_result) {
     while ($row = mysqli_fetch_assoc($list_result)) {
-        include "/xampp/htdocs/Mediqly/pages/card.php";
+        include "../pages/card.php";
     }
 } else {
     echo "Error: " . mysqli_error($link);
@@ -52,7 +52,7 @@ mysqli_close($link);
 ?>
     </div>
 </div>
-<?php include "/xampp/htdocs/Mediqly/components/footer-secondary/footer-secondary.html";?>
+<?php include "../components/footer-secondary/footer-secondary.html";?>
 
 </body>
 </html>

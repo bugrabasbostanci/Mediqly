@@ -1,4 +1,5 @@
-<?php require_once "/xampp/htdocs/Mediqly/config/config.php";
+<?php require_once "../config/config.php";
+
 
 // Get slug data
 $slug = isset($_GET['slug']) ? $_GET['slug'] : '';
@@ -56,7 +57,7 @@ if (!empty($slug)) {
   </head>
   <body>
     <!-- navbar -->
-    <?php include "/xampp/htdocs/Mediqly/components/navbar-main/navbar.php"; ?>
+    <?php include "../components/navbar-main/navbar.php"; ?>
 
     <div class="main">
       <!-- bread crumbs -->
@@ -180,7 +181,7 @@ if (!empty($slug)) {
     
     <!-- footer -->
     <?php 
-    include "/xampp/htdocs/Mediqly/components/footer-secondary/footer-secondary.html";?>
+    include "../components/footer-secondary/footer-secondary.html";?>
   </body>
 </html>
 

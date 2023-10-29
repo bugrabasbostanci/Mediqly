@@ -1,6 +1,6 @@
 <?php
 // Include config file
-require_once "/xampp/htdocs/Mediqly/config/config.php";
+require_once "../../config/config.php";
  
 // Define variables and initialize with empty values
 $name = $slug= $power = $powerText = $category = $method = $methodText = $ageA = $ageC = $purpose = $instruction = $imageURL = $prescription = "";

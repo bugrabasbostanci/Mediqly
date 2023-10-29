@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "/xampp/htdocs/Mediqly/config/config.php";
+include "../../config/config.php";
 if (isset($_SESSION['username']) && isset($_SESSION['id']))   ?>
 
 <!DOCTYPE html>
@@ -38,7 +38,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id']))   ?>
                             <a href="/pages/login/logout.php" class="btn btn-danger">Logout</a>
                         </div>
                         <?php
-                        require_once "/xampp/htdocs/Mediqly/config/config.php";
+                        require_once "../../config/config.php";
                         $sql = "SELECT * FROM medicines";
 
                         if($result = mysqli_query($link, $sql)){
