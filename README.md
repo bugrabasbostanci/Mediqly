@@ -40,7 +40,7 @@
 
 ## About The Project
 
-<img src="/mediqly-wallpaper.png" alt="Alt text" title="Optional title">
+https://github.com/bugrabasbostanci/Mediqly/assets/123307602/b86e2844-b4db-4a3b-b7fd-441ddf2193b9
 
 ### English
 
@@ -93,13 +93,14 @@ I developed the **Mediqly** fullstack web project using **PHP, MySQL, HTML, CSS,
 
 <p align="right">[<a href="#readme-top">back to top</a>]</p>
 
-<!-- GETTING STARTED -->
+<!-- GETTING STARTED  ??ÇALIŞMIYOR -->
 
+<!--
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
 
-### Installation ??ÇALIŞMIYOR
+### Installation 
 
 _Below is an example of how you can installing and setting up your app._
 
@@ -128,7 +129,8 @@ username:admin password:1234
 username:user password:abcd
 ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p 
+-->
 
 <!-- CONTRIBUTING -->
 
