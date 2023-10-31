@@ -8,9 +8,9 @@
 	<link rel="shortcut icon" href="/assets/images/favicon.svg" type="image/x-icon">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
-<body class="bg-white">
+<body class="bg-secondary bg-gradient">
       <div class="container d-flex justify-content-around
-align-items-center"
+align-items-center "
       style="min-height: 100vh">
 	  <img src="/assets/images/login.svg" alt="login" class="order-2 d-none d-lg-block " style="width:600px">
       	<form class="border shadow p-3 rounded d-flex flex-column row-gap-4"

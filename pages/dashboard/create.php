@@ -170,76 +170,76 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
     </style>
 </head>
-    <body>
+    <body class="bg-secondary bg-gradient">
         <div class="wrapper">
             <div class="container-fluid">
                 <div class="row mb-5">
                     <div class="col-md-12">
-                        <h2 class="mt-5 text-center text-black fs-1">Create Medicine</h2>
+                        <h2 class="mt-5 text-center text-light fs-1">Create Medicine</h2>
                         <p class="text-center text-black">Please fill this form and submit to add medicine data to the database.</p>
                         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                             <div class="form-group">
-                                <label><b>Name</b></label>
+                                <label class="text-black"><b>Name</b></label>
                                 <input type="text" name="name" class="form-control mb-3 <?php echo (!empty($name_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $name; ?>">
                                 <span class="invalid-feedback"><?php echo $name_err;?></span>
                             </div>
                             <div class="form-group">
-                                <label><b>Slug</b></label>
+                                <label class="text-black"><b>Slug</b></label>
                                 <input type="text" name="slug" class="form-control mb-3 <?php echo (!empty($slug_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $slug; ?>">
                                 <span class="invalid-feedback"><?php echo $slug_err;?></span>
                             </div>
                             <div class="form-group">
-                                <label><b>Power</b></label>
+                                <label class="text-black"><b>Power</b></label>
                                 <input type="text" name="power" class="form-control mb-3 <?php echo (!empty($power_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $power; ?>">
                                 <span class="invalid-feedback"><?php echo $power_err;?></span>
                             </div>
                             <div class="form-group">
-                                <label><b>PowerText</b></label>
+                                <label class="text-black"><b>PowerText</b></label>
                                 <input type="text" name="powerText" class="form-control mb-3 <?php echo (!empty($powerText_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $powerText; ?>">
                                 <span class="invalid-feedback"><?php echo $powerText_err;?></span>
                             </div>
                             <div class="form-group">
-                                <label><b>Category</b></label>
+                                <label class="text-black"><b>Category</b></label>
                                 <input type="text" name="category" class="form-control mb-3 <?php echo (!empty($category_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $category; ?>">
                                 <span class="invalid-feedback"><?php echo $category_err;?></span>
                             </div>
                             <div class="form-group">
-                                <label><b>Method</b></label>
+                                <label class="text-black"><b>Method</b></label>
                                 <input type="text" name="method" class="form-control mb-3 <?php echo (!empty($method_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $method; ?>">
                                 <span class="invalid-feedback"><?php echo $method_err;?></span>
                             </div>
                             <div class="form-group">
-                                <label><b>MethodText</b></label>
+                                <label class="text-black"><b>MethodText</b></label>
                                 <input type="text" name="methodText" class="form-control mb-3 <?php echo (!empty($methodText_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $methodText; ?>">
                                 <span class="invalid-feedback"><?php echo $methodText_err;?></span>
                             </div>
                             <div class="form-group">
-                                <label><b>AgeA</b> </label>
+                                <label class="text-black"><b>AgeA</b> </label>
                                 <input type="text" name="ageA" class="form-control mb-3 <?php echo (!empty($ageA_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $ageA; ?>">
                                 <span class="invalid-feedback"><?php echo $ageA_err;?></span>
                             </div>
                             <div class="form-group">
-                                <label><b>AgeC</b> </label>
+                                <label class="text-black"><b>AgeC</b> </label>
                                 <input type="text" name="ageC" class="form-control mb-3 <?php echo (!empty($ageC_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $ageC; ?>">
                                 <span class="invalid-feedback"><?php echo $ageC_err;?></span>
                             </div>
                             <div class="form-group">
-                                <label><b>purpose</b></label>
+                                <label class="text-black"><b>purpose</b></label>
                                 <textarea name="purpose" class="form-control mb-3 <?php echo (!empty($purpose_err)) ? 'is-invalid' : ''; ?>"><?php echo $purpose; ?></textarea>
                                 <span class="invalid-feedback"><?php echo $purpose_err;?></span>
                             </div>
                             <div class="form-group">
-                                <label><b>instruction</b></label>
+                                <label class="text-black"><b>instruction</b></label>
                                 <input type="text" name="instruction" class="form-control mb-3 <?php echo (!empty($instruction_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $instruction; ?>">
                                 <span class="invalid-feedback"><?php echo $instruction_err;?></span>
                             </div>
                             <div class="form-group">
-                                <label><b>imageURL</b></label>
+                                <label class="text-black"><b>imageURL</b></label>
                                 <input type="text" name="imageURL" class="form-control mb-3 <?php echo (!empty($imageURL_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $imageURL; ?>">
                                 <span class="invalid-feedback"><?php echo $imageURL_err;?></span>
                             </div>
                             <div class="form-group">
-                                <label><b>Prescription</b></label>
+                                <label class="text-black"><b>Prescription</b></label>
                                 <input type="text" name="prescription" class="form-control mb-4 <?php echo (!empty($prescription_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $prescription; ?>">
                                 <span class="invalid-feedback"><?php echo $prescription_err;?></span>
                             </div>

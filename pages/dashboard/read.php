@@ -67,13 +67,13 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
         }
     </style>
 </head>
-    <body>
+    <body class="bg-secondary">
         <div class="wrapper">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="mt-5 mb-3 text-black text-center fs-1">View Medicine Data</h1>
-                        <table class="table table-info table-bordered table-striped">
+                        <h1 class="mt-5 mb-3 text-light text-center fs-1">View Medicine Data</h1>
+                        <table class="table table-warning table-bordered table-striped">
                             <thead>
                                 <tr>
                                     <th>Name</th>

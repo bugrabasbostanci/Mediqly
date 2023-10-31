@@ -31,10 +31,10 @@ if (isset($_SESSION['username']) && isset($_SESSION['id']))   ?>
         <div class="wrapper">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-12 d-flex flex-column justify-content-center align-items-center">
+                    <div class="col-md-12 d-flex flex-column justify-content-center align-items-center bg-secondary bg-gradient">
                         <div class="mt-5 mb-3 mx-auto d-flex flex-column justify-content-center align-items-center row-gap-3" style="width:max-content">
-                            <h1 class="fs-1 text-black">Medicine Database Dashboard</h1>
-                            <p class="fs-4">Hello <?=$_SESSION['name']?></p>
+                            <h1 class="fs-1 text-light">Medicine Database Dashboard</h1>
+                            <p class="fs-4 text-black">Hello <?=$_SESSION['name']?></p>
                             <a href="/pages/login/logout.php" class="btn btn-danger">Logout</a>
                         </div>
                         <?php
@@ -44,7 +44,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id']))   ?>
                         if($result = mysqli_query($link, $sql)){
                             if(mysqli_num_rows($result) > 0){
                                 echo '<a href="create.php" class="btn btn-success mb-5"><i class="fa fa-plus"></i> Add New Medicine</a>';
-                                echo '<table class="table table-info table-bordered table-striped">';
+                                echo '<table class="table table-warning table-bordered table-striped">';
                                     echo "<thead>";
                                         echo "<tr class='text-center'>";
                                             echo "<th>#</th>";
@@ -91,7 +91,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id']))   ?>
                                     }
                                     echo "</tbody>";                            
                                 echo "</table>";
-                                echo '<p>All information has been prepared by reviewing the official prescriptions of the medicines.</p>';  
+                                echo '<p class="text-white">All information has been prepared by reviewing the official prescriptions of the medicines.</p>';  
                                 mysqli_free_result($result);
                             } else{
                                 echo '<div class="alert alert-danger"><em>No records were found.</em></div>';

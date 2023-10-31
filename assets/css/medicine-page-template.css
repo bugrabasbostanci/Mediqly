@@ -109,8 +109,9 @@ body {
 
 .card__subtitle {
   color: var(--GRAY-50);
-  font-weight: 600;
+  font-weight: 500;
   font-size: var(--lengthMd2);
+  font-family: var(--TITLE-FONT);
 }
 
 .card__description {
@@ -121,6 +122,7 @@ body {
 
 .purpose-title {
   color: white;
+  font-family: var(--TITLE-FONT);
 }
 
 .purpose-text {
@@ -129,6 +131,7 @@ body {
 
 .instruction-title {
   color: white;
+  font-family: var(--TITLE-FONT);
 }
 
 .instruction-text {
@@ -143,6 +146,11 @@ body {
   border-radius: calc(var(--lengthMd2) / 4);
   padding: var(--lengthLg2);
   margin-bottom: var(--lengthLg4);
+}
+
+.form-container > h1 {
+  color: var(--WHITISH);
+  font-size: var(--lengthLg2);
 }
 
 .form {
@@ -160,7 +168,7 @@ body {
 
 .label__name {
   font-size: var(--lengthMd2);
-  color: var(--colorText);
+  color: white;
 }
 
 .input__name {
@@ -182,7 +190,7 @@ body {
 
 .label__comment {
   font-size: var(--lengthMd2);
-  color: var(--colorText);
+  color: white;
 }
 
 .input__comment {
@@ -205,6 +213,7 @@ body {
   background-color: var(--colorSecondary);
   color: white;
   align-self: flex-start;
+  font-family: var(--TITLE-FONT);
 }
 
 /* SHOW COMMENTS */
@@ -212,21 +221,23 @@ body {
   background-color: var(--GRAY-400);
   padding: var(--lengthMd1);
   border-radius: calc(var(--lengthMd2) / 4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--lengthMd1);
 }
 
 .posted-comments__title {
   color: var(--colorText);
-}
-
-.posted-comment__body {
-  margin: var(--lengthMd1) 0;
+  border-bottom: 1px solid var(--WHITE);
 }
 
 .posted-comment__name {
-  color: var(--colorTitle);
+  color: var(--WHITISH);
+  font-size: var(--lengthMd2);
 }
 .posted-comment__text {
   color: var(--GRAY-100);
+  margin-bottom: var(--lengthMd1);
 }
 
 @media (max-width: 600px) {

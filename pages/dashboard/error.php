@@ -14,7 +14,7 @@
         }
     </style>
 </head>
-    <body>
+    <body class="bg-secondary bg-gradient">
         <div class="wrapper">
             <div class="container-fluid">
                 <div class="row">

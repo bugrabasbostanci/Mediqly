@@ -127,7 +127,7 @@ if (!empty($slug)) {
 
           <!-- form -->
           <div class="comment-container">
-            <div class="comment__form">
+            <div class="form-container">
               <h1>Add Comment</h1>
               <form action="" method="post" class="form">
                 <!-- name wrapper -->
