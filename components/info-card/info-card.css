@@ -84,10 +84,7 @@ html {
   gap: var(--lengthMd1) 0;
 }
 
-.info-card__text {
-  color: var(--WHITISH);
-  font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
-}
+.info-card__text,
 .info-card__text-2 {
   color: var(--WHITISH);
   font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
@@ -165,9 +162,7 @@ html {
     padding: var(--lengthMd1);
   }
 
-  .info-card__text {
-    font-size: calc(var(--lengthMd1) + 0.15rem);
-  }
+  .info-card__text,
   .info-card__text-2 {
     font-size: calc(var(--lengthMd1) + 0.15rem);
   }

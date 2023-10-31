@@ -120,20 +120,13 @@ body {
   gap: var(--lengthLg4);
 }
 
-.purpose-title {
-  color: white;
-  font-family: var(--TITLE-FONT);
-}
-
-.purpose-text {
-  color: var(--GRAY-100);
-}
-
+.purpose-title,
 .instruction-title {
   color: white;
   font-family: var(--TITLE-FONT);
 }
 
+.purpose-text,
 .instruction-text {
   color: var(--GRAY-100);
 }

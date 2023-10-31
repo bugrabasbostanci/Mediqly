@@ -53,6 +53,7 @@ html {
   font-size: var(--lengthMd1);
   font-family: var(--TEXT-FONT);
 }
+
 body {
   background-color: var(--colorMain);
 }
@@ -61,8 +62,8 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
   gap: var(--lengthLg2);
   width: 80%;
   margin: calc(var(--lengthLg3) * 2) 0 var(--lengthLg1) 0;
@@ -145,6 +146,7 @@ body {
 .fa-spray-can {
   color: palevioletred;
 }
+
 .fa-head-side-cough {
   color: navajowhite;
 }
@@ -197,7 +199,7 @@ body {
 .card__purpose,
 .card__instruction {
   font-family: var(--TEXT-FONT);
-  color: var(--WHITE-50);
+  color: var(--WHITISH);
 }
 
 .card__prescription-container {

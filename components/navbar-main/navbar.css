@@ -298,6 +298,7 @@ html {
     }
   }
 }
+
 /* 600px ve bigger */
 @media (min-width: 600px) {
   .navbar {
@@ -381,16 +382,6 @@ html {
   }
   .navbar__search-icon {
     display: block !important;
-  }
-
-  /* test */
-  .navbar__logo > .logo-button {
-    margin: 0;
-    height: auto;
-    background: transparent;
-    padding: 0;
-    border: none;
-    cursor: pointer;
   }
 
   /* logo-button styling */

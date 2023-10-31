@@ -84,7 +84,7 @@ html {
 
 .feature-card__title {
   font-size: var(--lengthMd3);
-  color: var(--WHITE);
+  color: var(--colorText);
   letter-spacing: 0.5px;
 }
 
